@@ -1,0 +1,63 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-shadow: 1px 1px #fff;
+  font-family: "Droid Sans Mono", Monospace;
+}
+
+body {
+  position: relative;
+
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  margin: 2em 0;
+  font-size: 48px;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 24px;
+  max-width: 40em;
+  margin: 3em auto;
+}
+
+footer {
+  text-align: center;
+}
+
+a {
+  color: #2e87dd;
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 1px solid #2e87dd;
+}
+
+@media (max-width:800px) {
+  h1 {font-size: 36px;}
+  p {font-size: 18px;}
+}
+@media (max-width:600px) {
+  h1 {font-size: 24px;}
+  p {font-size: 16px;}
+}
+@media (max-width:400px) {
+  h1 {font-size: 18px;}
+  p {font-size: 14px;}
+}
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "syntax-highlighting";
