@@ -2,7 +2,7 @@
 layout: post
 title: 회사 이름에 대하여
 author: 강규영
-date: 2014-09-03 16:21:18
+date: 2014-09-03 16:21:19
 category: announcement
 ---
 회사 이름과 로고에 대해 궁금해하시는 분들이 있어서 첫 포스팅 주제로 잡았다.
@@ -11,7 +11,7 @@ category: announcement
 # Box and Whisker
 
 박스앤위스커(Box and Whisker)라는 회사 이름은 통계학자 [John Tukey](http://en.wikipedia.org/wiki/John_W._Tukey)가
-IQR(interquartile range)를 비롯하여 데이터의 분포를 효과적으로 보여주기 위해 고안한
+IQR(interquartile range)을 비롯하여 데이터의 분포를 효과적으로 보여주기 위해 고안한
 다이어그램인 "Box and whisker plot"에서 따왔다. 짧게 박스플롯(boxplot)이라고 부르기도 한다:
 
 ![Box and whisker plot](http://upload.wikimedia.org/wikipedia/commons/5/55/Box-Plot_mit_Min-Max_Abstand.png)
