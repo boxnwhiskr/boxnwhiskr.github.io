@@ -2,7 +2,7 @@
 layout: post
 title: 회사 이름에 대하여
 author: 강규영
-date: 2014-09-03 16:21:10
+date: 2014-09-03 16:21:11
 category: announcement
 ---
 회사 이름과 로고에 대해 궁금해하시는 분들이 있어서 첫 포스팅 주제로 잡았다.
