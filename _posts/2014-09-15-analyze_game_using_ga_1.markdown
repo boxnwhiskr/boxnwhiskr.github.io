@@ -2,7 +2,7 @@
 layout: post
 title: Google Analytics로 게임 분석하기 #1
 author: 강규영
-date: 2014-09-15 11:30:00
+date: 2014-09-15
 ---
 (이 글은 [Box and Whisker 홈페이지](http://www.boxnwhis.kr/)와 [강규영 개인 블로그](http://www.ecogwiki.com/sp.posts)에 중복으로 게재되었습니다)
 
