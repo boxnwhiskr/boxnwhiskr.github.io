@@ -39,7 +39,7 @@ date: 2014-09-15
 
 ![timestructure](/img/posts/2014-09-15-make_a_criterion_for_churn/time_structure.jpg)
 
-초반 n일 동안의 접속 일수가 0일 경우에 사용자가 이탈할 확률 $p(churn = 1|count.days_{n}=0)$의 추이를 n의 변화에 따라 관찰하면 적절한 n의 값을 정할 수 있다.
+초반 n일 동안의 접속 일수가 0일 경우에 사용자가 이탈할 확률 \\(p(churn = 1|count.days_{n}=0)\\)의 추이를 n의 변화에 따라 관찰하면 적절한 n의 값을 정할 수 있다.
 
 ![churnrate](/img/posts/2014-09-15-make_a_criterion_for_churn/churn_rate.jpg)
 
