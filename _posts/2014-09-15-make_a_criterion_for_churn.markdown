@@ -37,11 +37,11 @@ date: "2014-09-13"
 
 과거 100일 동안의 사용자 접속 세션 자료가 있다면, 어떤 사용자가 실제 이탈하였는지 알 수 있다. 이를 토대로 세션 자료에서 처음 며칠을 확인하면 이탈로 판단할 수 있는지 확인이 가능하다. 아래 그림에서 적절한 n을 찾기 위해 n을 변경하며 이탈 비율을 계산할 수 있다. 
 
-![timestructure](\img\posts\2014-09-15_make_a_criterion_for_churn\time_structure.jpg)
+![timestructure](/img/posts/2014-09-15_make_a_criterion_for_churn/time_structure.jpg)
 
 초반 n일 동안의 접속 일수가 0일 경우에 사용자가 이탈할 확률 $p(churn = 1|count.days_{n}=0)$의 추이를 n의 변화에 따라 관찰하면 적절한 n의 값을 정할 수 있다.
 
-![churnrate](\img\posts\2014-09-15_make_a_criterion_for_churn\churn_rate.jpg)
+![churnrate](/img/posts/2014-09-15_make_a_criterion_for_churn/churn_rate.jpg)
 
 위의 그래프는 가상의 접속 자료를 토대로 계산 것이다. n이 커지면서 이탈 비율도 증가하는 것을 알 수 있다. 관건은 어느 정도의 n에서 관찰 기간의 증가를 멈추고 이탈 기준으로 정할 것인지 결정하는 문제다. n이 작으면 이탈 여부를 빨리 알 수 있지만 이탈이 불확실한 사용자를 다수 이탈로 분류하게 된다. n이 크면 이탈 가능성이 확실한 사용자만을 걸러낼 수 있지만, 이미 이탈한 유저들에 대한 대응이 늦어진다.
 
