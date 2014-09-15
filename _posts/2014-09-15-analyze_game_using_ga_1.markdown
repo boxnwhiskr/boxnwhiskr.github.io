@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Google Analytics로 게임 분석하기 #1
+title: Google Analytics로 게임 분석하기 1
 author: 강규영
 date: 2014-09-15
 ---
