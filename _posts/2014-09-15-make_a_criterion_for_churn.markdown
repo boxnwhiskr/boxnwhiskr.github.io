@@ -5,7 +5,7 @@ author: 박장시
 date: 2014-09-15
 ---
 
-(이 글은 [Box and Whisker 홈페이지](www.boxnwhis.kr)와 [datum.io](datum.io)에 중복으로 게재되었습니다.)
+(이 글은 [Box and Whisker 홈페이지](http://www.boxnwhis.kr)와 [datum.io](http://datum.io)에 중복으로 게재되었습니다.)
 
 # 데이터 관점에서의 이탈
 
