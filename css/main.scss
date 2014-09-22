@@ -11,7 +11,7 @@ html {
   padding: 0;
 
   text-shadow: 1px 1px #fff;
-  font-size: 24px;
+  font-size: 18px;
   font-family: "NanumGothic", "Malgun Gothic", "Apple SD Neo Gothic", "AppleGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   background: #f2f2f2 url("/img/bg.gif");
@@ -23,7 +23,7 @@ body {
   padding: 2em;
   box-sizing: border-box;
 
-  max-width: 48em;
+  max-width: 45em;
   margin: 0 auto;
 }
 
@@ -35,7 +35,7 @@ body > footer {
 
 body > header {
   h1 {
-    font-size: 2.2em;
+    font-size: 200%;
     font-family: "Droid Sans Mono", Monospace;
     margin: 0;
     padding: 0.1em 0;
@@ -53,15 +53,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-  font-size: 1.6em;
+  font-size: 160%;
 }
 h2 {
-  font-size: 1.2em;
+  font-size: 120%;
 }
 
 p {
   margin: 1em 0 1.5em;
-  font-size: 0.8em;
   line-height: 160%;
 }
 
@@ -74,30 +73,30 @@ a:hover {
   border-bottom: 1px solid #2e87dd;
 }
 
-
-@media (max-width:800px) {
-  body {font-size: 20px;}
-  p {font-size: 1.0em;}
+ol, ul {
+  padding-left: 2em;
 }
+
+
 @media (max-width:700px) {
   body {font-size: 16px;}
-  p {font-size: 1.0em;}
+  p {font-size: 100%;}
 }
 @media (max-width:600px) {
   body {font-size: 14px;}
-  p {font-size: 1.2em;}
+  p {font-size: 100%;}
 }
 @media (max-width:500px) {
   body {font-size: 12px;}
-  p {font-size: 1.2em;}
+  p {font-size: 100%;}
 }
 @media (max-width:400px) {
   body {font-size: 10px;}
-  p {font-size: 1.3em;}
+  p {font-size: 130%;}
 }
 @media (max-width:360px) {
   body {font-size: 9px;}
-  p {font-size: 1.5em;}
+  p {font-size: 150%;}
 }
 
 
@@ -164,13 +163,21 @@ a:hover {
     }
   }
 
-  footer {
-    nav ol {
+  nav {
+    ol {
       list-style-type: none;
-      margin: 1em 0 3em;
+      margin: 3em 0 3em;
       padding: 0;
+
+      h2 {
+        margin: 0.5em 0;
+      }
     }
   }
+}
+
+footer {
+  text-align: center;
 }
 
 @import "syntax-highlighting";
