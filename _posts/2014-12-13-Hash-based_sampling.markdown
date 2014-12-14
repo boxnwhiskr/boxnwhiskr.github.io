@@ -85,9 +85,9 @@ date: 2014-12-13
 [csample](https://pypi.python.org/pypi/csample)을 설치하고 아래와 같이 사용하면 된다:
 
     > pip install csample
-    > cat original.log | csample -r 0.01 -c 2 > sample.log
+    > cat original.log | csample -r 0.0001 -c 2 > sample.log
 
-``-r 0.0001``은 샘플링 비율 0.01%를 뜻하고, ``-c 2``는 사용자 아이디가 담겨있는 세번째 칼럼(인덱스는 0에서 시작하므로)을 기준으로 해싱을 하라는 뜻이다.
+``-r 0.0001``은 샘플링 비율 0.0001%를 뜻하고, ``-c 2``는 사용자 아이디가 담겨있는 세번째 칼럼(인덱스는 0에서 시작하므로)을 기준으로 해싱을 하라는 뜻이다.
 
 
 # 빅데이터와 샘플링
