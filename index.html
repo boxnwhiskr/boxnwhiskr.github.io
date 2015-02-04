@@ -18,10 +18,10 @@ layout: default
     <ol>
         {% for post in site.posts %}
         <li>
-            <time datetime="{{ post.date | date: "%Y-%m-%dT%h:%M:%sZ" }}">
-            {{ post.date | date: "%b %-d, %Y" }}
-            </time>
             <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <time datetime="{{ post.date | date: "%Y-%m-%dT%H:%M:%sZ" }}">
+            {{ post.date | date: "%Y-%m-%d" }}
+            </time>
             <div class="author">{{ post.author }}</div>
         </li>
         {% endfor %}
