@@ -5,7 +5,7 @@ layout: default
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 <!-- Facebook plugin -->
-<div id="fb-root"></div>
+<div id="fb-root" style="display: none"></div>
 <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -17,6 +17,7 @@ layout: default
 <section class="post">
     <header>
         <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+        <img class="profile" src="/img/people/{% if page.author == "강규영" %}alan{% elsif page.author == "박장시" %}jangsea{% else %}chanjoo{% endif %}.png" alt="{{ page.author }}">
         <time datetime="{{ page.date | date: "%Y-%m-%dT%h:%M:%sZ" }}">
         {{ page.date | date: "%b %-d, %Y" }}
         </time>
