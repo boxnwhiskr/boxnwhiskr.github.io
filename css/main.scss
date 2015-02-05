@@ -12,8 +12,8 @@ $fg-col: #666666;
 $bg-col: #FFFFFF;
 $dimmed-fg-col: $base0;
 
-$code-fg-col: $base00;
-$code-bg-col: $base3;
+$code-fg-col: #666666;
+$code-bg-col: #EFF3F7;
 
 
 html {
@@ -76,10 +76,10 @@ body > nav {
     display: inline-block;
   }
   a {
-    padding: 0.4em 0 0.4em;
+    padding: 0.4em 0 0.2em;
     margin: 0 1em 1em 0;
     text-transform: uppercase;
-    border-width: 2px;
+    border-width: 1px;
   }
 }
 
