@@ -46,7 +46,6 @@ a {
   color: $point-col;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: border 0.5s;
 }
 a:hover {
   border-bottom-color: $point-col;
@@ -77,35 +76,48 @@ body > nav {
     display: inline-block;
   }
   a {
-    padding: 0.5rem 0;
-    margin: 0 1rem 1rem 0;
-    font-weight: bold;
+    padding: 0.4em 0 0.4em;
+    margin: 0 1em 1em 0;
+    text-transform: uppercase;
     border-width: 2px;
   }
 }
 
 body > header {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 5em;
+  padding-bottom: 5em;
 
   text-align: center;
   color: #DDD;
   text-shadow: 1px 1px 1px black;
-  background: black url(/img/banner.png) 10% 50%;
+  background: black url(/img/banner.png) 50% 50%;
+  background-size: cover;
   border-bottom: 1px solid #EEE;
 
   h1 {
     margin: 0;
-    font-size: 3rem;
-    font-family: "Inconsolata", "Droid Sans Mono", monospace;
+    font-size: 4.5rem;
+    font-family: 'Khand', sans-serif;
     text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1;
+
+    .logo {
+      margin-right: 0.5rem;
+      font-size: 90%;
+    }
+    .title {
+      letter-spacing: 0.02em;
+    }
   }
   h1 > a {
     color: #DDD;
   }
   p {
     margin: 0;
-    font-size: 2rem;
+    color: #BBB;
+    font-size: 1.8rem;
+    font-family: 'Petit Formal Script', cursive;
   }
 }
 
@@ -260,10 +272,10 @@ body > .post {
   }
 
   body > header h1 {
-    font-size: 8vw;
+    font-size: 12vw;
   }
   body > header p {
-    font-size: 5.3333vw;
+    font-size: 4.3333vw;
   }
 
   body > .intro p {
