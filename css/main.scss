@@ -16,6 +16,10 @@ $code-fg-col: #666666;
 $code-bg-col: #EFF3F7;
 
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
   font-family: Apple SD Gothic Neo, Nanum Barun Gothic, Nanum Gothic, Verdana, Arial, Dotum, sans-serif;
@@ -24,7 +28,6 @@ html {
   line-height: 1.6;
   color: $fg-col;
   background-color: $bg-col;
-  box-sizing: border-box;
 }
 
 body > header,
@@ -144,12 +147,7 @@ body > footer {
 body > .intro {
   p {
     font-size: 1.5rem;
-  }
-  p:first-child {
-    margin-top: 0;
-  }
-  p:last-child {
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
@@ -181,7 +179,7 @@ body > .recent-posts {
 body > .post {
   header {
     margin-bottom: 2em;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
     border-bottom: 1px solid #EEE;
   }
 
@@ -276,7 +274,7 @@ body > .people {
   }
 
   li {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
   li:last-child {
     margin-bottom: 1rem;
@@ -297,6 +295,34 @@ body > .people {
   }
   p {
     margin: 0;
+  }
+}
+
+body > .contact {
+  h1 {
+    display: none;
+  }
+  p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+
+body > .connect {
+  ul {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+  li {
+    margin: 0 0 1rem 0;
+    padding: 0;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+  a {
+    font-size: 1.5rem;
   }
 }
 
