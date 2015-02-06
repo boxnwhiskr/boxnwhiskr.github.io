@@ -26,11 +26,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-W9QS49');</script>
 <!-- End Google Tag Manager -->
 
+
 <nav>
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        {% for item in site.navigation %}
+        {% if page.url == item.url %}
+        <li class="active"><a href="{{ item.url }}">{{ item.text }}</a></li>
+        {% else %}
+        <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+        {% endif %}
+        {% endfor %}
     </ul>
 </nav>
 

@@ -10,3 +10,13 @@ paginate: 10
 
 # Build settings
 markdown: kramdown
+
+# Navigation
+navigation:
+- url: /index.html
+  text: Home
+- url: /about.html
+  text: About
+- url: /contact.html
+  text: Contact
+
