@@ -18,7 +18,7 @@
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
-    <meta property="og:image" content="/img/icon400.png" />
+    <meta property="og:image" content="{{ site.url }}/img/icon400.png" />
     <!-- } Open Graph properties -->
 </head>
 
