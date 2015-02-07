@@ -14,10 +14,11 @@
     <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="Box and Whisker">
 
     <!-- Open Graph properties { -->
-    <meta property="og:site_name" content="-[|]- Box and Whisker">
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <meta property="og:site_name" content="-[|]- Box and Whisker">
+    <meta property="og:description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:image" content="{{ site.url }}/img/icon400.png" />
     <!-- } Open Graph properties -->
 </head>
