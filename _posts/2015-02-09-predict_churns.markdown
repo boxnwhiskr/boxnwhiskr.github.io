@@ -21,8 +21,8 @@ $$Probability(Churn_{k}=1) = f(RiskRatio_{k}=x)$$
 * Churn: 이탈 유무, 0 or 1
 * Risk Ratio: 이탈 위험 비율
 
-즉, 유저의 이탈 위험 비율을 토대로 $$k$$라는 유저의 이탈할 가능성을 평가한다.
-예를 들어, A라는 유저의 이탈 위험 비율이 1.3이라면, 위의 모형을 통해서 해당 유저의 이탈 가능성은 0.4라는 값을 얻을 수 있다.
+즉, 유저의 이탈 위험 비율을 토대로 $$k$$라는 유저가 이탈할 가능성을 평가한다.
+예를 들어, A라는 유저의 이탈 위험 비율이 2.2이라면, 위의 모형을 통해서 해당 유저의 이탈 가능성은 0.72라는 값을 얻을 수 있다.
 
 $$Probability(Churn_{A}=1) = f(RiskRatio_{A}=2.2) = 0.72$$
 
@@ -54,7 +54,7 @@ cid는 유저 아이디를 나타내며, datetime은 로그인 시간이다.
 
 # 데이터 가공
 
-로그 데이터를 csv 파일로 가지고 있다면, 통계 모형을 만들기 전에 분석 가능한 형태로 변형해야 한다.
+로그 데이터를 파일 형태로 확보했다면, 통계 모형을 만들기 전에 분석 가능한 형태로 변형해야 한다.
 분석에 적합한 데이터 형태로 바꾸기 위해서 [R](http://www.r-project.org/)의 [dplyr](https://github.com/hadley/dplyr) 패키지를 사용한다.
 데이터 분석에 적합한 데이터 형태에 대해서는 [tidy data](http://vita.had.co.nz/papers/tidy-data.pdf)를 참고한다.
 
@@ -84,7 +84,7 @@ cid는 유저 아이디를 나타내며, datetime은 로그인 시간이다.
 모형의 기본 형태는 `churn ~ risk_ratio`와 같은 모습이다.
 즉, 위험 비율로 이탈 여부를 설명하는 모형을 만든다.
 설명하고자 하는 변수 `churn`이 이항 사건이기 때문에 [로지스틱 회귀분석](http://en.wikipedia.org/wiki/Logistic_regression)을 사용한다.
-[R](http://www.r-project.org/)에서는 아래와 같이 _glm_ 함수의 _family_ argument를 사용하여 로지스틱 회귀 모형을 만들 수 있다.
+[R](http://www.r-project.org/)에서는 아래와 같이 _glm_ 함수에 _family=binomial()_ 을 지정하여 로지스틱 회귀 모형을 만들 수 있다.
 마찬가지로 [predict_churn.R](https://github.com/box-and-whisker/fake_log_generator/blob/master/predict_churn.R)을 이용하여 모형을 만든다.
  
     fit <- glm(churn ~ risk_ratio, data = rr_logs, family = binomial())
@@ -150,7 +150,7 @@ A의 경우, 위험 비율의 증가에 따라 이탈 가능성이 상대적으�
 유저가 평균 접속 주기보다 긴 시간 동안 접속하지 않더라도, 이탈하지 않고 다시 서비스에 접속하는 경우가 많아지고 있다.
 
 아래와 같이 반대의 경우도 생각할 수 있는데, 이탈 곡선이 좌측으로 이동하는 경우에는 유저들의 이탈이 가속화되고 있다고 볼 수 있다.
-극단적인 경우, y축의 절편이 0보다 훨씬 위로 이동하는 상황이 있는데, 기본적인 이탈률이 매우 높을 때 나타나는 모습니다.
+극단적인 경우, y축의 절편이 0보다 훨씬 위로 이동하는 상황이 있는데, 기본적인 이탈률이 매우 높을 때 나타나는 모습이다.
 즉, 아무리 유저가 접속 주기보다 짧은 시간동안 접속하지 않더라도 대부분의 유저가 이탈한다면 이탈 가능성은 항상 높게 나타날 수 밖에 없다. 
 
 ![series_bad_curve](/img/posts/2015-02-09-predict_churns/series_bad_churn_curve.png)
