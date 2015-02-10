@@ -371,7 +371,7 @@ body > .connect {
 
 // IPython Notebook
 article {
-  .cell {
+  .cell.code_cell {
     cursor: pointer;
   }
   .cell .prompt {
