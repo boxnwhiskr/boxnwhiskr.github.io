@@ -226,7 +226,9 @@ body > .post {
       background-color: $code-bg-col;
     }
 
-    img {
+    img,
+    svg,
+    object {
       max-width: 100%;
     }
   }
