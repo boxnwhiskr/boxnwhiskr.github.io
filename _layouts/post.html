@@ -2,6 +2,11 @@
 layout: default
 ---
 <!-- MathJax -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 <!-- Facebook plugin -->
@@ -13,6 +18,24 @@ layout: default
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=613868738726819&version=v2.0";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- IPython Notebook -->
+<script>
+document.addEventListener("DOMContentLoaded", function(e) {
+    var cells = document.querySelectorAll('article .cell');
+    for(var i = 0; i < cells.length; i++) {
+        var cell = cells[i];
+        cell.addEventListener('click', function() {
+            var curClasses = this.getAttribute('class');
+            if(curClasses.indexOf(' expanded') !== -1) {
+                this.setAttribute('class', curClasses.substring(0, curClasses.length - 9));
+            } else {
+                this.setAttribute('class', curClasses + ' expanded');
+            }
+        });
+    }
+});
+</script>
 
 <section class="post">
     <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>

@@ -20,3 +20,4 @@ navigation:
 - url: /contact.html
   text: Contact
 
+exclude: ["*.pynb"]
