@@ -12,7 +12,7 @@ module Jekyll
     end
 
     def convert(content)
-      `ipython nbconvert --to html --template basic --stdout \`pwd\`/_ipynbs/#{content}`
+      `ipython nbconvert --config _ipynbs/ipython_nbconvert_config.py --to html --template basic --stdout _ipynbs/#{content}`
     end
   end
 end

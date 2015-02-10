@@ -1,164 +1,228 @@
-# Configuration file for ipython-notebook.
+# Configuration file for ipython-qtconsole.
 
 c = get_config()
 
 #------------------------------------------------------------------------------
-# NotebookApp configuration
+# IPythonQtConsoleApp configuration
 #------------------------------------------------------------------------------
 
-# NotebookApp will inherit config from: BaseIPythonApplication, Application
+# IPythonQtConsoleApp will inherit config from: BaseIPythonApplication,
+# Application, IPythonConsoleApp, ConnectionFileMixin
 
 # Whether to install the default config files into the profile dir. If a new
 # profile is being created, and IPython contains config files for that profile,
 # then they will be staged into the new directory.  Otherwise, default config
 # files will be automatically generated.
-# c.NotebookApp.copy_config_files = False
+# c.IPythonQtConsoleApp.copy_config_files = False
 
-# The IP address the notebook server will listen on.
-# c.NotebookApp.ip = 'localhost'
-
-# The number of additional ports to try if the specified port is not available.
-# c.NotebookApp.port_retries = 50
+# Set the kernel's IP address [default localhost]. If the IP address is
+# something other than localhost, then Consoles on other machines will be able
+# to connect to the Kernel, so be careful!
+# c.IPythonQtConsoleApp.ip = ''
 
 # The date format used by logging formatters for %(asctime)s
-# c.NotebookApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+# c.IPythonQtConsoleApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+
+# Set to display confirmation dialog on exit. You can always use 'exit' or
+# 'quit', to force a direct exit without any confirmation.
+# c.IPythonQtConsoleApp.confirm_exit = True
 
 # Whether to overwrite existing config files when copying
-# c.NotebookApp.overwrite = False
+# c.IPythonQtConsoleApp.overwrite = False
 
-# The full path to a private key file for usage with SSL/TLS.
-# c.NotebookApp.keyfile = ''
+# set the shell (ROUTER) port [default: random]
+# c.IPythonQtConsoleApp.shell_port = 0
 
-# Supply overrides for the tornado.web.Application that the IPython notebook
-# uses.
-# c.NotebookApp.webapp_settings = {}
+# Whether to create profile dir if it doesn't exist
+# c.IPythonQtConsoleApp.auto_create = False
 
-# The base URL for the notebook server.
-# 
-# Leading and trailing slashes can be omitted, and will automatically be added.
-# c.NotebookApp.base_url = '/'
+# set the stdin (DEALER) port [default: random]
+# c.IPythonQtConsoleApp.stdin_port = 0
 
-# 
-# c.NotebookApp.file_to_run = ''
-
-# Whether to open in a browser after starting. The specific browser used is
-# platform dependent and determined by the python standard library `webbrowser`
-# module, unless it is overridden using the --browser (NotebookApp.browser)
-# configuration option.
-# c.NotebookApp.open_browser = True
-
-# The random bytes used to secure cookies. By default this is a new random
-# number every time you start the Notebook. Set it to a value in a config file
-# to enable logins to persist across server sessions.
-# 
-# Note: Cookie secrets should be kept private, do not share config files with
-# cookie_secret stored in plaintext (you can read the value from a file).
-# c.NotebookApp.cookie_secret = b''
-
-# Supply extra arguments that will be passed to Jinja environment.
-# c.NotebookApp.jinja_environment_options = {}
+# path to a custom CSS stylesheet
+# c.IPythonQtConsoleApp.stylesheet = ''
 
 # Path to an extra config file to load.
 # 
 # If specified, load this config file in addition to any other IPython config.
-# c.NotebookApp.extra_config_file = ''
-
-# DEPRECATED use base_url
-# c.NotebookApp.base_project_url = '/'
-
-# The notebook manager class to use.
-# c.NotebookApp.notebook_manager_class = 'IPython.html.services.notebooks.filenbmanager.FileNotebookManager'
+# c.IPythonQtConsoleApp.extra_config_file = ''
 
 # Create a massive crash report when IPython encounters what may be an internal
 # error.  The default is to append a short message to the usual traceback
-# c.NotebookApp.verbose_crash = False
+# c.IPythonQtConsoleApp.verbose_crash = False
 
-# The port the notebook server will listen on.
-# c.NotebookApp.port = 8888
+# Use a plaintext widget instead of rich text (plain can't print/save).
+# c.IPythonQtConsoleApp.plain = False
 
-# The directory to use for notebooks and kernels.
-# c.NotebookApp.notebook_dir = '/Users/alankang/Projects/bnw-www'
+# Connect to an already running kernel
+# c.IPythonQtConsoleApp.existing = ''
 
-# paths for Javascript extensions. By default, this is just
-# IPYTHONDIR/nbextensions
-# c.NotebookApp.nbextensions_path = []
+# set the heartbeat port [default: random]
+# c.IPythonQtConsoleApp.hb_port = 0
 
-# Use a regular expression for the Access-Control-Allow-Origin header
-# 
-# Requests from an origin matching the expression will get replies with:
-# 
-#     Access-Control-Allow-Origin: origin
-# 
-# where `origin` is the origin of the request.
-# 
-# Ignored if allow_origin is set.
-# c.NotebookApp.allow_origin_pat = ''
+# Start the console window with the menu bar hidden.
+# c.IPythonQtConsoleApp.hide_menubar = False
 
-# Specify what command to use to invoke a web browser when opening the notebook.
-# If not specified, the default browser will be determined by the `webbrowser`
-# standard library module, which allows setting of the BROWSER environment
-# variable to override it.
-# c.NotebookApp.browser = ''
+# 
+# c.IPythonQtConsoleApp.transport = 'tcp'
 
-# Set the Access-Control-Allow-Credentials: true header
-# c.NotebookApp.allow_credentials = False
+# set the iopub (PUB) port [default: random]
+# c.IPythonQtConsoleApp.iopub_port = 0
 
-# Hashed password to use for web authentication.
-# 
-# To generate, type in a python/IPython shell:
-# 
-#   from IPython.lib import passwd; passwd()
-# 
-# The string should be of the form type:salt:hashed-password.
-# c.NotebookApp.password = ''
+# Start the console window maximized.
+# c.IPythonQtConsoleApp.maximize = False
+
+# The SSH server to use to connect to the kernel.
+# c.IPythonQtConsoleApp.sshserver = ''
 
 # The IPython profile to use.
-# c.NotebookApp.profile = 'default'
+# c.IPythonQtConsoleApp.profile = 'default'
 
 # The name of the IPython directory. This directory is used for logging
 # configuration (through profiles), history storage, etc. The default is usually
 # $HOME/.ipython. This options can also be specified through the environment
 # variable IPYTHONDIR.
-# c.NotebookApp.ipython_dir = ''
-
-# Whether to enable MathJax for typesetting math/TeX
-# 
-# MathJax is the javascript library IPython uses to render math/LaTeX. It is
-# very large, so you may want to disable it if you have a slow internet
-# connection, or for offline use of the notebook.
-# 
-# When disabled, equations etc. will appear as their untransformed TeX source.
-# c.NotebookApp.enable_mathjax = True
+# c.IPythonQtConsoleApp.ipython_dir = ''
 
 # The Logging format template
-# c.NotebookApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+# c.IPythonQtConsoleApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
 
-# Whether to trust or not X-Scheme/X-Forwarded-Proto and X-Real-Ip/X-Forwarded-
-# For headerssent by the upstream reverse proxy. Necessary if the proxy handles
-# SSL
-# c.NotebookApp.trust_xheaders = False
-
-# The full path to an SSL/TLS certificate file.
-# c.NotebookApp.certfile = ''
-
-# The url for MathJax.js.
-# c.NotebookApp.mathjax_url = ''
+# Path to the ssh key to use for logging in to the ssh server.
+# c.IPythonQtConsoleApp.sshkey = ''
 
 # Set the log level by value or name.
-# c.NotebookApp.log_level = 30
+# c.IPythonQtConsoleApp.log_level = 30
 
-# Extra paths to search for serving static files.
+# JSON file in which to store connection info [default: kernel-<pid>.json]
 # 
-# This allows adding javascript/css to be available from the notebook server
-# machine, or overriding individual files in the IPython
-# c.NotebookApp.extra_static_paths = []
+# This file will contain the IP, ports, and authentication key needed to connect
+# clients to this kernel. By default, this file will be created in the security-
+# dir of the current profile, but can be specified by absolute path.
+# c.IPythonQtConsoleApp.connection_file = ''
 
-# Set the Access-Control-Allow-Origin header
+#------------------------------------------------------------------------------
+# IPythonWidget configuration
+#------------------------------------------------------------------------------
+
+# A FrontendWidget for an IPython kernel.
+
+# IPythonWidget will inherit config from: FrontendWidget, HistoryConsoleWidget,
+# ConsoleWidget
+
 # 
-# Use '*' to allow any origin to access your server.
+# c.IPythonWidget.history_lock = False
+
+# The type of completer to use. Valid values are:
 # 
-# Takes precedence over allow_origin_pat.
-# c.NotebookApp.allow_origin = ''
+# 'plain'   : Show the available completion as a text list
+#             Below the editing area.
+# 'droplist': Show the completion in a drop down list navigable
+#             by the arrow keys, and from which you can select
+#             completion by pressing Return.
+# 'ncurses' : Show the completion as a text list which is navigable by
+#             `tab` and arrow keys.
+# c.IPythonWidget.gui_completion = 'ncurses'
+
+# If not empty, use this Pygments style for syntax highlighting. Otherwise, the
+# style sheet is queried for Pygments style information.
+# c.IPythonWidget.syntax_style = ''
+
+# The type of underlying text widget to use. Valid values are 'plain', which
+# specifies a QPlainTextEdit, and 'rich', which specifies a QTextEdit.
+# c.IPythonWidget.kind = 'plain'
+
+# Whether to ask for user confirmation when restarting kernel
+# c.IPythonWidget.confirm_restart = True
+
+# 
+# c.IPythonWidget.banner = ''
+
+# Whether to automatically execute on syntactically complete input.
+# 
+# If False, Shift-Enter is required to submit each execution. Disabling this is
+# mainly useful for non-Python kernels, where the completion check would be
+# wrong.
+# c.IPythonWidget.execute_on_complete_input = True
+
+# 
+# c.IPythonWidget.output_sep = ''
+
+# The maximum number of lines of text before truncation. Specifying a non-
+# positive number disables text truncation (not recommended).
+# c.IPythonWidget.buffer_size = 500
+
+# Whether to clear the console when the kernel is restarted
+# c.IPythonWidget.clear_on_kernel_restart = True
+
+# The editor command to use when a specific line number is requested. The string
+# should contain two format specifiers: {line} and {filename}. If this parameter
+# is not specified, the line number option to the %edit magic will be ignored.
+# c.IPythonWidget.editor_line = ''
+
+# A command for invoking a system text editor. If the string contains a
+# {filename} format specifier, it will be used. Otherwise, the filename will be
+# appended to the end the command.
+# c.IPythonWidget.editor = ''
+
+# 
+# c.IPythonWidget.in_prompt = 'In [<span class="in-prompt-number">%i</span>]: '
+
+# Whether to draw information calltips on open-parentheses.
+# c.IPythonWidget.enable_calltips = True
+
+# A CSS stylesheet. The stylesheet can contain classes for:
+#     1. Qt: QPlainTextEdit, QFrame, QWidget, etc
+#     2. Pygments: .c, .k, .o, etc. (see PygmentsHighlighter)
+#     3. IPython: .error, .in-prompt, .out-prompt, etc
+# c.IPythonWidget.style_sheet = ''
+
+# 
+# c.IPythonWidget.input_sep = '\n'
+
+# The type of paging to use. Valid values are:
+# 
+# 'inside'
+#    The widget pages like a traditional terminal.
+# 'hsplit'
+#    When paging is requested, the widget is split horizontally. The top
+#    pane contains the console, and the bottom pane contains the paged text.
+# 'vsplit'
+#    Similar to 'hsplit', except that a vertical splitter is used.
+# 'custom'
+#    No action is taken by the widget beyond emitting a
+#    'custom_page_requested(str)' signal.
+# 'none'
+#    The text is written directly to the console.
+# c.IPythonWidget.paging = 'inside'
+
+# Whether to process ANSI escape codes.
+# c.IPythonWidget.ansi_codes = True
+
+# 
+# c.IPythonWidget.output_sep2 = ''
+
+# The height of the console at start time in number of characters (will double
+# with `vsplit` paging)
+# c.IPythonWidget.height = 25
+
+# The width of the console at start time in number of characters (will double
+# with `hsplit` paging)
+# c.IPythonWidget.width = 81
+
+# The font size. If unconfigured, Qt will be entrusted with the size of the
+# font.
+# c.IPythonWidget.font_size = 0
+
+# 
+# c.IPythonWidget.out_prompt = 'Out[<span class="out-prompt-number">%i</span>]: '
+
+# The pygments lexer class to use.
+# c.IPythonWidget.lexer_class = <IPython.utils.traitlets.Undefined object at 0x101f26668>
+
+# The font family to use for the console. On OSX this defaults to Monaco, on
+# Windows the default is Consolas with fallback of Courier, and on other
+# platforms the default is Monospace.
+# c.IPythonWidget.font_family = ''
 
 #------------------------------------------------------------------------------
 # IPKernelApp configuration
@@ -597,66 +661,3 @@ c = get_config()
 # of figures, and behaves most consistently with other matplotlib backends, but
 # figure barriers between cells must be explicit.
 # c.InlineBackend.close_figures = True
-
-#------------------------------------------------------------------------------
-# MappingKernelManager configuration
-#------------------------------------------------------------------------------
-
-# A KernelManager that handles notebook mapping and HTTP error handling
-
-# MappingKernelManager will inherit config from: MultiKernelManager
-
-# The kernel manager class.  This is configurable to allow subclassing of the
-# KernelManager for customized behavior.
-# c.MappingKernelManager.kernel_manager_class = 'IPython.kernel.ioloop.IOLoopKernelManager'
-
-# 
-# c.MappingKernelManager.root_dir = '/Users/alankang/Projects/bnw-www'
-
-#------------------------------------------------------------------------------
-# NotebookManager configuration
-#------------------------------------------------------------------------------
-
-# Glob patterns to hide in file and directory listings.
-# c.NotebookManager.hide_globs = ['__pycache__']
-
-#------------------------------------------------------------------------------
-# FileNotebookManager configuration
-#------------------------------------------------------------------------------
-
-# FileNotebookManager will inherit config from: NotebookManager
-
-# The directory name in which to keep notebook checkpoints
-# 
-# This is a path relative to the notebook's own directory.
-# 
-# By default, it is .ipynb_checkpoints
-# c.FileNotebookManager.checkpoint_dir = '.ipynb_checkpoints'
-
-# 
-# c.FileNotebookManager.notebook_dir = '/Users/alankang/Projects/bnw-www'
-
-# Automatically create a Python script when saving the notebook.
-# 
-# For easier use of import, %run and %load across notebooks, a <notebook-
-# name>.py script will be created next to any <notebook-name>.ipynb on each
-# save.  This can also be set with the short `--script` flag.
-# c.FileNotebookManager.save_script = False
-
-# Glob patterns to hide in file and directory listings.
-# c.FileNotebookManager.hide_globs = ['__pycache__']
-
-#------------------------------------------------------------------------------
-# NotebookNotary configuration
-#------------------------------------------------------------------------------
-
-# A class for computing and verifying notebook signatures.
-
-# The hashing algorithm used to sign notebooks.
-# c.NotebookNotary.algorithm = 'sha256'
-
-# The secret key with which notebooks are signed.
-# c.NotebookNotary.secret = b''
-
-# The file where the secret key is stored.
-# c.NotebookNotary.secret_file = ''

@@ -2,3 +2,8 @@
 .idea
 _site
 _ipynbs/.ipynb_checkpoints
+_ipynbs_profile/security
+_ipynbs_profile/log
+_ipynbs_profile/db
+_ipynbs_profile/pid
+_ipynbs_profile/history.sqlite
