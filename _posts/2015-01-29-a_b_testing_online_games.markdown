@@ -2,6 +2,7 @@
 layout: post
 title: "온라인 게임에서의 A/B 테스팅"
 author: 강규영
+brief: "A/B 테스팅의 개념을 소개하고, 온라인 게임에서 A/B 테스팅을 하는 방법을 살펴본다"
 date: 2015-01-29
 ---
 (이 글은 [박스앤위스커 홈페이지](http://www.boxnwhis.kr)와 [강규영 개인 블로그](http://www.ecogwiki.com/sp.posts)에 중복으로 게재되었습니다.)

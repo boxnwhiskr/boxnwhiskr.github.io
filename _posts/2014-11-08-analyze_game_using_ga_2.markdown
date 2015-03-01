@@ -2,6 +2,7 @@
 layout: post
 title: Google Analytics로 게임 분석하기 2
 author: 강규영
+brief: "구글 애널리틱스를 활용하여 게임 내에서 발생하는 다양한 사건을 기록하고 분석하기"
 date: 2014-11-08
 ---
 

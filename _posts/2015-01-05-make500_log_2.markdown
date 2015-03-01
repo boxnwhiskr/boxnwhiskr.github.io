@@ -2,6 +2,7 @@
 layout: post
 title: "Make 500 개발일지 - 운과 실력"
 author: 황찬주
+brief: "Make 500 개발일지 - 자유도, 운, 실력에 대하여"
 date: 2015-01-05
 ---
 

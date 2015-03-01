@@ -2,6 +2,7 @@
 layout: post
 title: "Make 500 개발일지 - 재미를 만드는 방법"
 author: 황찬주
+brief: "Make 500 개발일지 - 재미에 대한 고민"
 date: 2014-12-18
 ---
 

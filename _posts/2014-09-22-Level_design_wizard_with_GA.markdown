@@ -2,6 +2,7 @@
 layout: post
 title: 스테이지 난이도 마법사 With Google Analytics
 author: 황찬주
+brief: "구글 애널리틱스를 활용하여 스테이지 난이도를 분석하기"
 date: 2014-09-22
 ---
 
