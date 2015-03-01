@@ -67,7 +67,8 @@ $$ P(t_1 \le X \le t_2) = \int_{t_1}^{t_2}f(x)dx$$
 
 $$ \begin{align} 
 P(11\text{:}30 \le X \le 13\text{:}00) & = \int_{11\text{:}30}^{13\text{:}00}f(x)dx \\ 
-& = \frac{13}{34} \approx 0.3823 = 38.23\%
+& = \frac{13}{34} \approx 0.3823 \\
+& = 38.23\%
 \end{align}$$
 
 ![session_bar5](/img/posts/2015-02-27-right_timing_to_push_messages/session_bar5.png)
