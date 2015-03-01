@@ -65,7 +65,10 @@ $$ P(t_1 \le X \le t_2) = \int_{t_1}^{t_2}f(x)dx$$
 
 위에서 만든 접속 시간 분포를 사용하면, 유저가 오전 11시 30분에서 오후 1시 사이에 접속해 있을 확률을 아래와 같이 계산한다.
 
-$$ P(11:30 \le X \le 13:00) = \int_{11:30}^{13:00}f(x)dx = \frac{13}{34} \approx 0.3823 = 38.23\% $$
+$$ \begin{align} 
+P(11\text{:}30 \le X \le 13\text{:}00) & = \int_{11\text{:}30}^{13\text{:}00}f(x)dx \\ 
+& = \frac{13}{34} \approx 0.3823 = 38.23\%
+\end{align}$$
 
 ![session_bar5](/img/posts/2015-02-27-right_timing_to_push_messages/session_bar5.png)
 
