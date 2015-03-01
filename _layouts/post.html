@@ -37,17 +37,17 @@ document.addEventListener("DOMContentLoaded", function(e) {
 });
 </script>
 
-<section class="post">
+<section class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
     <header>
         <img class="profile" src="/img/people/{% if page.author == "강규영" %}alan{% elsif page.author == "박장시" %}jangsea{% else %}chanjoo{% endif %}.png" alt="{{ page.author }}">
-        <time datetime="{{ page.date | date: "%Y-%m-%dT%h:%M:%sZ" }}">
+        <time datetime="{{ page.date | date: "%Y-%m-%dT%h:%M:%sZ" }}" itemprop="datePublished">
         {{ page.date | date: "%b %-d, %Y" }}
         </time>
-        <div class="author">{{ page.author }}</div>
+        <div class="author" itemprop="author">{{ page.author }}</div>
     </header>
 
-    <article>
+    <article itemprop="articleBody">
     {{ content }}
     </article>
 
