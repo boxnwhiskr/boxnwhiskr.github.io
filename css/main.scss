@@ -103,6 +103,8 @@ body > nav {
     float: right;
     input[type="text"] {
       width: 8em;
+      border: 1px solid #888;
+      outline: none;
     }
     input[type="submit"] {
       background-color: $point-col;
