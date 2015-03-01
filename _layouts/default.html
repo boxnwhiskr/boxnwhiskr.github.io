@@ -52,11 +52,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <script>
         document.querySelector('.searchform').addEventListener('submit', function(e) {
             var value = encodeURIComponent(document.querySelector('.searchform input[name="q"]').value);
-            ga('send', 'pageview', '/search?q=' + value);
-            e.preventDefault();
+            ga('send', {
+                'hitType': 'pageview',
+                'page': '/search.html?q=' + value,
+                'title': 'Search'
+            });
             window.setTimeout(function() {
                 location.href = 'https://www.google.com/webhp?ie=UTF-8#q=site:www.boxnwhis.kr%20' + value;
             }, 200);
+
+            e.preventDefault();
             return false;
         });
         </script>
