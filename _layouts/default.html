@@ -34,7 +34,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-W9QS49');</script>
 <!-- End Google Tag Manager -->
 
-
 <nav>
     <ul>
         {% for item in site.navigation %}
@@ -44,6 +43,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li><a href="{{ item.url }}">{{ item.text }}</a></li>
         {% endif %}
         {% endfor %}
+        <li class="search">
+            <form class="searchform" method="get" action="https://www.google.co.kr/webhp?ie=UTF-8">
+                <input type="text" name="q">
+                <input type="submit" value="Search">
+            </form>
+        </li>
+        <script>
+        document.querySelector('.searchform').addEventListener('submit', function(e) {
+            var value = encodeURIComponent(document.querySelector('.searchform input[name="q"]').value);
+            ga('send', 'pageview', '/search?q=' + value);
+            e.preventDefault();
+            window.setTimeout(function() {
+                location.href = 'https://www.google.com/webhp?ie=UTF-8#q=site:www.boxnwhis.kr%20' + value;
+            }, 200);
+            return false;
+        });
+        </script>
     </ul>
 </nav>
 

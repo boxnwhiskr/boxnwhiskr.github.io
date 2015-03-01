@@ -98,6 +98,20 @@ body > nav {
     background-color: $point-col;
     color: white;
   }
+
+  li.search {
+    float: right;
+    input[type="text"] {
+      width: 8em;
+    }
+    input[type="submit"] {
+      background-color: $point-col;
+      color: white;
+      border-width: 0;
+      padding: 2px 8px;
+      font-size: 14px;
+    }
+  }
 }
 
 body > header {
@@ -367,6 +381,10 @@ body > .connect {
       border-radius: 40px;
       margin-bottom: 1rem;
     }
+  }
+
+  body > nav input[type="submit"] {
+    display: none;
   }
 }
 
