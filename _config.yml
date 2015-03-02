@@ -16,8 +16,8 @@ markdown: kramdown
 navigation:
 - url: /index.html
   text: Home
-- url: /about.html
-  text: About
+- url: /service.html
+  text: Service
 - url: /contact.html
   text: Contact
 
