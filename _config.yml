@@ -18,6 +18,8 @@ navigation:
   text: Home
 - url: /service.html
   text: Service
+- url: /company.html
+  text: Company
 - url: /contact.html
   text: Contact
 

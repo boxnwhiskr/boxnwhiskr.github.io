@@ -87,7 +87,6 @@ body > nav {
   }
   li {
     display: inline-block;
-    margin-left: -4px;
   }
   a {
     padding: 0.3em 0.4em 0.2em;
@@ -104,6 +103,7 @@ body > nav {
     float: right;
     input[type="text"] {
       width: 8em;
+      padding: 2px 5px;
       border: 1px solid #888;
       outline: none;
     }
@@ -386,8 +386,23 @@ body > .connect {
     }
   }
 
-  body > nav input[type="submit"] {
-    display: none;
+  body > nav {
+    padding-left: 5px;
+    padding-right: 5px;
+
+    a {
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+
+    li.search {
+      input[type="text"] {
+        width: 6em;
+      }
+      input[type="submit"] {
+        display: none;
+      }
+    }
   }
 }
 
