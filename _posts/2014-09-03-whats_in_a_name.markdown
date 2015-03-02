@@ -8,10 +8,10 @@ date: 2014-09-03
 회사 이름과 로고에 대해 궁금해하시는 분들이 있어서 첫 포스팅 주제로 잡았다.
 
 
-# Box and Whisker
+# Box and Whisker Plot
 
 박스앤위스커(Box and Whisker)라는 회사 이름은 통계학자 [John Tukey](http://en.wikipedia.org/wiki/John_W._Tukey)가
-고안한 다이어그램인 "Box and whisker plot"에서 따왔다. 짧게 박스플롯(boxplot)이라고 부르기도 한다:
+고안한 다이어그램인 "Box and whisker plot"에서 따왔다. 박스플롯(boxplot), 상자수염그림(box and whisker plot의 번역) 등으로 부르기도 한다:
 
 ![Box and whisker plot](http://upload.wikimedia.org/wikipedia/commons/5/55/Box-Plot_mit_Min-Max_Abstand.png)
 
@@ -19,28 +19,29 @@ date: 2014-09-03
 
 위 그림에서 상자는 IQR(Inter-quartile range)을 나타내고, 상자 안에 있는 선은 중앙값(median)을 나타낸다. 상자 바깥에
 있는 두 선을 표시하는 방법에는 다양한 변형이 있는데, 가장 간단하게는 데이터의 최대값과 최소값을
-나타낼 수 있다. J. Tukey가 제안한 방법은 1.5 IQR 범위 내에서의 최대값과 최소값을 표시하는
-것이다. 이 경우, 해당 범위를 벗어난 데이터는 점이나 x 등으로 표현해준다:
+나타낼 수 있다. 이 경우 박스플롯은 [Five-number summary](http://en.wikipedia.org/wiki/Five-number_summary)를 모두 나타내게 된다.
+
+J. Tukey가 선호하는 방법은 아래와 같이 1.5 IQR 범위 내에서의 최대값과 최소값을 표시하는 것이다. 이 경우, 해당 범위를 벗어난 데이터는 점이나 x 등으로
+표현해준다:
 
 ![Tukey Boxplot](http://upload.wikimedia.org/wikipedia/commons/2/2b/Box-Plot_mit_Interquartilsabstand.png)
 
 (출처: [Wikipedia](http://en.wikipedia.org/wiki/File:Box-Plot_mit_Interquartilsabstand.png))
 
-여러 데이터 집합의 분포를 비교하기 위해 여러 박스플롯을 병렬로 그리기도 한다:
+여러 데이터 집합(J. Tukey는 이를 batch라 부른다)의 분포를 비교하기 위해 여러 박스플롯을 병렬로 그리기도 한다. 두 개 혹은 그 이상의 플롯를 근접하게
+병치함으로써 보는 이가 각 이미지 사이의 유사성, 차이점 등을 능동적으로 비교할 수 있도록 유도할 수 있다:
 
 ![Multiple plots](http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Michelsonmorley-boxplot.svg/432px-Michelsonmorley-boxplot.svg.png)
 
 (출처: [Wikipedia](http://en.wikipedia.org/wiki/Box_plot))
 
-박스플롯에 대한 자세한 설명은 [위키피디아](http://en.wikipedia.org/wiki/Box_plot)를
-참고하자.
+박스플롯에 대한 자세한 설명은 [위키피디아](http://en.wikipedia.org/wiki/Box_plot)를 참고하자.
 
 
 # 왜 박스플롯이 사명이 되었나
 
-어느 날 박장시와 강규영이 낮술을 마시며 박스 플롯 그리는 작업을 했었는데, 그 날 밤에 갑자기 회사
-이름 브레인스토밍을 하게 되었다. 박장시가 "박스앤위스커"를 제안하였고 만장일치로 확정되었다. 나중에
-회사가 커지면 좀 더 심오한 의미가 담겨 있다고 우겨볼 생각이다.
+어느 날 박장시와 강규영이 낮술을 마시며 박스 플롯 그리는 작업을 했었는데, 그 날 밤에 갑자기 회사 이름 브레인스토밍을 하게 되었다. 박장시가 "박스앤위스커"를
+제안하였고 만장일치로 확정되었다. 나중에 회사가 커지면 좀 더 심오한 의미가 담겨 있다고 우겨볼 생각이다.
 
 
 # 로고
@@ -49,5 +50,4 @@ date: 2014-09-03
 
     -[|]-
 
-키보드로 쉽게 입력할 수 있는 문자들로만 구성되어 있어서 이메일 서명, 코드 주석, 텍스트 문서 등
-어디에나 쉽게 넣을 수 있다는 장점이 있다.
+키보드로 쉽게 입력할 수 있는 문자들로만 구성되어 있어서 이메일 서명, 코드 주석, 텍스트 문서 등 어디에나 쉽게 넣을 수 있다는 장점이 있다.
