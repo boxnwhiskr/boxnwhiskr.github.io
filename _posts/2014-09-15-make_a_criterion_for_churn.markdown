@@ -2,7 +2,7 @@
 layout: post
 title: 이탈 기준 정하기
 author: 박장시
-brief: "이탈(churn)의 기준을 잘 정하는 방법"
+brief: "유저의 접속 세션 데이터를 이용하여 이탈(churn) 기준을 잘 정하는 방법"
 date: 2014-09-15
 ---
 
