@@ -40,11 +40,20 @@ document.addEventListener("DOMContentLoaded", function(e) {
 <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <h1><a href="{{ page.url }}"><span itemprop="name">{{ page.title }}</span></a></h1>
     <header>
-        <img class="profile" src="/img/people/{% if page.author == "강규영" %}alan{% elsif page.author == "박장시" %}jangsea{% else %}chanjoo{% endif %}.png" alt="{{ page.author }}">
         <time datetime="{{ page.date | date: "%Y-%m-%dT%h:%M:%sZ" }}" itemprop="datePublished">
         {{ page.date | date: "%b %-d, %Y" }}
         </time>
-        <div class="author" itemprop="author">{{ page.author }}</div>
+
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        {% for member in site.data.members %}
+            {% if member.name == page.author %}
+            <img class="profile" src="{{ member.image }}" alt="{{ member.name }}" itemprop="image">
+            <span class="title" itemprop="jobTitle">{{ member.title }}</span>
+            <br>
+            <span class="name" itemprop="author">{{ member.name }}</span>
+            {% endif %}
+        {% endfor %}
+        </div>
     </header>
 
     <article itemprop="articleBody">
