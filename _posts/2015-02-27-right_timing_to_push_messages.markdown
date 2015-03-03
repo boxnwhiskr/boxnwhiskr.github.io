@@ -210,7 +210,11 @@ Google Analytics는 기본적으로 30분 동안 유저의 활동이 기록되�
 일반적인 내용이므로 실제 서비스에 적용한다면 테스트가 필요하다.
 극단적으로는 '그냥 점심 시간에 일괄적으로 보내는 것과 차이가 없다'는 결론에 도달할 수도 있다.
 아주 작은 규모라도 테스트를 반드시 수행한다. 
-관련 내용은 [온라인 게임에서의 A/B 테스팅](http://boxnwhis.kr/2015/01/29/a_b_testing_online_games.html), [A-B Testing의 단점과 개선안](http://www.ecogwiki.com/A-B_Testing%EC%9D%98_%EB%8B%A8%EC%A0%90%EA%B3%BC_%EA%B0%9C%EC%84%A0%EC%95%88)을 참고한다.
+관련 내용은 다음을 참고한다.
+
+*   [A/B 테스팅이란](http://boxnwhis.kr/2015/01/29/a_b_testing.html)
+*   [온라인 게임에서의 A/B 테스팅](http://boxnwhis.kr/2015/01/29/a_b_testing_online_games.html)
+*   [A-B Testing의 단점과 개선안](http://www.ecogwiki.com/A-B_Testing%EC%9D%98_%EB%8B%A8%EC%A0%90%EA%B3%BC_%EA%B0%9C%EC%84%A0%EC%95%88)
 
 ## 타임 윈도우 확장
 위에서는 온라인 서비스를 가정하여 고객의 접속 시간을 매우 짧은 시간대로 표현하였다.
