@@ -146,8 +146,10 @@ document.addEventListener("DOMContentLoaded", function(e) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            var difficulty = form.difficulty.value || '';
-            var helpful = form.helpful.value || '';
+            var difficultyEl = document.querySelector('input[name="difficulty"]:checked');
+            var helpfulEl = document.querySelector('input[name="helpful"]:checked');
+            var difficulty = difficultyEl ? difficultyEl.value : '';
+            var helpful = helpfulEl ? helpfulEl.value : '';
             if(difficulty === '' || helpful === '') return false;
 
             var difficultyValue = 5 - Math.abs(3 - difficulty) * 2;
