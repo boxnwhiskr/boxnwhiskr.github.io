@@ -64,6 +64,107 @@ document.addEventListener("DOMContentLoaded", function(e) {
         <div class="fb-like" data-href="{{ page.url }}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
     </div>
 
+    <form class="poll">
+        <ul>
+            <li>
+                <p class="question difficulty">글의 난이도가 적절하였나요?</p>
+                <ol class="rating">
+                    <li>
+                        <label>
+                            <input type="radio" name="difficulty" value="1">
+                            <span>너무 쉽다</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="difficulty" value="2">
+                            <span>약간 쉽다</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="difficulty" value="3">
+                            <span>적절하다</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="difficulty" value="4">
+                            <span>약간 어렵다</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="difficulty" value="5">
+                            <span>너무 어렵다</span>
+                        </label>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p class="question helpful">실무 혹은 학업에 도움이 되었나요?</p>
+                <ol class="rating">
+                    <li>
+                        <label>
+                            <input type="radio" name="helpful" value="1">
+                            <span>전혀 도움이 안된다</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="helpful" value="2">
+                            <span>별로 도움이 안된다</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="helpful" value="3">
+                            <span>보통이다</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="helpful" value="4">
+                            <span>약간 도움이 된다</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="helpful" value="5">
+                            <span>매우 도움이 된다</span>
+                        </label>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+
+        <input type="submit" value="설문 참여">
+    </form>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var form = document.querySelector('form.poll');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var difficulty = form.difficulty.value || '';
+            var helpful = form.helpful.value || '';
+            if(difficulty === '' || helpful === '') return false;
+
+            var difficultyValue = 5 - Math.abs(3 - difficulty) * 2;
+            var helpfulValue = +helpful;
+
+            var submitButton = document.querySelector('form.poll input[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.value = '감사합니다';
+            submitButton.setAttribute('class', 'closed');
+
+            ga('send', 'event', 'poll', 'difficulty', difficulty, difficultyValue);
+            ga('send', 'event', 'poll', 'helpful', helpful, helpfulValue);
+            return false;
+        });
+    });
+    </script>
+
     <nav>
         <ol>
             {% if page.next.url %}

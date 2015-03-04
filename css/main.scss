@@ -259,6 +259,44 @@ body > .post {
     margin: 2em 0;
   }
 
+  .poll {
+    margin: 1em 0;
+    padding: 1em;
+    background-color: $code-bg-col;
+
+    & > ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 0 1em 0;
+    }
+
+    .rating {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .rating li {
+      cursor: pointer;
+    }
+
+    input[type="radio"] {
+      margin-right: 0.5em;
+    }
+
+    input[type="submit"] {
+      background-color: $point-col;
+      color: white;
+      border-width: 0;
+      padding: 5px 0.5em;
+      margin-bottom: 1em;
+
+      &.closed {
+        background-color: #999;
+      }
+    }
+  }
+
   nav > ol {
     margin: 2rem 0 0 0;
     padding-left: 0;
@@ -397,12 +435,9 @@ body > .connect {
   }
 
   body > nav {
-    padding-left: 5px;
-    padding-right: 5px;
-
     a {
-      padding-left: 3px;
-      padding-right: 3px;
+      padding-left: 4px;
+      padding-right: 4px;
     }
 
     li.search {
