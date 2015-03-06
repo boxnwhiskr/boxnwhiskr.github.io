@@ -108,7 +108,7 @@ $$P(L|S)=0.8$$
 
 $$P(L) = P(L|O)$$
 
-ref) John K. Kruschke, _Doing Bayesian Data Analysis: A Tutorial with R and BUGS_, Academic Press(2010) - See ch4.
+ref.: John K. Kruschke, _Doing Bayesian Data Analysis: A Tutorial with R and BUGS_, Academic Press(2010) - See ch4.
 
 # 조건부 확률을 이용해서 유저가 접속할 확률 계산하기
 
