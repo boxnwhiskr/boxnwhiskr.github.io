@@ -21,39 +21,40 @@ MathJax.Hub.Config({
 
 <!-- Read event -->
 <script>
-document.addEventListener("DOMContentLoaded", function(e) {
-    var accumScrollMove = 0;
-    // Set it 1 msecs to avoid div by zero error
-    var accumScrollTime = 1;
-    var latestScrollTop = 0;
-    var latestScrollAt = new Date();
+try {
+    document.addEventListener("DOMContentLoaded", function() {
+        var accumScrollMove = 0;
+        // Set it 1 msecs to avoid div by zero error
+        var accumScrollTime = 1;
+        var latestScrollTop = 0;
+        var latestScrollAt = new Date();
 
-    function checkScroll() {
-        // 1. Check scrollbar movement speed
-        var scrollTop = document.body.scrollTop;
-        var scrollAt = new Date();
-        var scrollTopDelta = Math.abs(latestScrollTop - scrollTop);
-        var scrollTimeDelta = Math.min(scrollAt - latestScrollAt, 5 * 60 * 1000); // limit max time-delta to 5 minutes
-        if(scrollTopDelta !== 0) {
-            latestScrollTop = scrollTop;
-            latestScrollAt = scrollAt;
+        function checkScroll() {
+            // 1. Check scrollbar movement speed
+            var scrollTop = document.body.scrollTop;
+            var scrollAt = new Date();
+            var scrollTopDelta = Math.abs(latestScrollTop - scrollTop);
+            var scrollTimeDelta = Math.min(scrollAt - latestScrollAt, 5 * 60 * 1000); // limit max time-delta to 5 minutes
+            if(scrollTopDelta !== 0) {
+                latestScrollTop = scrollTop;
+                latestScrollAt = scrollAt;
+                accumScrollMove += scrollTopDelta;
+                accumScrollTime += scrollTimeDelta;
+            }
 
-            accumScrollMove += scrollTopDelta;
-            accumScrollTime += scrollTimeDelta;
+            // 2. Check event firing condition
+            if(accumScrollTime > 30 * 1000 && scrollTop / document.body.scrollHeight > 0.8) {
+                var pixelPerSec = Math.floor(accumScrollMove / accumScrollTime * 1000);
+                var label = pixelPerSec > 100 ? 'skimmer' : 'reader';
+                ga('send', 'event', 'read', 'pps', label, pixelPerSec);
+            } else {
+                window.setTimeout(checkScroll, 500);
+            }
         }
 
-        // 2. Check content end
-        if(accumScrollTime > 30 * 1000 && scrollTop / document.body.scrollHeight > 0.8) {
-            var pixelPerSec = Math.floor(accumScrollMove / accumScrollTime * 1000);
-            var category = pixelPerSec > 100 ? 'skimmer' : 'reader';
-            ga('send', 'event', 'read', 'pps', category, pixelPerSec);
-        } else {
-            window.setTimeout(checkScroll, 500);
-        }
-    }
-
-    checkScroll();
-});
+        checkScroll();
+    });
+} catch(e) {}
 </script>
 
 <!-- IPython Notebook -->
