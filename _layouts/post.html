@@ -74,6 +74,20 @@ document.addEventListener("DOMContentLoaded", function(e) {
 });
 </script>
 
+<!-- Align image to center -->
+<script>
+document.addEventListener("DOMContentLoaded", function(e) {
+    var imgs = document.querySelectorAll('article img');
+    for(var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        var parent = img.parentNode;
+        if(parent.firstChild === parent.lastChild) {
+            parent.setAttribute('class', 'center');
+        }
+    }
+});
+</script>
+
 <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <h1><a href="{{ page.url }}"><span itemprop="name">{{ page.title }}</span></a></h1>
     <header>
