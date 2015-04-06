@@ -41,7 +41,7 @@ date: 2015-04-06
 플레이어 숙련도 구분
 [Box  plot](http://en.wikipedia.org/wiki/Box_plot)으로 플레이어 숙련도를 네 단계로 구분한다. 컨텐츠의 소비 속도가 빠르면 숙련도가 높은 유저로 정의한다.  그래프에 따른 숙련도는 아래와 같다.
 
-![Box plot](/img/posts/2015-03-18-analyzing_blog_using_ga/boxnwhiskr.png)   
+![Box plot](/img/posts/2015-04-06-when_will_this_game_die/boxnwhiskr.png)   
 *시간이 빠를 수록 숙련도가 높은 플레이어이다.*
 
 이러한 속도는 개발팀이 의도한 것인가?
@@ -68,12 +68,12 @@ date: 2015-04-06
 ##활용법 
 
 스테이지형 게임의 각 스테이지 클리어 속도를 나타낸 그래프를 살펴보자. x 축은 레벨, y축은 시간이다.
-![Box plot 분포 그래프](/img/posts/2015-03-18-analyzing_blog_using_ga/whisker_2.png)
+![Box plot 분포 그래프](/img/posts/2015-04-06-when_will_this_game_die/whisker_2.png)
 
 **\#1**    
 유저의 시간을 찍으면 유저의 숙련도를 유추할 수 있다.
 레벨 컨텐츠의 하드 코어 유저의 플레이와 라이트 유저의 플레이
-![Box plot](/img/posts/2015-03-18-analyzing_blog_using_ga/whisker_3.png)
+![Box plot](/img/posts/2015-04-06-when_will_this_game_die/whisker_3.png)
 
 **\#2**   
 간단한 그래프로 게임의 현황을 파악하여 다양한 곳에 쓸 수 있다. 
