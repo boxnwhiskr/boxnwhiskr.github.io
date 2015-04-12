@@ -5,8 +5,6 @@ author: 강규영
 brief: "구글 애널리틱스를 활용하여 게임 로그를 분석하는 예시를 개괄적으로 보여준다"
 date: 2014-09-15
 ---
-(이 글은 [Box and Whisker 홈페이지](http://www.boxnwhis.kr/)와 [강규영 개인 블로그](http://www.ecogwiki.com/sp.posts)에 중복으로 게재되었습니다)
-
 [Google Analytics](http://www.google.com/analytics/)라는 것이 있다(이하 GA). 원래는 웹 로그 분석 도구인데 아이폰/안드로이드 앱 로그를 분석할 수 있는 SDK도 추가되고, 최근에는 좀 더 범용으로 쓸 수 있는 저수준 API인 [Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/v1/)이라는 것이 추가되면서 오프라인 이벤트(POS 데이터, 키오스크 사용 데이터)를 포함하여 온갖 도메인의 데이터를 수집 및 분석할 수 있게 확장되었다.
 
 이 글에서는 GA를 활용하여 게임 로그를 분석하는 예시를 개괄적으로 보여준다. 이후에 이어지는 글들에서는 구체적인 방법을 설명하고자 한다.
