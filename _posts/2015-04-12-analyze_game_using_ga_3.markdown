@@ -23,6 +23,8 @@ date: 2015-04-12
 
 [http://snake.g15e.com](http://snake.g15e.com)
 
+급히 만들어서 지저분하지만 소스코드는 [깃헙](https://github.com/akngs/snake)에 공개되어 있다.
+
 추억의(?) 뱀 게임([Snake Byte](http://en.wikipedia.org/wiki/Snake_Byte))을 기반으로 삼고,
 사과를 놓고 경쟁하는 AI 뱀을 추가하였다. 다음은 스크린샷:
 
