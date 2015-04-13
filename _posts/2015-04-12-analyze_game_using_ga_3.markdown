@@ -56,9 +56,14 @@ date: 2015-04-12
 
 ![player-eat-apple](/img/posts/2015-04-12-analyze_game_using_ga_3/player-eat-apple.png)
 
-두 세그먼트가 거의 동일한 비율로 사과를 먹고 있음을 확인할 수 있다.
+두 세그먼트가 거의 동일한 비율로 사과를 먹고 있음을 확인할 수 있다. 이 데이터는 사과를 먹을 때 아래와 같이
+사용자 정의 이벤트를 보내도록 코딩을 했기 때문에 집계된 데이터이다:
 
-다행히도 모바일 기기로 플레이하는 경우와 데스크탑에서 플레이하는 경우 사이에 큰 차이는 없음을 알 수 있다.
+    // this._name 은 뱀의 이름. "player", "pink" 등
+    ga('send', 'event', 'in-game', this._name + '-eat-apple');
+
+평균 플레이 길이도 비슷하고, 플레이 중 먹는 사과의 양도 비슷한 것으로 보아 모바일 기기로 플레이하는 경우와
+데스크탑에서 플레이하는 경우 사이에 큰 차이는 없음을 알 수 있다.
 
 
 # 일반 모드와 어려운 모드
@@ -72,6 +77,11 @@ date: 2015-04-12
 이 조건의 반대로 지정하면 되므로 생략:
 
 ![normal-vs-hard](/img/posts/2015-04-12-analyze_game_using_ga_3/normal-vs-hard.png)
+
+위에서 지정한 "mode" 차원은 사용자 정의 차원(custom dimension)이다. GA의 관리자 화면에서 사용자
+정의 차원을 추가한 뒤 아래와 같은 코드로 데이터를 보내주면 집계가 된다:
+
+    ga('set', 'dimension1', 'normal');
 
 이제 모드에 따라 평균 플레이 시간을 살펴보자. 역시 Behavior -> Site Content -> All Pages에서
 확인할 수 있다. 다음은 처음 이틀 간의 데이터:
