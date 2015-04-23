@@ -219,9 +219,9 @@ Cox PH model은 설명 변수가 시간과 독립적인 관계를 갖는다고 �
 시간 축을 다양하게 설정이 가능한데, 이러한 경우 left-truncated data에 대한 고민이 필요하다.
 다른 시간 축을 사용하면서 생기는 문제에 대해서는 다른 글에서 다루기로 한다.
 
-# 이전 글
+# 관련 글
 
-[유저 생존 곡선 그리기](http://boxnwhis.kr/2015/03/15/drawing_survival_curves_of_users.html)
+이전 글: [유저 생존 곡선 그리기](http://boxnwhis.kr/2015/03/15/drawing_survival_curves_of_users.html)
 
 # 참고
 

@@ -224,9 +224,9 @@ churn=0인 유저는 실제 이탈을 관찰하지 못한 유저다. 즉, censor
 반대로, 유저의 수명을 증가시킬 수단이 없다면 시간당 가치 증대에 자원을 투입하는 것이 현명할 것이다.
 이와 같은 의사결정을 위해서 돈과 시간에 대한 측정이 함께 필요하다.
 
-# 다음 글
+# 관련 글
 
-[설명 변수를 이용하여 유저 생존 곡선 그리기](http://boxnwhis.kr/2015/04/24/drawing_survival_curves_with_predictors.html)
+다음 글: [설명 변수를 이용하여 유저 생존 곡선 그리기](http://boxnwhis.kr/2015/04/24/drawing_survival_curves_with_predictors.html)
 
 # 참고
 
