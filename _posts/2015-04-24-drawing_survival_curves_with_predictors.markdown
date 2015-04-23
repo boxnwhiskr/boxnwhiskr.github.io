@@ -195,6 +195,9 @@ promo=1, dt=100, purchase=3 이라는 조건과는 다른 유저의 생존 곡�
     
 ![adjuted.survival.curve2](/img/posts/2015-04-24-drawing_survival_curves_with_predictors/adjusted_survival_curve2.png)
 
+광고를 통해 유입되었고, 구매 빈도가 3인 고객의 경우 DT에 따라서 생존 시간이 위와 같은 차이를 보인다.
+즉, 초반 서비스 사용 시간이 길수록 고객이 더 오래 생존할 가능성이 높다.
+
 # 결과
 
 여러 개의 설명 변수로 유저의 생존 곡선을 추정할 수 있다.
