@@ -90,7 +90,7 @@ linked in [us.battle.net](http://us.battle.net/d3/en/forum/topic/7199913320)>_
 이렇게 $n$번 베르누이 시행을 반복하는 시행을 이항 시행(binomial trial)이라고 한다.
 이항은 항이 2개라는 의미다.
 즉, 시행의 결과가 2개인 특성을 말한다.
-영어로는 nomial이 2개라서  bi + nomial 이라고 쓴다.
+영어로는 'nomial'이 2개라서 'bi + nomial'이라고 쓴다.
 
 # 아이템 강화 성공 확률 - 이항 분포
 
@@ -115,6 +115,7 @@ $$P(X=k) = \frac{n!}{k!(n-k)!}p^{k}(1-p)^{n-k}$$
 플레이어의 경험을 고려한다면 후자의 설명이 더 와닿는다.
 
 확률 값은 [R](http://www.r-project.org/)에서 아래와 같이 간단하게 계산한다.
+구체적은 코드는 [여기](https://github.com/Jangsea/binom_item/blob/master/examples_binom.R)에서도 볼 수 있다. 
 성공 확률(prob)이 0.1인 경우, 10번(size) 시도했을 때, 0번부터 10번 성공(x)할 확률 11개 값을 계산한 값이다.
 총합 1인 확률을 각 사건에 나눠주었기 때문에 11개 확률 값의 합계는 당연히 1이 된다.
 
