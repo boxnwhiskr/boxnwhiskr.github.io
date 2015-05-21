@@ -349,7 +349,7 @@ $$P(X=r) = \frac{(k + r - 1)!}{k!(r-1)!}(1-p)^{r}p^{k}$$
 분석 방법은 위의 예시를 그대로 사용 가능하다.
 '강화 성공'과 '원하는 아이템이 나타난 사건'을 동일시하면 같은 방법을 적용할 수 있다.
 
-만약 다수의 결과를 이항으로 만드는 것에 회의적이라면, [다항 분포(multinomial)](http://en.wikipedia.org/wiki/Multinomial_distribution)를 활용한다.
+만약 다수의 결과를 이항으로 만드는 것에 회의적이라면, [다항 분포(multinomial distribution)](http://en.wikipedia.org/wiki/Multinomial_distribution)를 활용한다.
 다항 분포는 시행 결과가 2개를 초과하는 경우 사용한다.
 결과가 여러 개라 'multi + nomial'이라고 부른다.
 다항 분포를 활용해 확률형 아이템을 설명하는 내용은 다음 글에서 다룬다.
