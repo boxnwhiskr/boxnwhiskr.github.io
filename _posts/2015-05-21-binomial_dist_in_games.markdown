@@ -44,9 +44,12 @@ linked in [us.battle.net](http://us.battle.net/d3/en/forum/topic/7199913320)>_
 이렇게 시행에 따라서 나타날 수 있는 모든 결과의 집합을 [표본 공간(sample space)](http://en.wikipedia.org/wiki/Sample_space)이라고 부른다.
 일단 어떤 시행을 하면 모든 가능한 결과를 나열할 수 있고, 그 결과 중에 하나가 실현된다.
 
-이렇게 표본 공간 상에 있는 결과 중에 실제로 실현된 결과를 [사건(event)](http://en.wikipedia.org/wiki/Event_(probability_theory))이라고 부른다.
+이렇게 표본 공간 상에 있는 결과 중, 그 일부를 [사건(event)](http://en.wikipedia.org/wiki/Event_(probability_theory))이라고 부른다.
+사건은 표본 공간의 부분 집합이 된다.
+보통 관심이 있는 결과를 모아서 특정 사건이라 부른다.
+실현 여부에 따라 사건의 범위를 축소하여 언급할 수도 있다.
 동전을 던지고 그 결과를 확인하기 전까지는 사건이 아직 발생하지 않았다.
-동전을 쥔 주먹을 펴서 그 결과를 관찰하고 나면 시행의 결과, 사건을 알 수 있다.
+동전을 쥔 주먹을 펴서 그 결과를 관찰하고 나면 시행의 결과, 실현된 사건을 알 수 있다.
 동전 던지기의 표본 공간에 있는 원소는 '앞면(H)' 혹은 '뒷면(T)'이었기 때문에 사건은 둘 중에 하나가 나타난다.
 
 [확률(probability)](http://en.wikipedia.org/wiki/Probability)이란 이러한 사건들이 일어날 수 있는 가능성(likelihood)을 0에서 1 사이의 숫자로 나타낸 척도다.
