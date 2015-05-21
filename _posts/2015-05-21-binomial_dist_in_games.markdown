@@ -177,7 +177,7 @@ $$P(X=r) = \frac{(k + r - 1)!}{k!(r-1)!}(1-p)^{r}p^{k}$$
     +      xaxt='n')
     > axis(1, at = seq(10, 200, by = 10), las=2)    
 
-확륲 분포를 그래프로 나타내면 아래와 같다.
+확률 분포를 그래프로 나타내면 아래와 같다.
 대략적으로 봐도 10번 강화에 성공하려면 100번 정도는 강화 시도를 해야 현실적인 확률 값에 도달할 수 있다.
 
 ![nbinom_dist0](/img/posts/2015-05-21-binomial_dist_in_games/nbinom_dist0.jpg)
