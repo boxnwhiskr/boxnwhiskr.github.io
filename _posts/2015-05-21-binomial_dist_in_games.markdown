@@ -2,7 +2,7 @@
 layout: post
 title: 온라인 게임에서의 이항 분포 
 author: 박장시
-brief: nothing
+brief: 온라인 게임의 아이템 강화, 확률형 아이템 등을 이항 분포로 설명한다.
 date: 2015-05-21
 ---
 
