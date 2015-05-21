@@ -115,7 +115,7 @@ $$P(X=k) = \frac{n!}{k!(n-k)!}p^{k}(1-p)^{n-k}$$
 플레이어의 경험을 고려한다면 후자의 설명이 더 와닿는다.
 
 확률 값은 [R](http://www.r-project.org/)에서 아래와 같이 간단하게 계산한다.
-구체적은 코드는 [여기](https://github.com/Jangsea/binom_item/blob/master/examples_binom.R)에서도 볼 수 있다. 
+구체적은 코드는 [여기](https://github.com/Jangsea/binom_item/blob/master/examples_binom.R)에서 볼 수 있다. 
 성공 확률(prob)이 0.1인 경우, 10번(size) 시도했을 때, 0번부터 10번 성공(x)할 확률 11개 값을 계산한 값이다.
 총합 1인 확률을 각 사건에 나눠주었기 때문에 11개 확률 값의 합계는 당연히 1이 된다.
 
@@ -152,7 +152,7 @@ $$P(X=k) = \frac{n!}{k!(n-k)!}p^{k}(1-p)^{n-k}$$
 총 시도 수는 '성공 횟수 + 실패 횟수'이므로 +10강 무기를 위해서 몇 번이나 실패를 해야하는지 구하면 총 시도 수는 실패 수 + 10으로 계산 가능하다.
 
 목표 성공 횟수 $k$와 성공 확률 $p$가 정해진 상황에서 실패 횟수가 $r$이 될 확률은 아래와 같은 수식으로 계산할 수 있다.
-이는 음이항 확률 분포 함수(negative binomial distribution function)다.
+이는 [음이항 확률 분포 함수(negative binomial distribution function)](http://en.wikipedia.org/wiki/Negative_binomial_distribution#Definition)다.
 
 $$P(X=r) = \frac{(k + r - 1)!}{k!(r-1)!}(1-p)^{r}p^{k}$$
 
