@@ -59,6 +59,8 @@ linked in [us.battle.net](http://us.battle.net/d3/en/forum/topic/7199913320)>_
 게임도 다르지 않다.
 어떤 시행인지 결정하면 표본 공간이 결정되고, 각 사건들에게 부여한 실현 가능성의 정도에 따라 반복된 시행에서 여러 결과가 나타난다.
 
+![sample_space](/img/posts/2015-05-21-binomial_dist_in_games/sample_space.png)
+
 # 아이템 강화 - 베르누이 시행
 
 시행(trial)에는 매우 전형적인 형태가 있어서 어떤 시행은 특별한 이름을 가지고 있다.
