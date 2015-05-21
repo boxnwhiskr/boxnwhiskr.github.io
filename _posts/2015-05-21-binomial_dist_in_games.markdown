@@ -54,7 +54,7 @@ linked in [us.battle.net](http://us.battle.net/d3/en/forum/topic/7199913320)>_
 
 [확률(probability)](http://en.wikipedia.org/wiki/Probability)이란 이러한 사건들이 일어날 수 있는 가능성(likelihood)을 0에서 1 사이의 숫자로 나타낸 척도다.
 표본 공간 안에 있는 사건들은 총합이 1인 확률을 일어날 수 있는 가능성에 비례하여 나눠 갖는다.
-확률 분포(distribution)에서 'ditribute'은 총합이 1인 확률을 나눠준다는 의미다.
+확률 분포(distribution)에서 'distribute'은 총합이 1인 확률을 나눠준다는 의미다.
 동전 던지기의 표본 공간에는 '앞면(H)' 혹은 '뒷면(T)'이라는 원소가 있으므로 1이라는 숫자를 두 원소에게 나눠준다.
 공정한 동전(fair coin)이라면 앞면과 뒷면이 나올 가능성은 같으므로 각각 0.5라는 확률을 나눠 갖는다.
 
