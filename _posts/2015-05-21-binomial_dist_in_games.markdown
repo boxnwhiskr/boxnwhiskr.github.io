@@ -182,7 +182,7 @@ $$P(X=r) = \frac{(k + r - 1)!}{k!(r-1)!}(1-p)^{r}p^{k}$$
 
 ![nbinom_dist0](/img/posts/2015-05-21-binomial_dist_in_games/nbinom_dist0.jpg)
 
-100번 시도 안에 10번 강화에 성공할 확률(= $P(X \lg 90)$)은 약 55%다.
+100번 시도 안에 10번 강화에 성공할 확률(= $P(X \le 90)$)은 약 55%다.
 
     > pnbinom(90, 10, .1)
     [1] 0.5487098
