@@ -223,12 +223,12 @@ document.addEventListener("DOMContentLoaded", function(e) {
         <ol>
             {% if page.next.url %}
             <li>
-                <h2>다음글: <a class="newer" href="{{page.next.url}}">{{page.next.title}}</a></h2>
+                <h2>다음 글: <a class="newer" href="{{page.next.url}}">{{page.next.title}}</a></h2>
             </li>
             {% endif %}
             {% if page.previous.url %}
             <li>
-                <h2>이전글: <a class="older" href="{{page.previous.url}}">{{page.previous.title}}</a></h2>
+                <h2>이전 글: <a class="older" href="{{page.previous.url}}">{{page.previous.title}}</a></h2>
             </li>
             {% endif %}
         </ol>
