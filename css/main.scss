@@ -257,6 +257,20 @@ body > .post {
     object {
       max-width: 100%;
     }
+
+    table {
+      margin: 1.5em auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 0.25em 0.5em;
+      border: 1px solid #DDD;
+    }
+    th {
+      color: black;
+      background-color: #EEE;
+      font-weight: normal;
+    }
   }
 
   .social-buttons {
