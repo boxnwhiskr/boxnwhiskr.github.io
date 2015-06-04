@@ -366,7 +366,7 @@ $$P(X=r) = \frac{(k + r - 1)!}{k!(r-1)!}(1-p)^{r}p^{k}$$
 만약 다수의 결과를 이항으로 만드는 것에 회의적이라면, [다항 분포(multinomial distribution)](http://en.wikipedia.org/wiki/Multinomial_distribution)를 활용한다.
 다항 분포는 시행 결과가 2개를 초과하는 경우 사용한다.
 결과가 여러 개라 '다항'이라고 부르고, 'multi + nomial'이라 쓴다.
-다항 분포를 활용해 확률형 아이템을 설명하는 내용은 다음 글에서 다룬다.
+다항 분포를 활용해 확률형 아이템을 설명하는 내용은 ['확률형 아이템을 위한 다항분포'](http://boxnwhis.kr/2015/06/04/multinomial_dist_for_gachas.html)에서 다룬다.
 
 # 좋은 확률 설계
 
