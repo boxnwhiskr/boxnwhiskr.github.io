@@ -116,6 +116,8 @@ if(location.hostname !== 'boxnwhis.kr' && location.hostname !== 'www.boxnwhis.kr
         var expId = '3605ebfebcc1b071770ba169aeaba0fe';
         var currentPageIsPost = document.location.href.split('/')[3] > 2000;
         var referredFromPost = +document.referrer.split('/')[3] > 2000;
+        var currentPageIsNotHome = ['', 'index.html'].indexOf(document.location.href.split('/')[3]) !== -1;
+
         GreedyBandit.host = 'greedy-bandit.boxnwhis.kr';
 
         if(currentPageIsPost) {
@@ -131,7 +133,7 @@ if(location.hostname !== 'boxnwhis.kr' && location.hostname !== 'www.boxnwhis.kr
                     }
                 }
             );
-        } else if(referredFromPost) {
+        } else if(referredFromPost && currentPageIsNotHome) {
             GreedyBandit.convert(expId);
         } else {
             // Do nothing
