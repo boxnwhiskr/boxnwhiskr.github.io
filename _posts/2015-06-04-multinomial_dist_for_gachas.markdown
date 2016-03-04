@@ -6,7 +6,7 @@ brief: 온라인 게임의 확률형 아이템을 이항 분포와 다항 분포
 date: 2015-06-04
 ---
 
-이전 글: [온라인 게임에서의 이항 분포](http://boxnwhis.kr/2015/05/21/binomial_dist_in_games.html) 
+이전 글: [온라인 게임에서의 이항 분포](/2015/05/21/binomial_dist_in_games.html) 
 
 온라인 게임의 확률형 아이템을 이항 분포와 다항 분포로 설명한다.
 
@@ -29,7 +29,7 @@ date: 2015-06-04
 # 확률형 아이템 단순화 하기 - 이항 분포
 
 확률형 아이템도 그 결과가 불확실하므로 일종의 [시행(trial)](http://en.wikipedia.org/wiki/Experiment_(probability_theory))이다.
-'확률'과 '시행'에 대해서는 이전 글인 ['온라인 게임에서의 이항 분포'](http://boxnwhis.kr/2015/05/21/binomial_dist_in_games.html)를 참고한다.
+'확률'과 '시행'에 대해서는 이전 글인 ['온라인 게임에서의 이항 분포'](/2015/05/21/binomial_dist_in_games.html)를 참고한다.
 확률형 아이템은 그 결과가 2개가 아니므로 [이항 분포(binomial distribution)](http://en.wikipedia.org/wiki/Binomial_distribution)로 설명할 수 없다.
 그러나, 확률형 아이템에서 원하는 아이템이 단 한 가지라면 결과를 '성공'과 '실패'로 단순화시킬 수 있다.
 원하는 아이템이 나오면 '성공'으로, 다른 아이템이 나오면 '실패'로 간주한다.
@@ -87,7 +87,7 @@ date: 2015-06-04
 
 # 몇 개의 확률형 아이템을 구매해야 하나? - 음이항 분포
 
-['온라인 게임에서의 이항 분포'](http://boxnwhis.kr/2015/05/21/binomial_dist_in_games.html)에서 살펴본 강화 성공 확률과 마찬가지로, 몇 번의 시행을 해야만 원하는 성공 횟수를 달성할 수 있는지가 궁금하다.
+['온라인 게임에서의 이항 분포'](/2015/05/21/binomial_dist_in_games.html)에서 살펴본 강화 성공 확률과 마찬가지로, 몇 번의 시행을 해야만 원하는 성공 횟수를 달성할 수 있는지가 궁금하다.
 위에서 살펴 본 확률형 아이템을 몇 개 구매하면 아이템 A를 상당히 높은 확률로 구할 수 있을까?
 이에 대한 확률을 구하려면 [음이항 분포(negative binomial distribution)](http://en.wikipedia.org/wiki/Negative_binomial_distribution)를 활용한다.
 이는 목표한 성공 횟수에 도달하기 위해서 얼마나 많은 실패가 필요한지 실패 횟수 $r$에 대한 확률을 계산한다.

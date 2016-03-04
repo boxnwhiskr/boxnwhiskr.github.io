@@ -93,5 +93,48 @@ if(location.hostname !== 'boxnwhis.kr' && location.hostname !== 'www.boxnwhis.kr
     </p>
 </footer>
 
+<!-- Greedy Bandit -->
+<style>
+    body.fixed > nav {
+        position: fixed;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 1px 2px #BBB;
+    }
+    body.fixed > header {
+        margin-top: 3.5rem;
+    }
+</style>
+
+<script src="http://greedy-bandit.boxnwhis.kr/assets/greedy-bandit-325afb050f19157d641c414d636820dfdf8ae13a1954d7436220e1361d59080d.js" ></script>
+<script type="text/javascript">
+    (function() {
+        var expId = '3605ebfebcc1b071770ba169aeaba0fe';
+        var currentPageIsPost = document.location.href.split('/')[3] > 2000;
+        var referredFromPost = +document.referrer.split('/')[3] > 2000;
+        GreedyBandit.host = 'greedy-bandit.boxnwhis.kr';
+
+        if(currentPageIsPost) {
+            GreedyBandit.choose(
+                {'3605ebfebcc1b071770ba169aeaba0fe': 'true'},
+                {
+                    newTrial: true,
+                    success: function (result) {
+                        var fixed = result.valueFor(expId) === 'true';
+                        if (fixed) {
+                            document.body.setAttribute('class', 'fixed');
+                        }
+                    }
+                }
+            );
+        } else if(referredFromPost) {
+            GreedyBandit.convert(expId);
+        } else {
+            // Do nothing
+        }
+    })();
+</script>
+<!-- End Greedy Bandit -->
+
 </body>
 </html>

@@ -7,7 +7,7 @@ date: 2014-11-08
 ---
 이 글에서는 게임 내에서 발생하는 각종 사건을 어떻게 Google Analytics(이하 GA)에 매핑할 것인지를 설명한다.
 
-개요는 [Google Analytics로 게임 분석하기](http://boxnwhis.kr/2014/09/15/analyze_game_using_ga_1.html)를 참고하기 바란다.
+개요는 [Google Analytics로 게임 분석하기](/2014/09/15/analyze_game_using_ga_1.html)를 참고하기 바란다.
 
 
 # 게임의 주요 요소에 URL 부여하기

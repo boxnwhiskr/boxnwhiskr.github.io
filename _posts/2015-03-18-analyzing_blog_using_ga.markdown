@@ -85,7 +85,7 @@ date: 2015-03-18
 ![All Pages - Filtered](/img/posts/2015-03-18-analyzing_blog_using_ga/all_pages_filtered.png)
 
 이제 어떤 글들이 많이 노출되었는지 알게 됐다. 3월 18일 기준으로 가장 많이 노출된 글은
-[푸시 메시지 타이밍 찾기](/2015/02/27/right_timing_to_push_messages.markdown)이다. 많이 노출된 여러 글들을 살펴보면
+[푸시 메시지 타이밍 찾기](/2015/02/27/right_timing_to_push_messages.html)이다. 많이 노출된 여러 글들을 살펴보면
 사람들은 주로 **리텐션 관리**에 관심을 갖는 것 같다.
 
 하지만 페이지뷰라는 숫자는 그저 "어떤 제목이 가장 많은 클릭을 유발하는가"를 알려줄 뿐이다. 이제 조금 더 "가치"와 관련된 숫자들을 살펴보자.
@@ -159,8 +159,8 @@ GA에서 만들기는 쉽지 않은데, Google Sheets의 GA 플러그인 사용�
 ![Read vs. Skim](/img/posts/2015-03-18-analyzing_blog_using_ga/read_vs_skim.png)
 
 조금 실망스럽지만 글을 꼼꼼하게 읽는 사람은 대단히 적고, 대부분은 훑어 읽거나 그보다도 더 빠르게 다른 페이지로 이동한다는 사실을 알 수
-있다. 위 기준으로 보았을 때 꼼꼼하게 읽은 사람의 비율이 가장 높은 글은 [스테이지 난이도 마법사 With Google Analytics](/2014/09/22/Level_design_wizard_with_GA.markdown)임을
-알 수 있다. 페이지뷰 기준으로만 봤을 때는 눈에 띄지 않았던 글이다. 페이지뷰 기준으로 1등이었던 [푸시 메시지 타이밍 찾기](/2015/02/27/right_timing_to_push_messages.markdown)도
+있다. 위 기준으로 보았을 때 꼼꼼하게 읽은 사람의 비율이 가장 높은 글은 [스테이지 난이도 마법사 With Google Analytics](/2014/09/22/Level_design_wizard_with_GA.html)임을
+알 수 있다. 페이지뷰 기준으로만 봤을 때는 눈에 띄지 않았던 글이다. 페이지뷰 기준으로 1등이었던 [푸시 메시지 타이밍 찾기](/2015/02/27/right_timing_to_push_messages.html)도
 상위권에 있음을 알 수 있다.
 
 참고로 위 시트에서 우측의 그래프처럼 보이는 것은 구글 시트의 기능은 아니고 문자열 반복 함수인 ``REPT``를 써서 ``|`` 문자와 ``:``

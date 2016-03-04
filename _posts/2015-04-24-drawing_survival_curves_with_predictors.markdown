@@ -10,7 +10,7 @@ Cox PH model을 활용하여, 설명 변수를 이용한 유저 생존 곡선을
 
 # 문제 제기
 
-이전 글, [유저 생존 곡선 그리기](http://boxnwhis.kr/2015/03/15/drawing_survival_curves_of_users.html)에서는 아주 간략하게 유저의 생존 곡선을 그리고, 수명을 측정하였다.
+이전 글, [유저 생존 곡선 그리기](/2015/03/15/drawing_survival_curves_of_users.html)에서는 아주 간략하게 유저의 생존 곡선을 그리고, 수명을 측정하였다.
 유저의 수명을 측정하게 되면, 어떤 유저는 오래 살고 어떤 유저는 그렇지 않은지 의문이 생긴다.
 예를 들어, 다음과 같은 질문이 떠오른다.
 
@@ -44,7 +44,7 @@ Cox PH model을 활용하여, 설명 변수를 이용한 유저 생존 곡선을
     C      6    0        1     12    0
     ...
 
-[유저 생존 곡선 그리기](http://boxnwhis.kr/2015/03/15/drawing_survival_curves_of_users.html)의 예제 데이터와 다른 점은 x1, x2, x3라는 설명 변수가 추가되었다는 점이다.
+[유저 생존 곡선 그리기](/2015/03/15/drawing_survival_curves_of_users.html)의 예제 데이터와 다른 점은 x1, x2, x3라는 설명 변수가 추가되었다는 점이다.
 기존 글에서는 그룹 사이의 생존 곡선을 따로 그려서 비교하는 방법에 그쳤다.
 이 글에서는 세 개의 설명 변수를 이용해 통계 모형을 만들어 유저의 수명을 설명한다.
 
@@ -68,7 +68,7 @@ $$h(t) = \lim_{\Delta t \to 0} \frac{P(t \le T \lt t + \Delta t \,\lvert\, T \ge
 
 $P(t \le T \lt t + \Delta t \,\lvert\, T \ge t)$은 t시점까지 살아 남은 유저($T \ge t$)가 다음 $\Delta t$ 시간 안에 죽을($t \le T \lt t + \Delta t$) 확률을 의미한다.
 '$t$시점까지 살아남은 유저'라는 조건 하에서 확률을 계산하므로 조건부 확률이다.
-조건부 확률에 대해서는 [유저가 접속할 확률 계산하기](http://boxnwhis.kr/2015/03/06/calcuate_prob_of_access.html)의 설명을 참고한다.
+조건부 확률에 대해서는 [유저가 접속할 확률 계산하기](/2015/03/06/calcuate_prob_of_access.html)의 설명을 참고한다.
 이 확률 값을 시간 $\Delta t$로 나누면 '단위 시간 당 죽을 가능성'이 된다.
 $\Delta t$가 1보다 작은 경우도 있으므로, 이 숫자는 더 이상 확률이 아니라 비율이 된다. 즉, 1보다 큰 수를 가질 수 있다.
 
@@ -224,7 +224,7 @@ Cox PH model은 설명 변수가 시간과 독립적인 관계를 갖는다고 �
 
 # 관련 글
 
-이전 글: [유저 생존 곡선 그리기](http://boxnwhis.kr/2015/03/15/drawing_survival_curves_of_users.html)
+이전 글: [유저 생존 곡선 그리기](/2015/03/15/drawing_survival_curves_of_users.html)
 
 # 참고
 

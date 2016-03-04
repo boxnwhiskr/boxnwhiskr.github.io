@@ -10,7 +10,7 @@ date: 2015-03-15
 
 # 문제 제기
 
-[이탈 예측하기](http://boxnwhis.kr/2015/02/09/predict_churns.html)에서는 [유저의 이탈(churn)](http://en.wikipedia.org/wiki/Customer_attrition)을 결과로만 다루었다.
+[이탈 예측하기](/2015/02/09/predict_churns.html)에서는 [유저의 이탈(churn)](http://en.wikipedia.org/wiki/Customer_attrition)을 결과로만 다루었다.
 즉, 이탈한 유저는 **1**로 표기하고, 이탈하지 않은 유저는 **0**으로 표기하여 결과가 2가지로만 나타나는 실험을 가정하였다.
 이탈은 두 가지 결과로 요약할 수 있지만, 서비스 이용 시작부터 이탈까지의 과정은 유저마다 다르다.
 특히, 유저가 얼마나 서비스를 이용하고 이탈하였는지, 그 시간을 측정하는 과정은 매우 중요하다.
@@ -48,7 +48,7 @@ $$LTV = LT \times V$$
 
 유저의 생존 시간을 그림으로 나타내면 아래와 같다.
 20주 전부터 관찰을 시작해 현재까지 유저의 생존 시간을 측정한다.
-이탈의 기준을 어떻게 정할지는 [이탈 기준 정하기](http://boxnwhis.kr/2014/09/15/make_a_criterion_for_churn.html)를 참고한다.
+이탈의 기준을 어떻게 정할지는 [이탈 기준 정하기](/2014/09/15/make_a_criterion_for_churn.html)를 참고한다.
 
 ![survival_curve01_exdata.png](/img/posts/2015-03-15-drawing_survival_curves_of_users/survival_curve_01_exdata.png)
 
@@ -192,7 +192,7 @@ churn=0인 유저는 실제 이탈을 관찰하지 못한 유저다. 즉, censor
 예를 들어, 구매 유저의 수명이 길다는 것을 알았다면, 많이 구매한 유저가 적게 구매한 유저보다 수명이 더 긴지 궁금해진다.
 단순히 구매-비구매 비교에 그치지 않고, 구매 액수가 생존 시간에 미치는 영향을 파악할 수 있다.
 이외에도 다양한 설명 변수의 영향을 평가할 수 있다.
-이 방법에 대해서는 [설명 변수를 이용하여 유저 생존 곡선 그리기](http://boxnwhis.kr/2015/04/24/drawing_survival_curves_with_predictors.html)에서 소개한다.
+이 방법에 대해서는 [설명 변수를 이용하여 유저 생존 곡선 그리기](/2015/04/24/drawing_survival_curves_with_predictors.html)에서 소개한다.
 
 ## 이벤트 변경
 
@@ -226,7 +226,7 @@ churn=0인 유저는 실제 이탈을 관찰하지 못한 유저다. 즉, censor
 
 # 관련 글
 
-다음 글: [설명 변수를 이용하여 유저 생존 곡선 그리기](http://boxnwhis.kr/2015/04/24/drawing_survival_curves_with_predictors.html)
+다음 글: [설명 변수를 이용하여 유저 생존 곡선 그리기](/2015/04/24/drawing_survival_curves_with_predictors.html)
 
 # 참고
 
