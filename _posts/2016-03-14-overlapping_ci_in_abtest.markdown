@@ -77,7 +77,12 @@ $$ SE_{\bar{x}_{A}} = \frac{s_{A}}{\sqrt{n_{A}}} = \frac{3102}{\sqrt{100123}} = 
 
 위의 표본 오차를 토대로 Variation A에 대한 표본 평균의 95% 신뢰 구간([confidence interval](https://en.wikipedia.org/wiki/Confidence_interval))을 구하면 아래와 같다.
 
-$$ \bar{x}_{A} \pm 1.96 \times SE_{\bar{x}_{A}} = 140.96 \pm 1.96 \times 9.80 = (120.85, 159.27) $$
+$$ 
+\begin{align}
+\bar{x}_{A} \pm 1.96 \times SE_{\bar{x}_{A}} & = 140.96 \pm 1.96 \times 9.80 \\
+& = (120.85, 159.27)
+\end{align}
+$$
 
 [1.96](https://en.wikipedia.org/wiki/1.96)은 표준 정규 분포에서 97.5 백분위 수에 해당하는 숫자다. 아래 그림처럼 $\pm 1.96$ 사이에 표준 정규 분포의 95% 영역이 포함된다.  
 
@@ -95,7 +100,12 @@ Variation A에 대해서 계산한 것과 마찬가지로 Variation B의 표준 
 
 $$ SE_{\bar{x}_{B}} = \frac{s_{B}}{\sqrt{n_{B}}} = \frac{3923}{\sqrt{100523}} = 12.37 $$
 
-$$ \bar{x}_{B} \pm 1.96 \times SE_{\bar{x}_{B}} = 219.87 \pm 1.96 \times 12.37 = (195.62, 244.12) $$
+$$
+\begin{align}
+\bar{x}_{B} \pm 1.96 \times SE_{\bar{x}_{B}} & = 219.87 \pm 1.96 \times 12.37 \\
+& = (195.62, 244.12)
+\end{align}
+$$
 
 | variation   | # Unique Visitors | Sum of Purchases | APPV   | std of Purchases | 95% CI           |
 |:-----------:|:-----------------:|:----------------:|:------:|:----------------:|:----------------:|
