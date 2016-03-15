@@ -133,8 +133,8 @@ A/B 테스트 결과로 이야기하면, B의 평균 구매액이 A의 평균 �
 
 # 겹치는 신뢰 구간(overlapping CI)
 
-_(참고1 - [https://www.cscu.cornell.edu/news/statnews/stnews73.pdf](https://www.cscu.cornell.edu/news/statnews/stnews73.pdf))_<br>
-_(참고2 - [http://amath.colorado.edu/sites/default/files/2014/03/1925917137/OverlappingCI.pdf](http://amath.colorado.edu/sites/default/files/2014/03/1925917137/OverlappingCI.pdf))_
+_(참고1 - [Overlapping Confidence Intervals and Statistical Significance](https://www.cscu.cornell.edu/news/statnews/stnews73.pdf))_<br>
+_(참고2 - [If we’re so different, why do we keep overlapping?](http://amath.colorado.edu/sites/default/files/2014/03/1925917137/OverlappingCI.pdf))_
 
 왜 신뢰 구간이 겹칠 때에도 통계적으로 유의미한 차이가 있을 수 있을까?
 95% 신뢰 구간 2개를 비교하면, 유의 수준 5%의 가설 검정이 자연스럽게 성립한다고 오해하기 쉽지만, 그렇지 않다.
