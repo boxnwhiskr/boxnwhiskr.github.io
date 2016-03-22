@@ -1,3 +1,10 @@
+---
+layout: post
+title: Mac OS X에서 rails 개발 환경 구축하기.
+author: 김재우
+date: 2016-03-22
+---
+
 
 Box and Whisker는 신규 서비스의 개발 플랫폼으로 ruby on rails를 선택했다. rails를 선택한 이유에 대해선 나중에 따로 풀어보기로 하고, 이번 포스팅에선 OSX에서 rails를 개발하기 위한 환경 구축에 대해 다루기로 한다.
 
