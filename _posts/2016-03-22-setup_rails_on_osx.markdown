@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Mac OS X에서 rails 개발 환경 구축하기.
+title: Mac OS X에서 rails 개발 환경 구축하기
 author: 김재우
+brief: 맥에서 rails 개발을 하기 위한 기본적인 환경 구축에 대해 설명한다.
 date: 2016-03-22
 ---
 
