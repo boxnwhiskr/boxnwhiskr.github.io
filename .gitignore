@@ -8,3 +8,7 @@ _ipynbs_profile/log
 _ipynbs_profile/db
 _ipynbs_profile/pid
 _ipynbs_profile/history.sqlite
+
+# rproject
+_rscript/*/*.rproj
+.Rproj.user
