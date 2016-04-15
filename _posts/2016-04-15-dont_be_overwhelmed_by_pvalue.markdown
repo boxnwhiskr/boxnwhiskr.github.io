@@ -6,7 +6,7 @@ brief: A/B 테스트에서 p-value에만 과하게 집중하는 것이 왜 좋�
 date: 2016-04-15
 ---
 
-A/B 테스트 결과는 주로 [빈도주의](https://en.wikipedia.org/wiki/Frequentist_inference) 관점에서 [유의성 검정(NHST)](https://en.wikipedia.org/wiki/Statistical_hypothesis_testing)을 따른다.
+A/B 테스트 결과 분석은 주로 [빈도주의](https://en.wikipedia.org/wiki/Frequentist_inference) 관점에서 [유의성 검정(NHST)](https://en.wikipedia.org/wiki/Statistical_hypothesis_testing)을 따른다.
 문제는 유독 [유의 확률(p-value)](https://en.wikipedia.org/wiki/P-value)에만 신경을 쓰느라 제대로 실험 결과를 해석하지 않는다는 점이다.
 실험의 목적은 얼마나 효과가 있는지 살펴보는 것이지 [통계적 유의성(statistical significance)](https://en.wikipedia.org/wiki/Statistical_significance)만을 확보하는 것이 아니다.
 
@@ -289,3 +289,14 @@ p-value는 통계적 실험에서 중요한 개념이 맞지만, 이것에만 �
 p-value는 통계적 유의성 확보를 위한 도구이지, 실험 결과의 중요성을 평가하는 지표가 아니다.
 실험 결과가 현실적으로 어떤 중요성을 갖는지 판단해야 한다.
 그 결과를 얼마나 믿을 수 있는지는 그 다음 문제다.
+
+# 참고
+
+*   [The Essential Guide to Effect Sizes: Statistical Power, Meta-Analysis, and the Interpretation of Research Results](http://amzn.com/0521142466)
+*   [How Not To Run An A/B Test](http://www.evanmiller.org/how-not-to-run-an-ab-test.html)
+*   [Is Bayesian A/B Testing Immune to Peeking? Not Exactly](http://varianceexplained.org/r/bayesian-ab-testing/)
+*   [A/B Testing Tech Note: determining sample size](https://signalvnoise.com/posts/3004-ab-testing-tech-note-determining-sample-size)
+*   [Is it possible to calculate the power of study retrospectively?](https://www.researchgate.net/post/Is_it_possible_to_calculate_the_power_of_study_retrospectively)
+*   [The Use of Predicted Confidence Intervals When Planning Experiments and the Misuse of Power When Interpreting Results](https://dirnagl.files.wordpress.com/2014/07/goodman-the-use-of-predicted-confidence-intervals-when-planning-experiments-and-the-misuse-of-power-when-interpreting-results-ann-intmed-1994.pdf)
+*   [Simple Sequential A/B Testing](http://www.evanmiller.org/sequential-ab-testing.html)
+*   [Formulas for Bayesian A/B Testing](http://www.evanmiller.org/bayesian-ab-testing.html)
