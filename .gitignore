@@ -12,3 +12,4 @@ _ipynbs_profile/history.sqlite
 # rproject
 _rscript/*/*.rproj
 .Rproj.user
+.Rhistory
