@@ -110,33 +110,22 @@ if(location.hostname !== 'boxnwhis.kr' && location.hostname !== 'www.boxnwhis.kr
     }
 </style>
 
-<script src="http://greedy-bandit.boxnwhis.kr/assets/greedy-bandit-325afb050f19157d641c414d636820dfdf8ae13a1954d7436220e1361d59080d.js" ></script>
+<script src="//boxnwhiskr.github.io/gbbox-sdk-js/gbbox-sdk.js" ></script>
 <script type="text/javascript">
     (function() {
-        var expId = '3605ebfebcc1b071770ba169aeaba0fe';
+        var gbbox = new _gbbox.API('http://52.78.207.89', 'blahblah');
+
         var currentPageIsPost = document.location.href.split('/')[3] > 2000;
-        var referredFromPost = +document.referrer.split('/')[3] > 2000;
-        var currentPageIsNotHome = ['', 'index.html'].indexOf(document.location.href.split('/')[3]) === -1;
-
-        GreedyBandit.host = 'greedy-bandit.boxnwhis.kr';
-
         if(currentPageIsPost) {
-            GreedyBandit.choose(
-                {'3605ebfebcc1b071770ba169aeaba0fe': 'true'},
-                {
-                    newTrial: true,
-                    success: function (result) {
-                        var fixed = result.valueFor(expId) === 'true';
-                        if (fixed) {
-                            document.body.setAttribute('class', 'fixed');
-                        }
-                    }
+            gbbox.route(['fixgnb'], function(assignments) {
+                var exp = assignments['fixgnb'];
+                if(exp.arms.fix === 'yes') {
+	                document.body.setAttribute('class', 'fixed');
                 }
-            );
-        } else if(referredFromPost && currentPageIsNotHome) {
-            GreedyBandit.convert(expId);
+                gbbox.sendPageview();
+            });
         } else {
-            // Do nothing
+            gbbox.sendPageview();
         }
     })();
 </script>
