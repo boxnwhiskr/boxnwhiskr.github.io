@@ -144,7 +144,7 @@ $$ 1 - \frac{365 \cdot 364 \cdot 363 \cdots (365 - 23 + 1)}{365^{23}} \approx 0.
     >>> prob_birthday(50)
     0.9703735795779884
 
-![birthday problem](https://upload.wikimedia.org/wikipedia/commons/e/e7/Birthday_Paradox.svg)
+![birthday problem](/img/posts/2016-11-25-how_long_uid_should_be/1000px-Birthday_Paradox.svg.png)
 _<같은 생일을 갖는 사람이 있을 확률 (출처: [wikipedia](https://en.wikipedia.org/wiki/File:Birthday_Paradox.svg))>_
 
 따라서 50명의 신규 고객에게 365개의 키는 부족하다.
