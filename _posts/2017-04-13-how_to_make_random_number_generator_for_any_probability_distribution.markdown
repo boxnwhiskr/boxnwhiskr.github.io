@@ -164,8 +164,6 @@ X & = \sigma \, \Phi^{-1}(U) + \mu \sim N(\mu, \sigma^{2}) \, \text{I}(a < X < b
 
 ![truncated normal pdf](/img/posts/2017-04-13-how_to_make_random_number_generator_for_any_probability_distribution/truncated_normal_pdf.png)
 
-
-
 # 결론
 
 물론 대부분의 프로그래밍 언어는 로지스틱 난수 생성기 등을 제공한다.
@@ -178,6 +176,10 @@ X & = \sigma \, \Phi^{-1}(U) + \mu \sim N(\mu, \sigma^{2}) \, \text{I}(a < X < b
 실무에서 이와 비슷한 문제가 있었는데, 당시에는 [R](https://www.r-project.org/) 프로세스를 따로 실행하여 계산하는 방식으로 해결하였다.
 물론 R에서도 지원하지 않는 확률 분포라면 만들어 써야 한다.
 다시 같은 상황과 마주친다면 다른 프로세스를 따로 실행시키지 않고, 프로젝트 언어를 이용해 난수 생성기를 만들어 쓸 것이다.
+
+통계와 개발을 함께 공부하는 건 재미있는 경험이다.
+통계를 먼저 공부했지만, 개발을 하면서 예전에 알던 것을 재발견하는 경우가 많다.
+반대로 개발을 잘 하기 위해서 통계 공부를 더 열심히 해야할 필요도 생긴다.
 
 # 참고
 
@@ -194,9 +196,11 @@ $F(x)$가 어떤 함수든 상관없이 이 관계가 성립한다.
 3. $F^{-1}$는 보통 inverse CDF라고 하지만, [quantile function](https://en.wikipedia.org/wiki/Quantile_function) 혹은 percent point fuction(ppf)라고도 부른다.
 [scipy.stats](https://docs.scipy.org/doc/scipy/reference/stats.html)에는 확률 분포마다 ppf를 따로 구현해놓았다.
 
-4. 이 글의 내용은 아래 참고 자료를 이용하여 작성하였다.
+4. 이 글은 아래 참고 자료를 이용하여 작성하였다.
     *   [Statistics110 - Lecture 12: Discrete vs. Continuous, the Uniform](https://www.youtube.com/watch?v=Tci---bVs60&list=EC2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo)
     *   [What is Universality of the Uniform?](https://www.quora.com/What-is-Universality-of-the-Uniform)
     *   [A Visual Explanation for Universality of the Uniform](https://www.youtube.com/watch?v=TzKANDzAXnQ)
     *   [Inverse CDF method](https://www.youtube.com/watch?v=TR0biDues7k)
+    *   [The Universality of the Uniform distribution Part 1](https://www.youtube.com/watch?v=RgV9kCwMKp8)
+    *   [The Universality of the Uniform distribution Part 2](https://www.youtube.com/watch?v=tdiEIMwzvJ4)
     *   [Inverse transform sampling](https://en.wikipedia.org/wiki/Inverse_transform_sampling)
