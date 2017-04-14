@@ -47,7 +47,7 @@ $$ X = F^{-1}(U)$$
 즉, 균등 분포만 있으면 다른 모든 분포를 만들어낼 수 있다.
 혹은 누적 분포 함수의 역함수 변환을 통한 난수 추출 방법이기 때문에 [Inverse transform sampling](https://en.wikipedia.org/wiki/Inverse_transform_sampling)이라고도 부른다.
 
-# 여러가지 난수 생성기
+# 여러 가지 난수 생성기
 
 ## 로지스틱 분포를 따르는 난수 생성기
 
