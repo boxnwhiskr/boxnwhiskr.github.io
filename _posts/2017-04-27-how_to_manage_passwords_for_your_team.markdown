@@ -197,7 +197,7 @@ pass는 비밀번호를 암호화시키거나 복원할 때 사용할 gpg-id를 
 또한 모든 팀원은 각 gpg-id의 public 키를 '~/.gnupg/'에 저장하고 있어야 한다.
 단순히 git repository를 복사해서 공유하는 것만으로는 비밀번호를 암호화하거나 다시 복원시킬 수 없다.
 
-![public key cryptography](/img/posts/2017-04-27-how_to_manage_passwords_for_your_team/Orange_blue_public_key_cryptography_en.svg)
+![public key cryptography](/img/posts/2017-04-27-how_to_manage_passwords_for_your_team/800px-Orange_blue_public_key_cryptography_en.svg.png)
 
 (그림 출처: [wikimedia](https://commons.wikimedia.org/wiki/File:Orange_blue_public_key_cryptography_en.svg))
 
