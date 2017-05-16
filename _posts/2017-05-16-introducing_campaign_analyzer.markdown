@@ -135,5 +135,5 @@ $$\sum_{r=1}^7 \binom{20}{r} = 137,979$$
 '캠페인 분석기'를 활용해서 캠페인 최적화를 함께 진행하고 싶은 회사들의 많은 연락 바랍니다!
 
 <div style="text-align: center; background-color: #1074ae; margin: 3rem 1rem">
-<a style="display: block; padding: 1rem; color: #FFFFFF;" href="https://goo.gl/forms/4xswVIuu6SRJ9fqn2">베타 테스트 신청하기</a>
+<a style="display: block; padding: 1rem; color: #FFFFFF;" href="https://goo.gl/forms/SC7BRxOEm6mIiPN93">베타 테스트 신청하기</a>
 </div>
