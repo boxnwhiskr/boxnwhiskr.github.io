@@ -341,6 +341,12 @@ pass에 개인용 비밀번호를 저장하면 git을 통해 전체 팀원에게
 [1password](https://1password.com/) 등의 서비스를 굳이 사용할 필요가 없다.
 특히 pass는 cli 기반이라 아주 편하다.
 
+private 디렉토리 역시 온라인으로 백업하고 싶다면 해당 디렉토리만 symlink로 만드는 것이 편리하다.
+예를 들어 private 디렉토리만 드랍박스(Dropbox)로 관리하려면, 드랍박스 내에 private 디렉토리를 만들고 이를 .password-store/ 하위에 디렉토리 symlink로 연결한다.
+pass를 통해서 개인 정보를 관리할 수 있고, 이는 드랍박스에 백업 된다.
+
+    $ ln -s ~/Dropbox/private_for_pass ~/.password-store/private
+
 # .pem 파일 관리
 
 AWS를 자주 사용하다 보면, .pem 파일이 쌓이는데 이 역시 pass로 관리 가능하다.
