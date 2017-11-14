@@ -56,7 +56,7 @@ $$\sum_{r=1}^7 \binom{20}{r} = 137,979$$
 
 # 그래프 탐색 알고리즘
 
-그래프 탐색에는 어러 가지 종류가 있는데 그 중에서도 [Best-first search](https://en.wikipedia.org/wiki/Best-first_search)를 사용한다.
+그래프 탐색에는 여러 가지 종류가 있는데 그 중에서도 [Best-first search](https://en.wikipedia.org/wiki/Best-first_search)를 사용한다.
 흔히 길 찾기 문제에서 활용하는데, 아래의 예제를 보면 가장 거리가 짧은 길을 찾아 원하는 노드로 도착하는 것이 알고리즘의 목표다.
 'Best-first'라는 말에서 알 수 있듯이 다음 탐색할 노드를 결정할 때, 가장 우선 순위가 높은 노드를 선택한다.
 최단 거리 길 찾기 문제라면 가장 짧은 거리를 갖는 노드가 가장 우선 순위가 높은 노드가 된다.
