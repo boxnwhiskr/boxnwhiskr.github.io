@@ -2,7 +2,7 @@
 layout: post
 title: 구글 애널리틱스 API를 이용한 캠페인 분석(2)
 author: 박장시
-brief: Best-First 알고리즘을 이용하여 다차원 큐브에서 원하는 조건의 셀을 탐색합니다
+brief: Best-first search를 이용해 다차원 큐브에서 원하는 조건의 셀을 탐색합니다.
 date: 2017-11-13
 ---
 
