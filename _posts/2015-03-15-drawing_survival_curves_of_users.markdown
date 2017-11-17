@@ -133,32 +133,33 @@ churn=0인 유저는 실제 이탈을 관찰하지 못한 유저다. 즉, censor
 생존 곡선을 보면 절반의 유저가 이탈하는데 약 8주가 걸리는 것을 알 수 있다.
 
 ![survival_curve.png](/img/posts/2015-03-15-drawing_survival_curves_of_users/survival_curve.png)
-    
-    #### survival_example.R
-    # load packages
-    library(survival)
-    library(ggplot2)
 
-    # read data
-    uid <- LETTERS
-    time <- c(8, 10, 6, 8, 7, 11, 6, 9, 9, 8, 4, 12, 5, 11, 5, 1, 2, 13, 5, 6, 8, 5, 4, 4, 5, 6)
-    churn <- c(1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0)
-    surv_df <- data.frame(uid, time, churn)
+{% highlight r %}
+#### survival_example.R
+# load packages
+library(survival)
+library(ggplot2)
 
-    # make survival data
-    surv_obj <- Surv(surv_df$time, surv_df$churn)
-    
-    # draw survival curve
-    fit <- survfit(surv_obj ~ 1)
-    fit_df <- data.frame(time = c(0, fit$time), surv = c(1, fit$surv))
-    ggplot(fit_df, aes(x=time, y=surv)) +
-        geom_step() +
-        ylab('S(t)') +
-        xlab('time(weeks)') +
-        ylim(c(0, 1)) +
-        scale_x_continuous(breaks=seq(0, 13, 1)) +
-        theme_bw()
-  
+# read data
+uid <- LETTERS
+time <- c(8, 10, 6, 8, 7, 11, 6, 9, 9, 8, 4, 12, 5, 11, 5, 1, 2, 13, 5, 6, 8, 5, 4, 4, 5, 6)
+churn <- c(1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0)
+surv_df <- data.frame(uid, time, churn)
+
+# make survival data
+surv_obj <- Surv(surv_df$time, surv_df$churn)
+
+# draw survival curve
+fit <- survfit(surv_obj ~ 1)
+fit_df <- data.frame(time = c(0, fit$time), surv = c(1, fit$surv))
+ggplot(fit_df, aes(x=time, y=surv)) +
+    geom_step() +
+    ylab('S(t)') +
+    xlab('time(weeks)') +
+    ylim(c(0, 1)) +
+    scale_x_continuous(breaks=seq(0, 13, 1)) +
+    theme_bw()
+{% endhighlight %}
         
 # 서로 다른 그룹의 비교
 
