@@ -64,7 +64,7 @@ $$ F^{-1}(U) = log(\frac{U}{1 - U}) \sim \text{Logistic}$$
 
 위 식을 코드로 옮기면 아래와 같다. 기본 난수 생성기에서 추출한 균등 분포 자료를 로지스틱 누적 분포 함수의 역함수에 대입하면 로지스틱 난수가 된다.
 
-{% highlight py3 %}
+{% highlight python %}
 # python3
 import math
 import random
@@ -99,7 +99,7 @@ $$ F^{-1}(U) = \sqrt{-2log(1 - U)} \sim \text{Rayleigh} $$
 
 이를 코드로 구현하면 아래와 같다.
 
-{% highlight py3 %}
+{% highlight python %}
 # python3
 import math
 import random
@@ -152,7 +152,7 @@ X & = \sigma \, \Phi^{-1}(U) + \mu \sim N(\mu, \sigma^{2}) \, \text{I}(a < X < b
 
 확률 분포 $N(2, 9)\,\text{I}(1<X<5)$ 를 따르는 난수 생성기를 만들면 아래 코드와 같다.
 
-{% highlight py3 %}
+{% highlight python %}
 # python3
 from random import uniform
 from scipy.stats import norm
