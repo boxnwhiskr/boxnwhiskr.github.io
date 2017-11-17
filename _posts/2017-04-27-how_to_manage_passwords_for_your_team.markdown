@@ -35,7 +35,7 @@ cli 기반이므로 쓰기도 아주 쉽다.
 Mac 기준으로 설명한다.
 우선 'brew'로 'pass'를 설치하고 자동 완성 세팅을 한다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ brew install pass
 $ echo "source /usr/local/etc/bash_completion.d/password-store" >> ~/.bash_profile
 {% endhighlight %}
@@ -46,7 +46,7 @@ gpg key를 만든다.
 gpg는 비대칭키 방식의 암호화를 사용할 수 있는 오픈 소스 툴이다.
 혹시 이미 생성한 gpg key가 있다면 기존 키를 그대로 사용해도 무방하다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ gpg2 --gen-key
 {% endhighlight %}
 
@@ -58,7 +58,7 @@ gpg를 이용해서 키를 생성하면 공개 키(public key)와 비밀 키(prv
 
 생성한 gpg key를 확인하면 아래와 같이 방금 전에 만든 키를 확인할 수 있다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ gpg2 --list-keys
 
 /home/jngsp/.gnupg/pubring.kbx
@@ -75,7 +75,7 @@ sub   rsa2048/E716C901 2017-04-27 [E]
 
 gpg-id를 이용해서 pass를 활성화시킨다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass init BD699A08
 {% endhighlight %}
 
@@ -89,7 +89,7 @@ gpg-id로 pass를 시작하면 pass는 앞으로 해당 gpg-id의 공개 키를 
 
 jngsp@test.com 메일의 비밀번호를 저장하고 싶다면 아래와 같이 `insert` 명령을 사용한다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass insert email/jngsp@test.com
 
 mkdir: created directory '/home/jngsp/.password-store/email'
@@ -107,7 +107,7 @@ email 디렉토리 밑에 jngsp@test.com 계정의 비밀번호가 저장되었�
 pass 명령으로 해당 계정을 호출하면 비밀번호가 출력된다.
 탭 키를 이용해서 자동 생성이 가능하므로 편리하다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass email/jngsp@test.com
 myemailpassword
 {% endhighlight %}
@@ -116,7 +116,7 @@ myemailpassword
 비밀번호를 화면에 출력하는 대신에 클립보드로 복사해준다.
 클립보드에 복사된 비밀번호는 45초 동안 유효하며, 시간이 지나면 클립보드에서 사라진다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass -c email/jngsp@test.com
 {% endhighlight %}
 
@@ -127,7 +127,7 @@ Copied cadb to clipboard. Will clear in 45 seconds.
 애초에 새 계정을 만들 때부터 pass를 이용해서 비밀번호를 생성할 수도 있다.
 `generate` 명령을 사용하면 원하는 길이의 강력한 암호를 만들어주고, 자동으로 저장한다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass generate heroku-for-microsite 16
 
 The generated password for heroku-for-microsite is:
@@ -144,7 +144,7 @@ Password Store
 'NhZypm~N&'3#X`p4'라는 16자리 암호를 생성하고 바로 저장하였다.
 생성할 때도 화면에 출력하지 않고 클립보드로 바로 복사가 가능하다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass generate -c ci-tool 16
 
 Copied ci-tool to clipboard. Will clear in 45 seconds.
@@ -163,7 +163,7 @@ Password Store
 pass에 비밀번호만 저장해야 하는 것은 아니다.
 `-m` 옵션을 사용하면 여러 줄의 텍스트를 저장할 수 있다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass insert -m corporate-credit-card
 
 Enter contents of corporate-credit-card and press Ctrl+D when finished:
@@ -183,14 +183,14 @@ cvv: 287
 pass는 [git](https://git-scm.com/)을 지원한다.
 물론 '~/.password-store/' 디렉토리를 git으로 관리하는 비교적 쉬운 일이지만, pass 자체 명령어를 사용하면 더 간단하게 git을 사용할 수 있다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass git init
 Initialized empty Git repository in /home/jngsp/.password-store/.git/
 {% endhighlight %}
 
 remote repository와 연동하면 팀원들과 pass 계정 정보를 공유할 수 있다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass git remote add origin git@github.com:testcom/pass-store.git
 $ pass git push -u origin master
 {% endhighlight %}
@@ -235,7 +235,7 @@ pass는 비밀번호를 암호화시키거나 복호화시킬 때 사용할 gpg-
 키 서버에 공유하기 전에 공유할 키의 gpg-id를 확인한다.
 `--list-secret-keys` 옵션을 사용하면 현재 저장되어 있는 비밀 키를 볼 수 있다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ gpg2 --list-secret-keys
 
 /home/jngsp/.gnupg/pubring.kbx
@@ -249,7 +249,7 @@ ssb   rsa2048/E716C901 2017-04-27 [E]
 키 서버는 몇 개가 있는데 [MIT PGP Public Key Server](https://pgp.mit.edu/)를 주로 사용한다.
 아래와 같이 'pgp.mit.edu'에 공개 키를 공유한다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ gpg2 --keyserver pgp.mit.edu --send-key BD699A08
 
 gpg: sending key BD699A08 to hkp://pgp.mit.edu
@@ -262,7 +262,7 @@ gpg: sending key BD699A08 to hkp://pgp.mit.edu
 
 아래와 같이 동료의 키를 키 서버에서 공유 받는다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ gpg --keyserver pgp.mit.edu --recv-key D83EB3C5
 
 gpg: key D83EB3C5: public key "Box Whisker <bw@boxnwhis.kr>" imported
@@ -272,7 +272,7 @@ gpg:               imported: 1
 
 저장된 공개 키 리스트를 보면 동료의 키가 추가된 것을 알 수 있다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ gpg2 --list-keys
 
 /home/jngsp/.gnupg/pubring.kbx
@@ -288,7 +288,7 @@ sub   rsa2048/A9CD6AD3 2017-04-27 [E]
 
 가져온 키는 바로 쓸 수 없고, 신뢰 수준을 조정해야 한다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ gpg2 --edit-key D83EB3C5
 
 gpg> trust
@@ -313,7 +313,7 @@ gpg> q
 새로운 팀원의 입장에서는 기존 팀원 중 누군가가 자신을 pass에 포함시켜 주기를 기다리는 것 말고 할 일이 없다.
 새로운 동료를 포함시키기 위해서는 새로운 동료의 gpg-id를 pass에 추가해야 한다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass init BD699A08 D83EB3C5
 
 Password store initialized for BD699A08, D83EB3C5
@@ -338,7 +338,7 @@ corporate-credit-card: reencrypting to C7505C45A9CD6AD3 D4F57D4EE716C901
 위의 결과를 보면 기존에 저장되어 있던 비밀번호들이 새로운 공개 키를 이용해 다시 암호화된 것을 알 수 있다.
 변경된 내용은 git repository를 업데이트하여 공유한다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass git push
 
 Counting objects: 14, done.
@@ -360,7 +360,7 @@ To https://github.com/Jangsea/pass-store.git
 예를 들어, RED와 BLUE로 구분된 보안 수준이 있다면 각 보안 수준에 따라 다른 구성원들만 포함시키고 싶다.
 이럴 때는 pass에 하위 디렉토리를 만들고, 각 하위 디렉토리마다 서로 다른 gpg-id를 지정할 수 있다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass init -p RED BD699A08
 
 mkdir: created directory '/home/jngsp/.password-store/RED'
@@ -385,7 +385,7 @@ private 디렉토리 역시 온라인으로 백업하고 싶다면 해당 디렉
 예를 들어 private 디렉토리만 드랍박스(Dropbox)로 관리하려면, 드랍박스 내에 private 디렉토리를 만들고 이를 .password-store/ 하위에 디렉토리 symlink로 연결한다.
 pass를 통해서 개인 정보를 관리할 수 있고, 이는 드랍박스에 백업 된다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ ln -s ~/Dropbox/private_for_pass ~/.password-store/private
 {% endhighlight %}
 
@@ -394,7 +394,7 @@ $ ln -s ~/Dropbox/private_for_pass ~/.password-store/private
 AWS를 자주 사용하다 보면, .pem 파일이 쌓이는데 이 역시 pass로 관리 가능하다.
 결국 .pem 파일도 텍스트이므로 `-m` 옵션으로 .pem 내용을 통째로 암호화하여 저장할 수 있다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass insert -m pem/test.pem < test.pem
 
 Enter contents of pem/ga-climber-test.pem and press Ctrl+D when finished:
@@ -407,7 +407,7 @@ Enter contents of pem/ga-climber-test.pem and press Ctrl+D when finished:
 저장된 .pem 파일은 암호화되어 git repository로 공유된다.
 필요할 때 꺼내 쓰기 편하다.
 
-{% highlight shell_session %}
+{% highlight console %}
 $ pass pem/test.pem > another-test.pem
 $ diff test.pem another-test.pem  # there is nothing different
 {% endhighlight %}
