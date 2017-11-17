@@ -88,8 +88,10 @@ cid는 유저 아이디를 나타내며, datetime은 로그인 시간이다.
 로지스틱 회귀 분석을 사용한 이탈 예측은 여러 분야에서 [매우 많은 사례](http://www.google.co.kr/search?q=churn%20prediction%20using%20logistic%20regression)를 찾아볼 수 있다.
 [R](http://www.r-project.org/)에서는 아래와 같이 _glm_ 함수에 _family=binomial()_ 을 지정하여 로지스틱 회귀 모형을 만들 수 있다.
 마찬가지로 [predict_churn.R](https://github.com/box-and-whisker/fake_log_generator/blob/master/predict_churn.R)을 이용하여 모형을 만든다.
- 
-    fit <- glm(churn ~ risk_ratio, data = rr_logs, family = binomial())
+
+{% highlight r %}
+fit <- glm(churn ~ risk_ratio, data = rr_logs, family = binomial())
+{% endhighlight %}
 
 그런데, 해당 모형은 일종의 순환 논리 오류를 가지고 있다.
 `churn`과 `risk_ratio`는 '마지막 접속 경과일'에 일정 부분 종속되므로, 상당한 정보를 공유한다.
