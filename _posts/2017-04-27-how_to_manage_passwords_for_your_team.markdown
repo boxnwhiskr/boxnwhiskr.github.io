@@ -35,8 +35,10 @@ cli 기반이므로 쓰기도 아주 쉽다.
 Mac 기준으로 설명한다.
 우선 'brew'로 'pass'를 설치하고 자동 완성 세팅을 한다.
 
-    $ brew install pass
-    $ echo "source /usr/local/etc/bash_completion.d/password-store" >> ~/.bash_profile
+{% highlight shell_session %}
+$ brew install pass
+$ echo "source /usr/local/etc/bash_completion.d/password-store" >> ~/.bash_profile
+{% endhighlight %}
 
 ## gpg key 생성
 
@@ -44,7 +46,9 @@ gpg key를 만든다.
 gpg는 비대칭키 방식의 암호화를 사용할 수 있는 오픈 소스 툴이다.
 혹시 이미 생성한 gpg key가 있다면 기존 키를 그대로 사용해도 무방하다.
 
-    $ gpg2 --gen-key
+{% highlight shell_session %}
+$ gpg2 --gen-key
+{% endhighlight %}
 
 gpg를 이용해서 키를 생성하면 공개 키(public key)와 비밀 키(prviate key)가 함께 생성되고, '~/.gnupg/' 디렉토리에 저장된다.
 종종 키 생성에 시간이 오래 걸릴 때가 있는데, 키 생성에 필요한 엔트로피가 부족하기 때문이다.
@@ -54,13 +58,15 @@ gpg를 이용해서 키를 생성하면 공개 키(public key)와 비밀 키(prv
 
 생성한 gpg key를 확인하면 아래와 같이 방금 전에 만든 키를 확인할 수 있다.
 
-    $ gpg2 --list-keys
+{% highlight shell_session %}
+$ gpg2 --list-keys
 
-    /home/jngsp/.gnupg/pubring.kbx
-    -------------------------------
-    pub   rsa2048/BD699A08 2017-04-27 [SC]
-    uid         [ultimate] jngsp <jngsp@test.com>
-    sub   rsa2048/E716C901 2017-04-27 [E]
+/home/jngsp/.gnupg/pubring.kbx
+-------------------------------
+pub   rsa2048/BD699A08 2017-04-27 [SC]
+uid         [ultimate] jngsp <jngsp@test.com>
+sub   rsa2048/E716C901 2017-04-27 [E]
+{% endhighlight %}
 
 여기서 'BD699A08'를 gpg-id라고 부른다.
 생성한 key pair의 ID다.
@@ -69,7 +75,9 @@ gpg를 이용해서 키를 생성하면 공개 키(public key)와 비밀 키(prv
 
 gpg-id를 이용해서 pass를 활성화시킨다.
 
-    $ pass init BD699A08
+{% highlight shell_session %}
+$ pass init BD699A08
+{% endhighlight %}
 
 gpg-id로 pass를 시작하면 pass는 앞으로 해당 gpg-id의 공개 키를 이용해서 모든 비밀번호를 암호화한다.
 '~/.password-store/' 디렉토리가 생성되었으며 이곳에 암호화된 비밀번호를 '.gpg' 파일로 저장한다.
@@ -81,78 +89,90 @@ gpg-id로 pass를 시작하면 pass는 앞으로 해당 gpg-id의 공개 키를 
 
 jngsp@test.com 메일의 비밀번호를 저장하고 싶다면 아래와 같이 `insert` 명령을 사용한다.
 
-    $ pass insert email/jngsp@test.com
+{% highlight shell_session %}
+$ pass insert email/jngsp@test.com
 
-    mkdir: created directory '/home/jngsp/.password-store/email'
-    Enter password for email/jngsp@test.com:myemailpassword
-    Retype password for email/jngsp@test.com:myemailpassword
+mkdir: created directory '/home/jngsp/.password-store/email'
+Enter password for email/jngsp@test.com:myemailpassword
+Retype password for email/jngsp@test.com:myemailpassword
 
-    $ pass
+$ pass
 
-    Password Store
-    └── email
-        └── jngsp@test.com
+Password Store
+└── email
+    └── jngsp@test.com
+{% endhighlight %}
 
 email 디렉토리 밑에 jngsp@test.com 계정의 비밀번호가 저장되었다.
 pass 명령으로 해당 계정을 호출하면 비밀번호가 출력된다.
 탭 키를 이용해서 자동 생성이 가능하므로 편리하다.
 
-    $ pass email/jngsp@test.com
-    myemailpassword
+{% highlight shell_session %}
+$ pass email/jngsp@test.com
+myemailpassword
+{% endhighlight %}
 
 비밀번호가 화면에 노출되는 것도 꺼려진다면 `-c` 옵션을 사용할 수 있다.
 비밀번호를 화면에 출력하는 대신에 클립보드로 복사해준다.
 클립보드에 복사된 비밀번호는 45초 동안 유효하며, 시간이 지나면 클립보드에서 사라진다.
 
-    $ pass -c email/jngsp@test.com
+{% highlight shell_session %}
+$ pass -c email/jngsp@test.com
+{% endhighlight %}
 
-    Copied cadb to clipboard. Will clear in 45 seconds.
+Copied cadb to clipboard. Will clear in 45 seconds.
 
 ## 비밀번호 생성
 
 애초에 새 계정을 만들 때부터 pass를 이용해서 비밀번호를 생성할 수도 있다.
 `generate` 명령을 사용하면 원하는 길이의 강력한 암호를 만들어주고, 자동으로 저장한다.
 
-    $ pass generate heroku-for-microsite 16
+{% highlight shell_session %}
+$ pass generate heroku-for-microsite 16
 
-    The generated password for heroku-for-microsite is:
-    NhZypm~N&'3#X`p4
+The generated password for heroku-for-microsite is:
+NhZypm~N&'3#X`p4
 
-    $ pass
+$ pass
 
-    Password Store
-    ├── email
-    │   └── jngsp@test.com
-    └── heroku-for-microsite
+Password Store
+├── email
+│   └── jngsp@test.com
+└── heroku-for-microsite
+{% endhighlight %}
 
 'NhZypm~N&'3#X`p4'라는 16자리 암호를 생성하고 바로 저장하였다.
 생성할 때도 화면에 출력하지 않고 클립보드로 바로 복사가 가능하다.
 
-    $ pass generate -c ci-tool 16
+{% highlight shell_session %}
+$ pass generate -c ci-tool 16
 
-    Copied ci-tool to clipboard. Will clear in 45 seconds.
+Copied ci-tool to clipboard. Will clear in 45 seconds.
 
-    $ pass
+$ pass
 
-    Password Store
-    ├── ci-tool
-    ├── email
-    │   └── jngsp@test.com
-    └── heroku-for-microsite
+Password Store
+├── ci-tool
+├── email
+│   └── jngsp@test.com
+└── heroku-for-microsite
+{% endhighlight %}
 
 ## 비밀번호 외의 정보
 
 pass에 비밀번호만 저장해야 하는 것은 아니다.
 `-m` 옵션을 사용하면 여러 줄의 텍스트를 저장할 수 있다.
 
-    $ pass insert -m corporate-credit-card
+{% highlight shell_session %}
+$ pass insert -m corporate-credit-card
 
-    Enter contents of corporate-credit-card and press Ctrl+D when finished:
+Enter contents of corporate-credit-card and press Ctrl+D when finished:
 
-    0898
-    name: TEST CO.LTD
-    number: 4876-9872-2938-1024
-    cvv: 287
+0898
+name: TEST CO.LTD
+number: 4876-9872-2938-1024
+cvv: 287
+{% endhighlight %}
 
 이렇게 여러 줄을 입력한 경우에는 `-c` 옵션으로 호출했을 때, 첫번째 줄만 클립보드로 복사하므로 비밀번호를 가장 위에 적는 것이 편하다.
 나머지 정보에 대해서는 조직 내에서 합의된 규칙을 만들어도 좋다.
@@ -163,13 +183,17 @@ pass에 비밀번호만 저장해야 하는 것은 아니다.
 pass는 [git](https://git-scm.com/)을 지원한다.
 물론 '~/.password-store/' 디렉토리를 git으로 관리하는 비교적 쉬운 일이지만, pass 자체 명령어를 사용하면 더 간단하게 git을 사용할 수 있다.
 
-    $ pass git init
-    Initialized empty Git repository in /home/jngsp/.password-store/.git/
+{% highlight shell_session %}
+$ pass git init
+Initialized empty Git repository in /home/jngsp/.password-store/.git/
+{% endhighlight %}
 
 remote repository와 연동하면 팀원들과 pass 계정 정보를 공유할 수 있다.
 
-    $ pass git remote add origin git@github.com:testcom/pass-store.git
-    $ pass git push -u origin master
+{% highlight shell_session %}
+$ pass git remote add origin git@github.com:testcom/pass-store.git
+$ pass git push -u origin master
+{% endhighlight %}
 
 일단 git과 연결되면, pass의 정보가 바뀔 때마다 커밋이 자동으로 이루어진다.
 pass git push, pass git pull 등을 사용해서 업데이트 한다.
@@ -211,21 +235,25 @@ pass는 비밀번호를 암호화시키거나 복호화시킬 때 사용할 gpg-
 키 서버에 공유하기 전에 공유할 키의 gpg-id를 확인한다.
 `--list-secret-keys` 옵션을 사용하면 현재 저장되어 있는 비밀 키를 볼 수 있다.
 
-    $ gpg2 --list-secret-keys
+{% highlight shell_session %}
+$ gpg2 --list-secret-keys
 
-    /home/jngsp/.gnupg/pubring.kbx
-    -------------------------------
-    sec   rsa2048/BD699A08 2017-04-27 [SC]
-    uid         [ultimate] jngsp <jngsp@test.com>
-    ssb   rsa2048/E716C901 2017-04-27 [E]
+/home/jngsp/.gnupg/pubring.kbx
+-------------------------------
+sec   rsa2048/BD699A08 2017-04-27 [SC]
+uid         [ultimate] jngsp <jngsp@test.com>
+ssb   rsa2048/E716C901 2017-04-27 [E]
+{% endhighlight %}
 
 비밀 키를 가지고 있는 gpg-id('BD699A08')를 찾아서 짝을 이루는 공개 키를 공유해야 한다.
 키 서버는 몇 개가 있는데 [MIT PGP Public Key Server](https://pgp.mit.edu/)를 주로 사용한다.
 아래와 같이 'pgp.mit.edu'에 공개 키를 공유한다.
 
-    $ gpg2 --keyserver pgp.mit.edu --send-key BD699A08
+{% highlight shell_session %}
+$ gpg2 --keyserver pgp.mit.edu --send-key BD699A08
 
-    gpg: sending key BD699A08 to hkp://pgp.mit.edu
+gpg: sending key BD699A08 to hkp://pgp.mit.edu
+{% endhighlight %}
 
 모든 팀원은 자신의 gpg-id로 키를 키 서버에 공유해야 한다.
 그리고 자신 외의 모든 팀원들의 키를 키 서버에서 공유받아야 한다.
@@ -234,84 +262,94 @@ pass는 비밀번호를 암호화시키거나 복호화시킬 때 사용할 gpg-
 
 아래와 같이 동료의 키를 키 서버에서 공유 받는다.
 
-    $ gpg --keyserver pgp.mit.edu --recv-key D83EB3C5
+{% highlight shell_session %}
+$ gpg --keyserver pgp.mit.edu --recv-key D83EB3C5
 
-    gpg: key D83EB3C5: public key "Box Whisker <bw@boxnwhis.kr>" imported
-    gpg: Total number processed: 1
-    gpg:               imported: 1
+gpg: key D83EB3C5: public key "Box Whisker <bw@boxnwhis.kr>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+{% endhighlight %}
 
 저장된 공개 키 리스트를 보면 동료의 키가 추가된 것을 알 수 있다.
 
-    $ gpg2 --list-keys
+{% highlight shell_session %}
+$ gpg2 --list-keys
 
-    /home/jngsp/.gnupg/pubring.kbx
-    -------------------------------
-    pub   rsa2048/BD699A08 2017-04-27 [SC]
-    uid         [ultimate] jngsp <jngsp@test.com>
-    sub   rsa2048/E716C901 2017-04-27 [E]
+/home/jngsp/.gnupg/pubring.kbx
+-------------------------------
+pub   rsa2048/BD699A08 2017-04-27 [SC]
+uid         [ultimate] jngsp <jngsp@test.com>
+sub   rsa2048/E716C901 2017-04-27 [E]
 
-    pub   rsa2048/D83EB3C5 2017-04-27 [SC]
-    uid         [ unknown] Box Whisker <bw@boxnwhis.kr>
-    sub   rsa2048/A9CD6AD3 2017-04-27 [E]
+pub   rsa2048/D83EB3C5 2017-04-27 [SC]
+uid         [ unknown] Box Whisker <bw@boxnwhis.kr>
+sub   rsa2048/A9CD6AD3 2017-04-27 [E]
+{% endhighlight %}
 
 가져온 키는 바로 쓸 수 없고, 신뢰 수준을 조정해야 한다.
 
-    $ gpg2 --edit-key D83EB3C5
+{% highlight shell_session %}
+$ gpg2 --edit-key D83EB3C5
 
-    gpg> trust
-    Please decide how far you trust this user to correctly verify other users' keys
-    (by looking at passports, checking fingerprints from different sources, etc.)
+gpg> trust
+Please decide how far you trust this user to correctly verify other users' keys
+(by looking at passports, checking fingerprints from different sources, etc.)
 
-      1 = I don't know or won't say
-      2 = I do NOT trust
-      3 = I trust marginally
-      4 = I trust fully
-      5 = I trust ultimately
-      m = back to the main menu
+  1 = I don't know or won't say
+  2 = I do NOT trust
+  3 = I trust marginally
+  4 = I trust fully
+  5 = I trust ultimately
+  m = back to the main menu
 
-    Your decision? 5
-    Do you really want to set this key to ultimate trust? (y/N) y
+Your decision? 5
+Do you really want to set this key to ultimate trust? (y/N) y
 
-    gpg> q
+gpg> q
+{% endhighlight %}
 
 ## 새로운 동료와 공유하기
 
 새로운 팀원의 입장에서는 기존 팀원 중 누군가가 자신을 pass에 포함시켜 주기를 기다리는 것 말고 할 일이 없다.
 새로운 동료를 포함시키기 위해서는 새로운 동료의 gpg-id를 pass에 추가해야 한다.
 
-    $ pass init BD699A08 D83EB3C5
+{% highlight shell_session %}
+$ pass init BD699A08 D83EB3C5
 
-    Password store initialized for BD699A08, D83EB3C5
+Password store initialized for BD699A08, D83EB3C5
 
-    [master 0f2f059] Set GPG id to BD699A08, D83EB3C5.
-     1 file changed, 1 insertion(+)
+[master 0f2f059] Set GPG id to BD699A08, D83EB3C5.
+ 1 file changed, 1 insertion(+)
 
-    ci-tool: reencrypting to C7505C45A9CD6AD3 D4F57D4EE716C901
-    email/jngsp@test.com: reencrypting to C7505C45A9CD6AD3 D4F57D4EE716C901
-    heroku-for-microsite: reencrypting to C7505C45A9CD6AD3 D4F57D4EE716C901
-    corporate-credit-card: reencrypting to C7505C45A9CD6AD3 D4F57D4EE716C901
+ci-tool: reencrypting to C7505C45A9CD6AD3 D4F57D4EE716C901
+email/jngsp@test.com: reencrypting to C7505C45A9CD6AD3 D4F57D4EE716C901
+heroku-for-microsite: reencrypting to C7505C45A9CD6AD3 D4F57D4EE716C901
+corporate-credit-card: reencrypting to C7505C45A9CD6AD3 D4F57D4EE716C901
 
-    [master 40f16d2] Reencrypt password store using new GPG id BD699A08, D83EB3C5.
-     4 files changed, 0 insertions(+), 0 deletions(-)
-     rewrite ci-tool.gpg (100%)
-     rewrite corporate-credit-card.gpg (100%)
-     rewrite email/jngsp@test.com.gpg (100%)
-     rewrite heroku-for-microsite.gpg (100%)
+[master 40f16d2] Reencrypt password store using new GPG id BD699A08, D83EB3C5.
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ rewrite ci-tool.gpg (100%)
+ rewrite corporate-credit-card.gpg (100%)
+ rewrite email/jngsp@test.com.gpg (100%)
+ rewrite heroku-for-microsite.gpg (100%)
+{% endhighlight %}
 
 새로운 gpg-id를 추가하려면 기존에 포함되어 있는 gpg-id도 포함하여 pass를 다시 설정해준다.
 위의 결과를 보면 기존에 저장되어 있던 비밀번호들이 새로운 공개 키를 이용해 다시 암호화된 것을 알 수 있다.
 변경된 내용은 git repository를 업데이트하여 공유한다.
 
-    $ pass git push
+{% highlight shell_session %}
+$ pass git push
 
-    Counting objects: 14, done.
-    Delta compression using up to 2 threads.
-    Compressing objects: 100% (10/10), done.
-    Writing objects: 100% (14/14), 3.61 KiB | 0 bytes/s, done.
-    Total 14 (delta 2), reused 0 (delta 0)
-    remote: Resolving deltas: 100% (2/2), completed with 1 local object.
-    To https://github.com/Jangsea/pass-store.git
-       5138d82..40f16d2  master -> master
+Counting objects: 14, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (14/14), 3.61 KiB | 0 bytes/s, done.
+Total 14 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/Jangsea/pass-store.git
+   5138d82..40f16d2  master -> master
+{% endhighlight %}
 
 이제 새 동료는 git repository를 복사하여 비밀번호에 접근할 수 있다.
 새 동료 역시 다른 동료들의 공개 키를 키 서버에서 공유 받아야 새로운 비밀번호를 pass에 추가할 수 있다.
@@ -322,13 +360,15 @@ pass는 비밀번호를 암호화시키거나 복호화시킬 때 사용할 gpg-
 예를 들어, RED와 BLUE로 구분된 보안 수준이 있다면 각 보안 수준에 따라 다른 구성원들만 포함시키고 싶다.
 이럴 때는 pass에 하위 디렉토리를 만들고, 각 하위 디렉토리마다 서로 다른 gpg-id를 지정할 수 있다.
 
-    $ pass init -p RED BD699A08
+{% highlight shell_session %}
+$ pass init -p RED BD699A08
 
-    mkdir: created directory '/home/jngsp/.password-store/RED'
-    Password store initialized for BD699A08
-    [master e17fd10] Set GPG id to BD699A08.
-     1 file changed, 1 insertion(+)
-     create mode 100644 RED/.gpg-id
+mkdir: created directory '/home/jngsp/.password-store/RED'
+Password store initialized for BD699A08
+[master e17fd10] Set GPG id to BD699A08.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 RED/.gpg-id
+{% endhighlight %}
 
 이제 '/home/jngsp/.password-store/RED' 디렉토리가 생성되었고, 'RED/.gpg-id' 파일에는 gpg-id, 'BD699A08'만 저장되어 있다.
 즉, RED 디렉토리에 저장되는 모든 비밀번호는 gpg-id, 'BD699A08'만 복호화 가능하다.
@@ -345,26 +385,32 @@ private 디렉토리 역시 온라인으로 백업하고 싶다면 해당 디렉
 예를 들어 private 디렉토리만 드랍박스(Dropbox)로 관리하려면, 드랍박스 내에 private 디렉토리를 만들고 이를 .password-store/ 하위에 디렉토리 symlink로 연결한다.
 pass를 통해서 개인 정보를 관리할 수 있고, 이는 드랍박스에 백업 된다.
 
-    $ ln -s ~/Dropbox/private_for_pass ~/.password-store/private
+{% highlight shell_session %}
+$ ln -s ~/Dropbox/private_for_pass ~/.password-store/private
+{% endhighlight %}
 
 # .pem 파일 관리
 
 AWS를 자주 사용하다 보면, .pem 파일이 쌓이는데 이 역시 pass로 관리 가능하다.
 결국 .pem 파일도 텍스트이므로 `-m` 옵션으로 .pem 내용을 통째로 암호화하여 저장할 수 있다.
 
-    $ pass insert -m pem/test.pem < test.pem
+{% highlight shell_session %}
+$ pass insert -m pem/test.pem < test.pem
 
-    Enter contents of pem/ga-climber-test.pem and press Ctrl+D when finished:
+Enter contents of pem/ga-climber-test.pem and press Ctrl+D when finished:
 
-    [master 726f816] Add given password for pem/test.pem to store.
-     1 file changed, 0 insertions(+), 0 deletions(-)
-     create mode 100644 pem/test.pem.gpg
+[master 726f816] Add given password for pem/test.pem to store.
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 pem/test.pem.gpg
+{% endhighlight %}
 
 저장된 .pem 파일은 암호화되어 git repository로 공유된다.
 필요할 때 꺼내 쓰기 편하다.
 
-    $ pass pem/test.pem > another-test.pem
-    $ diff test.pem another-test.pem  # there is nothing different
+{% highlight shell_session %}
+$ pass pem/test.pem > another-test.pem
+$ diff test.pem another-test.pem  # there is nothing different
+{% endhighlight %}
 
 # 정리
 
