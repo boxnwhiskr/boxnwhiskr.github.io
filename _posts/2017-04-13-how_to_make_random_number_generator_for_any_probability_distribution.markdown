@@ -64,19 +64,21 @@ $$ F^{-1}(U) = log(\frac{U}{1 - U}) \sim \text{Logistic}$$
 
 위 식을 코드로 옮기면 아래와 같다. 기본 난수 생성기에서 추출한 균등 분포 자료를 로지스틱 누적 분포 함수의 역함수에 대입하면 로지스틱 난수가 된다.
 
-    # python3
-    import math
-    import random
+{% highlight py3 %}
+# python3
+import math
+import random
 
-    def inv_logistic_cdf(u):
-        return math.log(u / (1 - u))
+def inv_logistic_cdf(u):
+    return math.log(u / (1 - u))
 
-    # random numbers of Unif(0, 1)
-    random_numbers = [random.random() for _ in range(10000)]
+# random numbers of Unif(0, 1)
+random_numbers = [random.random() for _ in range(10000)]
 
-    # random numbers of Logistic Dist. through the inverse transform
-    random_numbers_from_logistic = [inv_logistic_cdf(random_number)
-                                    for random_number in random_numbers]
+# random numbers of Logistic Dist. through the inverse transform
+random_numbers_from_logistic = [inv_logistic_cdf(random_number)
+                                for random_number in random_numbers]
+{% endhighlight %}
 
 로지스틱 [확률 밀도 함수(pdf)](https://en.wikipedia.org/wiki/Probability_density_function)와 위의 코드에서 생성한 난수의 히스토그램을 비교하면 아래와 같다.
 생성한 난수는 로지스틱 확률 분포에서 추출한 난수가 맞다는 것을 알 수 있다.
@@ -97,19 +99,21 @@ $$ F^{-1}(U) = \sqrt{-2log(1 - U)} \sim \text{Rayleigh} $$
 
 이를 코드로 구현하면 아래와 같다.
 
-    # python3
-    import math
-    import random
+{% highlight py3 %}
+# python3
+import math
+import random
 
-    def inv_rayleigh_cdf(u):
-        return math.sqrt(-2 * math.log(1 - u))
+def inv_rayleigh_cdf(u):
+    return math.sqrt(-2 * math.log(1 - u))
 
-    # random samples from Unif(0, 1)
-    random_numbers = [random.random() for _ in range(10000)]
+# random samples from Unif(0, 1)
+random_numbers = [random.random() for _ in range(10000)]
 
-    # random samples of Rayleigh Dist. through the inverse transform
-    random_numbers_from_rayleigh = [inv_rayleigh_cdf(random_number)
-                                    for random_number in random_numbers]
+# random samples of Rayleigh Dist. through the inverse transform
+random_numbers_from_rayleigh = [inv_rayleigh_cdf(random_number)
+                                for random_number in random_numbers]
+{% endhighlight %}
 
 역시나 생성한 난수로 히스토그램을 그려보면, 원하는 확률 분포에서 나온 것을 알 수 있다.
 
@@ -148,17 +152,19 @@ X & = \sigma \, \Phi^{-1}(U) + \mu \sim N(\mu, \sigma^{2}) \, \text{I}(a < X < b
 
 확률 분포 $N(2, 9)\,\text{I}(1<X<5)$ 를 따르는 난수 생성기를 만들면 아래 코드와 같다.
 
-    # python3
-    from random import uniform
-    from scipy.stats import norm
+{% highlight py3 %}
+# python3
+from random import uniform
+from scipy.stats import norm
 
-    def trucated_norm_rng(size, mu=0, sigma=1, lower_bound=None, upper_bound=None):
-        u_lower = norm.cdf(lower_bound, mu, sigma) if lower_bound is not None else 0
-        u_upper = norm.cdf(upper_bound, mu, sigma) if upper_bound is not None else 1
-        rns_unif = (uniform(u_lower, u_upper) for _ in range(size))
-        return (norm.ppf(rn_unif, mu, sigma) for rn_unif in rns_unif)
+def trucated_norm_rng(size, mu=0, sigma=1, lower_bound=None, upper_bound=None):
+    u_lower = norm.cdf(lower_bound, mu, sigma) if lower_bound is not None else 0
+    u_upper = norm.cdf(upper_bound, mu, sigma) if upper_bound is not None else 1
+    rns_unif = (uniform(u_lower, u_upper) for _ in range(size))
+    return (norm.ppf(rn_unif, mu, sigma) for rn_unif in rns_unif)
 
-    rng = trucated_norm_rng(10000, mu=2, sigma=3, lower_bound=1, upper_bound=5)
+rng = trucated_norm_rng(10000, mu=2, sigma=3, lower_bound=1, upper_bound=5)
+{% endhighlight %}
 
 위의 코드에서 생성한 난수의 히스토그램을 보면 원하는 정규 분포의 원하는 범위 내에서만 추출된 것을 알 수 있다.
 
