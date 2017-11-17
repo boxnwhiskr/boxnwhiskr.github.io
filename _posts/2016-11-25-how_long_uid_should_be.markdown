@@ -20,28 +20,32 @@ date: 2016-11-25
 고유 식별자([UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier))를 발급하는데는 여러 가지 방법이 있지만,
 예시를 위해서 아주 간단한 키 발급 함수를 만든다.
 
-    # python3
-    from string import ascii_letters, digits
-    import random
-    
-    def make_key(l):
-        letters = ascii_letters + digits
-        key = ''
-        for _ in range(l):
-            key += random.choice(letters)
-        return key
+{% highlight python %}
+# python3
+from string import ascii_letters, digits
+import random
+
+def make_key(l):
+    letters = ascii_letters + digits
+    key = ''
+    for _ in range(l):
+        key += random.choice(letters)
+    return key
+{% endhighlight %}
 
 알파벳 대소문자 52개와 숫자 10개, 총 62개 글자 중에서 $l$개를 무작위로 복원 추출하면 간단한 키를 만들 수 있다.
 
-    >>> random.seed(0)
-    >>> make_key(4)
-    '2yW4'
-    >>> make_key(8)
-    'Acq9GFz6'
-    >>> make_key(16)
-    'Y1t9EwL56nGisiWg'
-    >>> make_key(32)
-    'NZq6ITZM5jtgUe52RvEJgwBuNO6n9JEC'
+{% highlight python %}
+>>> random.seed(0)
+>>> make_key(4)
+'2yW4'
+>>> make_key(8)
+'Acq9GFz6'
+>>> make_key(16)
+'Y1t9EwL56nGisiWg'
+>>> make_key(32)
+'NZq6ITZM5jtgUe52RvEJgwBuNO6n9JEC'
+{% endhighlight %}
 
 키 길이는 길수록 좋다. 얼마나 길면 될까?
 
@@ -133,16 +137,18 @@ $$ 1 - \frac{365 \cdot 364 \cdot 363 \cdots (365 - 23 + 1)}{365^{23}} \approx 0.
 
 50명이 모이면 생일이 같은 사람이 있을 확률은 약 97%가 된다.
 
-    # python3
-    from math import factorial
-    
-    def prob_birthday(k, n=365):
-        return 1 - factorial(n) / factorial(n - k) / (n**k)
-    
-    >>> prob_birthday(23)
-    0.5072972343239854
-    >>> prob_birthday(50)
-    0.9703735795779884
+{% highlight python %}
+# python3
+from math import factorial
+
+def prob_birthday(k, n=365):
+    return 1 - factorial(n) / factorial(n - k) / (n**k)
+
+>>> prob_birthday(23)
+0.5072972343239854
+>>> prob_birthday(50)
+0.9703735795779884
+{% endhighlight %}
 
 ![birthday problem](/img/posts/2016-11-25-how_long_uid_should_be/1000px-Birthday_Paradox.svg.png)
 _<같은 생일을 갖는 사람이 있을 확률 (출처: [wikipedia](https://en.wikipedia.org/wiki/File:Birthday_Paradox.svg))>_
@@ -159,11 +165,13 @@ $$ P(k, n) = 1 - \frac{n \cdot (n - 1) \cdot (n - 2) \cdots (n - k + 1)}{n^{k}} 
 문제는 값이 커지면 계승(factorial) 계산이 어렵다는 점이다.
 아래처럼 'OverflowError'가 발생한다.
 
-    >>> prob_birthday(200)
-    Traceback (most recent call last):
-      File "<input>", line 1, in <module>
-      File "<input>", line 2, in prob_birthday
-    OverflowError: integer division result too large for a float
+{% highlight python %}
+>>> prob_birthday(200)
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+  File "<input>", line 2, in prob_birthday
+OverflowError: integer division result too large for a float
+{% endhighlight %}
 
 계승 계산을 잘 하려고 노력하기 보다는 근사값을 사용한다.
 (참고: [wikipedia](https://en.wikipedia.org/wiki/Birthday_problem#Approximations))
@@ -174,34 +182,40 @@ $$ P(k, n) \approx 1 - e^{\frac{-k^{2}}{2n}} $$
 만약 웹 사이트에 만 명의 신규 고객이 방문한다면 같은 키를 갖는 서로 다른 유저가 발생할 확률은 약 97%다.
 키가 턱없이 짧다.
 
-    # python3
-    from math import exp
-    
-    def approx_prob_birthday(k, n=365):
-        return 1 - exp(-k**2 / (2 * n))
+{% highlight python %}
+# python3
+from math import exp
 
-    >>> 62**4
-    14776336
-    >>> approx_prob_birthday(10000, 62**4)
-    0.9660812995934986
+def approx_prob_birthday(k, n=365):
+    return 1 - exp(-k**2 / (2 * n))
+
+>>> 62**4
+14776336
+>>> approx_prob_birthday(10000, 62**4)
+0.9660812995934986
+{% endhighlight %}
 
 천만 명의 신규 고객이 방문한다면, 키의 길이를 더 늘려야 한다.
 키 길이를 8개로 늘리면 키의 개수는 $62^{8}$, 약 218조 개다.
 그래도 같은 키를 갖는 서로 다른 고객이 생길 확률은 약 20%나 된다.
 
-    >>> 62**8
-    218340105584896
-    >>> approx_prob_birthday(10000000, 62**8)
-    0.20467188838610273
+{% highlight python %}
+>>> 62**8
+218340105584896
+>>> approx_prob_birthday(10000000, 62**8)
+0.20467188838610273
+{% endhighlight %}
 
 약 오천만 명의 신규 고객이 2개 이상의 다른 브라우저를 사용한다면 약 일억 번의 신규 방문이 가능하다.
 키의 길이를 10개로 늘려서 계산해보면 키의 개수는 $62^{10}$, 약 팔경 사천조 개다.
 같은 키를 발급받는 서로 다른 유저가 생길 확률은 약 0.6%다.
 
-    >>> 62**10
-    839299365868340224
-    >>> approx_prob_birthday(100000000, 62**10)
-    0.005939640084313247
+{% highlight python %}
+>>> 62**10
+839299365868340224
+>>> approx_prob_birthday(100000000, 62**10)
+0.005939640084313247
+{% endhighlight %}
 
 일억 번의 신규 키를 발급할 예정이라면 최소한 10자리의 키를 발급하는 것이 좋다.
 
@@ -218,8 +232,10 @@ $$ P(k, n) \approx 1 - e^{\frac{-k^{2}}{2n}} $$
 62개의 문자로 10자리 키를 만들면 총 80비트를 사용하는데, 비트 단위 키를 만들면 훨씬 적은 비트를 사용할 수 있다.
 1억 번의 신규 발급에 64비트 길이의 키를 사용하면 키가 겹칠 확률은 약 0.03%다.
 
-    >>> approx_prob_birthday(100000000, 2**64)
-    0.00027101381224159393
+{% highlight python %}
+>>> approx_prob_birthday(100000000, 2**64)
+0.00027101381224159393
+{% endhighlight %}
 
 # 생일 공격
 
@@ -235,8 +251,10 @@ _<몇 개의 키를 발급하면 키가 겹치나? 출처: [wikipedia](https://e
 위의 표는 키 길이와 키 충돌 확률에 따른 키 발급 수를 계산한 값이다.
 예를 들어, 16비트 키를 만들면 총 65,536개의 서로 다른 키를 발급할 수 있고, 300개를 신규 발급하면 키가 겹칠 확률이 약 50%라는 것을 알 수 있다.
 
-    >>> approx_prob_birthday(300, 2**16)
-    0.4967385727487834
+{% highlight python %}
+>>> approx_prob_birthday(300, 2**16)
+0.4967385727487834
+{% endhighlight %}
 
 표를 참고하면 대략적인 상황에 맞춰서 키 길이를 결정하는데 도움이 된다.
 브라우저 쿠키에 심을 유니크 키라면 64비트 정도로도 충분한 것으로 보인다.
@@ -251,4 +269,3 @@ _<몇 개의 키를 발급하면 키가 겹치나? 출처: [wikipedia](https://e
 5분이 지나도 결론을 내리지 못했다면, 아마도 그냥 충분히(?) 긴 키를 발급하고 넘어갔을 것이다.
 현실에서도 큰 문제는 발생하지 않았을 것이다.
 그러나 고민을 한 덕분에 기존에 알던 이론을 현실에 적용해볼 수 있고, 그만큼 더 알 수 있다. 그래서 더 재미있다.
-
