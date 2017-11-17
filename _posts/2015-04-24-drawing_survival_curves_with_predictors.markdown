@@ -114,32 +114,34 @@ $$ h(t, X_1, X_2, X_3) = h_0(t)exp(\beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3)$$
 데이터가 주어지면 위의 모형에서 $\beta_1$, $\beta_2$, $\beta_3$를 추정하여 모형을 완성시킨다.
 [R](http://www.r-project.org/)에서는 [survival](http://cran.r-project.org/web/packages/survival/index.html) 패키지의 _coxph_ 함수를 사용하여 모형을 만들 수 있다.
 
-    > coxph.fit <- coxph(Surv(t, churn) ~ X1 + X2 + X3, data=test)
+{% highlight r %}
+> coxph.fit <- coxph(Surv(t, churn) ~ X1 + X2 + X3, data=test)
+{% endhighlight %}
 
 실제로 데이터를 이용하여 도출한 모형은 아래와 같다.
 
 $$ h(t, X_1, X_2, X_3) = h_0(t)exp(1.08452 X_1 -0.03050 X_2 -0.07374 X_3)$$
 
-    > summary(coxph.fit)
-    
-    Call:
-    coxph(formula = Surv(time, churn) ~ promo + dt + purchase, data = surv_df)
-    
-      n= 1000, number of events= 818 
-    
-                 coef exp(coef) se(coef)       z Pr(>|z|)    
-    promo     1.08452   2.95802  0.07410  14.636  < 2e-16 ***
-    dt       -0.03050   0.96996  0.00128 -23.834  < 2e-16 ***
-    purchase -0.07374   0.92891  0.01929  -3.823 0.000132 ***
-    ---
-    Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-    
-             exp(coef) exp(-coef) lower .95 upper .95
-    promo       2.9580     0.3381    2.5582    3.4204
-    dt          0.9700     1.0310    0.9675    0.9724
-    purchase    0.9289     1.0765    0.8944    0.9647
+{% highlight r %}
+> summary(coxph.fit)
 
+Call:
+coxph(formula = Surv(time, churn) ~ promo + dt + purchase, data = surv_df)
 
+  n= 1000, number of events= 818
+
+             coef exp(coef) se(coef)       z Pr(>|z|)
+promo     1.08452   2.95802  0.07410  14.636  < 2e-16 ***
+dt       -0.03050   0.96996  0.00128 -23.834  < 2e-16 ***
+purchase -0.07374   0.92891  0.01929  -3.823 0.000132 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+         exp(coef) exp(-coef) lower .95 upper .95
+promo       2.9580     0.3381    2.5582    3.4204
+dt          0.9700     1.0310    0.9675    0.9724
+purchase    0.9289     1.0765    0.8944    0.9647
+{% endhighlight %}
 
 # 모형 해석
 
@@ -177,7 +179,9 @@ $h_0(t)$는 ratio를 계산하는 과정에서 소거되므로, $\beta$ 값을 �
 이렇게 얻은 모형으로 특정 설명 변수를 갖는 유저의 생존 곡선을 그릴 수 있다.
 만약, 광고를 통해서 유입되었고, 첫번째 날의 접속 시간이 100분이면서, 구매 횟수가 3회인 유저의 생존 곡선이 궁금하다면 위에서 도출한 모형으로 이를 쉽게 나타낼 수 있다.
 
-    > d.coxph <- survfit(coxph.fit, c(promo=1, dt=100, purchase=3)
+{% highlight r %}
+> d.coxph <- survfit(coxph.fit, c(promo=1, dt=100, purchase=3)
+{% endhighlight %}
 
 ![adjuted.survival.curve](/img/posts/2015-04-24-drawing_survival_curves_with_predictors/adjusted_survival_curve.png)
 
@@ -191,7 +195,9 @@ $h_0(t)$는 ratio를 계산하는 과정에서 소거되므로, $\beta$ 값을 �
 promo=1, dt=100, purchase=3 이라는 조건과는 다른 유저의 생존 곡선이 필요하다면, 모형을 이용해서 다시 계산한다.
 예를 들어, 기존과 같은 조건에서 dt=180인 유저의 생존 곡선은 아래와 같이 구할 수 있다.
 
-    > d.coxph <- survfit(coxph.fit, c(promo=1, dt=180, purchase=3)
+{% highlight r %}
+> d.coxph <- survfit(coxph.fit, c(promo=1, dt=180, purchase=3)
+{% endhighlight %}
     
 ![adjuted.survival.curve2](/img/posts/2015-04-24-drawing_survival_curves_with_predictors/adjusted_survival_curve2.png)
 
