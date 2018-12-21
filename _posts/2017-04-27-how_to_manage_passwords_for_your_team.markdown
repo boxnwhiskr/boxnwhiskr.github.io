@@ -47,7 +47,7 @@ gpg는 비대칭키 방식의 암호화를 사용할 수 있는 오픈 소스 �
 혹시 이미 생성한 gpg key가 있다면 기존 키를 그대로 사용해도 무방하다.
 
 {% highlight console %}
-$ gpg2 --gen-key
+$ gpg --gen-key
 {% endhighlight %}
 
 gpg를 이용해서 키를 생성하면 공개 키(public key)와 비밀 키(prviate key)가 함께 생성되고, '~/.gnupg/' 디렉토리에 저장된다.
@@ -59,7 +59,7 @@ gpg를 이용해서 키를 생성하면 공개 키(public key)와 비밀 키(prv
 생성한 gpg key를 확인하면 아래와 같이 방금 전에 만든 키를 확인할 수 있다.
 
 {% highlight console %}
-$ gpg2 --list-keys
+$ gpg --list-keys
 
 /home/jngsp/.gnupg/pubring.kbx
 -------------------------------
@@ -236,7 +236,7 @@ pass는 비밀번호를 암호화시키거나 복호화시킬 때 사용할 gpg-
 `--list-secret-keys` 옵션을 사용하면 현재 저장되어 있는 비밀 키를 볼 수 있다.
 
 {% highlight console %}
-$ gpg2 --list-secret-keys
+$ gpg --list-secret-keys
 
 /home/jngsp/.gnupg/pubring.kbx
 -------------------------------
@@ -250,7 +250,7 @@ ssb   rsa2048/E716C901 2017-04-27 [E]
 아래와 같이 'pgp.mit.edu'에 공개 키를 공유한다.
 
 {% highlight console %}
-$ gpg2 --keyserver pgp.mit.edu --send-key BD699A08
+$ gpg --keyserver pgp.mit.edu --send-key BD699A08
 
 gpg: sending key BD699A08 to hkp://pgp.mit.edu
 {% endhighlight %}
@@ -273,7 +273,7 @@ gpg:               imported: 1
 저장된 공개 키 리스트를 보면 동료의 키가 추가된 것을 알 수 있다.
 
 {% highlight console %}
-$ gpg2 --list-keys
+$ gpg --list-keys
 
 /home/jngsp/.gnupg/pubring.kbx
 -------------------------------
@@ -289,7 +289,7 @@ sub   rsa2048/A9CD6AD3 2017-04-27 [E]
 가져온 키는 바로 쓸 수 없고, 신뢰 수준을 조정해야 한다.
 
 {% highlight console %}
-$ gpg2 --edit-key D83EB3C5
+$ gpg --edit-key D83EB3C5
 
 gpg> trust
 Please decide how far you trust this user to correctly verify other users' keys
