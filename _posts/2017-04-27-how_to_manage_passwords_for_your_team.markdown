@@ -118,9 +118,10 @@ myemailpassword
 
 {% highlight console %}
 $ pass -c email/jngsp@test.com
-{% endhighlight %}
 
 Copied cadb to clipboard. Will clear in 45 seconds.
+{% endhighlight %}
+
 
 ## 비밀번호 생성
 
