@@ -471,31 +471,4 @@ body > .connect {
   }
 }
 
-
-// IPython Notebook
-article {
-  .cell.code_cell {
-    cursor: pointer;
-  }
-  .cell .prompt {
-    font-size: 14px;
-  }
-  .cell pre {
-    margin: 0.5em 0;
-  }
-
-  .cell .input {
-    display: none;
-  }
-  .cell .output_prompt {
-    display: none;
-  }
-  .cell.expanded .input {
-    display: block;
-  }
-  .cell.expanded .output_prompt {
-    display: block;
-  }
-}
-
 @import "syntax-highlighting";

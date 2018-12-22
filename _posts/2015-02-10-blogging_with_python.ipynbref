@@ -1,8 +1,0 @@
----
-layout: post
-title: IPython Notebook으로 블로깅하기
-author: 강규영
-brief: "IPython Notebook과 Jekyll을 연동하여 블로깅을 하는 방법"
-date: 2015-02-10
----
-2015-02-10-blogging_with_python.ipynb
