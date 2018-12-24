@@ -7,7 +7,7 @@ MathJax.Hub.Config({
   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 <!-- Facebook plugin -->
 <div id="fb-root" style="display: none"></div>
@@ -89,14 +89,14 @@ document.addEventListener("DOMContentLoaded", function(e) {
 });
 </script>
 
-<section class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<section class="post" itemscope itemtype="https://schema.org/BlogPosting">
     <h1><a href="{{ page.url }}"><span itemprop="name">{{ page.title }}</span></a></h1>
     <header>
         <time datetime="{{ page.date | date: "%Y-%m-%dT%h:%M:%sZ" }}" itemprop="datePublished">
         {{ page.date | date: "%b %-d, %Y" }}
         </time>
 
-        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
         {% for member in site.data.members %}
             {% if member.name == page.author %}
             <img class="profile" src="{{ member.image }}" alt="{{ member.name }}" itemprop="image">

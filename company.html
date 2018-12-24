@@ -17,7 +17,7 @@ title: Company
     <h1>구성원</h1>
     <ul>
         {% for member in site.data.members %}
-        <li itemscope itemtype="http://schema.org/Person">
+        <li itemscope itemtype="https://schema.org/Person">
             <img class="profile" src="{{ member.image }}" alt="{{ member.name }}" itemprop="image">
             <h2>
                 <span class="name" itemprop="name">{{ member.name }}</span>

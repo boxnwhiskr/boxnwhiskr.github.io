@@ -4,7 +4,7 @@ email: whisker@boxnwhis.kr
 description: > # this means to ignore newlines until "baseurl:"
   Official homepage of Box and Whisker
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.boxnwhis.kr"
+url: "https://www.boxnwhis.kr"
 timezone: UTC
 paginate: 10
 encoding: utf-8
