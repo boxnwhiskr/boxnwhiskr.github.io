@@ -6,7 +6,7 @@ brief: "'캠페인 분석기'를 소개하고 베타 테스터를 모집합니�
 date: 2017-05-16
 ---
 
-[박스앤위스커](http://boxnwhis.kr)와 [브리즈플랫폼(GSSHOP)](http://www.breezecommerce.co.kr)이 함께 만든 '캠페인 분석기' 툴에 대해서 설명한다.
+[박스앤위스커](/)와 [브리즈플랫폼(GSSHOP)](http://www.breezecommerce.co.kr)이 함께 만든 '캠페인 분석기' 툴에 대해서 설명한다.
 '캠페인 분석기'는 [구글 애널리틱스(Google Analytics)](https://www.google.com/analytics)를 이용해서 가장 성과가 높은 고객 세그먼트를 자동으로 탐색하는 툴이다.
 
 # 구글 애널리틱스 사용자 메뉴의 한계
@@ -49,7 +49,7 @@ $$\sum_{r=1}^7 \binom{20}{r} = 137,979$$
 
 # 캠페인 분석기 소개
 
-이러한 한계를 해결하고, 아래와 같은 질문에 대답하기 위해서 [박스앤위스커](http://boxnwhis.kr)와 [브리즈플랫폼](http://www.breezecommerce.co.kr)은 가칭 '캠페인 분석기'를 함께 만들었다.
+이러한 한계를 해결하고, 아래와 같은 질문에 대답하기 위해서 [박스앤위스커](/)와 [브리즈플랫폼](http://www.breezecommerce.co.kr)은 가칭 '캠페인 분석기'를 함께 만들었다.
 
  *   광고 캠페인에서 가장 성과가 높은 고객 세그먼트는 무엇인가?
 
