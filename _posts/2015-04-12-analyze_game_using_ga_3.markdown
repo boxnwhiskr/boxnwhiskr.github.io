@@ -5,8 +5,8 @@ author: 강규영
 brief: "구글 애널리틱스를 활용하여 난이도 분석, 점수 기록, 플레이어 사망 원인 분석 등을 수행하는 실제 사례를 소개합니다"
 date: 2015-04-12
 ---
-[Google Analytics로 게임 분석하기 1](http://www.boxnwhis.kr/2014/09/15/analyze_game_using_ga_1.html)에서는 구글 애널리틱스(이하 GA)를 활용하여 게임 로그를 분석하는 예시를 개괄적으로 소개하였고,
-[Google Analytics로 게임 분석하기 2](http://www.boxnwhis.kr/2014/11/08/analyze_game_using_ga_2.html)에서는 게임
+[Google Analytics로 게임 분석하기 1](/2014/09/15/analyze_game_using_ga_1.html)에서는 구글 애널리틱스(이하 GA)를 활용하여 게임 로그를 분석하는 예시를 개괄적으로 소개하였고,
+[Google Analytics로 게임 분석하기 2](/2014/11/08/analyze_game_using_ga_2.html)에서는 게임
 내에서 발생하는 각종 사건을 어떻게 GA에 매핑할 것인지 설명하였다.
 
 이번 글에서는 GA를 활용하여 난이도 분석, 점수 기록, 플레이어 사망 원인 분석 등을 수행하는 **실제 사례**를
@@ -161,8 +161,8 @@ AI와 관련된 부분은 모드별로 나누어 살펴보거나, 점수대별�
 
 다음 포스팅에서는 A/B 테스팅을 통한 게임 난이도 조절을 다루고자 한다. 관련하여 다음 글들을 참고하기 바란다:
 
-*   [A/B 테스팅이란](http://www.boxnwhis.kr/2015/01/29/a_b_testing.html)
-*   [온라인 게임에서의 A/B 테스팅](http://www.boxnwhis.kr/2015/01/29/a_b_testing_online_games.html)
+*   [A/B 테스팅이란](/2015/01/29/a_b_testing.html)
+*   [온라인 게임에서의 A/B 테스팅](/2015/01/29/a_b_testing_online_games.html)
 
 현재 테스팅이 진행되는 중인데 플레이어가 부족하여 걱정이다. 데이터 축적에 도움을 주고 싶다면 다음 링크를
 눌러서 게임을 플레이해주길 바란다 :)

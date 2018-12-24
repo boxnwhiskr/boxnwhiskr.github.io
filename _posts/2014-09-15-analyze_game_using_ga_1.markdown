@@ -85,4 +85,4 @@ GA로 게임 로그를 분석했을 때 가장 좋은 점은 하루~이틀 투�
 
 # 관련 글
 
-*   [Google Analytics로 게임 분석하기 2](http://www.boxnwhis.kr/2014/11/08/analyze_game_using_ga_2.html): 게임 데이터를 GA에 매핑하는 방법
+*   [Google Analytics로 게임 분석하기 2](/2014/11/08/analyze_game_using_ga_2.html): 게임 데이터를 GA에 매핑하는 방법
