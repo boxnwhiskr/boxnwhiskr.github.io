@@ -94,41 +94,41 @@ if(location.hostname !== 'boxnwhis.kr' && location.hostname !== 'www.boxnwhis.kr
 </footer>
 
 <!-- Greedy Bandit -->
-<style>
-    body.fixed > nav {
-        position: fixed;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.8);
-        box-shadow: 0 1px 2px #BBB;
-        z-index: 1;
-    }
-    body.fixed > header {
-        margin-top: 3.5rem;
-    }
-    body.fixed .social-buttons {
-        z-index: 0;
-    }
-</style>
+<!--<style>-->
+    <!--body.fixed > nav {-->
+        <!--position: fixed;-->
+        <!--width: 100%;-->
+        <!--background-color: rgba(255, 255, 255, 0.8);-->
+        <!--box-shadow: 0 1px 2px #BBB;-->
+        <!--z-index: 1;-->
+    <!--}-->
+    <!--body.fixed > header {-->
+        <!--margin-top: 3.5rem;-->
+    <!--}-->
+    <!--body.fixed .social-buttons {-->
+        <!--z-index: 0;-->
+    <!--}-->
+<!--</style>-->
 
-<script src="//boxnwhiskr.github.io/gbbox-sdk-js/gbbox-sdk.js" ></script>
-<script type="text/javascript">
-    (function() {
-        var gbbox = new _gbbox.API('http://52.78.245.125', 'blahblah');
+<!--<script src="//boxnwhiskr.github.io/gbbox-sdk-js/gbbox-sdk.js" ></script>-->
+<!--<script type="text/javascript">-->
+    <!--(function() {-->
+        <!--var gbbox = new _gbbox.API('http://52.78.245.125', 'blahblah');-->
 
-        var currentPageIsPost = document.location.href.split('/')[3] > 2000;
-        if(currentPageIsPost) {
-            gbbox.route(['fixgnb'], function(assignments) {
-                var exp = assignments['fixgnb'];
-                if(exp.arms.fix === 'yes') {
-	                document.body.setAttribute('class', 'fixed');
-                }
-                gbbox.sendPageview();
-            });
-        } else {
-            gbbox.sendPageview();
-        }
-    })();
-</script>
+        <!--var currentPageIsPost = document.location.href.split('/')[3] > 2000;-->
+        <!--if(currentPageIsPost) {-->
+            <!--gbbox.route(['fixgnb'], function(assignments) {-->
+                <!--var exp = assignments['fixgnb'];-->
+                <!--if(exp.arms.fix === 'yes') {-->
+	                <!--document.body.setAttribute('class', 'fixed');-->
+                <!--}-->
+                <!--gbbox.sendPageview();-->
+            <!--});-->
+        <!--} else {-->
+            <!--gbbox.sendPageview();-->
+        <!--}-->
+    <!--})();-->
+<!--</script>-->
 <!-- End Greedy Bandit -->
 
 </body>
