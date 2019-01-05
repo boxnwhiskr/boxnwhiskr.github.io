@@ -25,3 +25,7 @@ navigation:
   text: Contact
 
 exclude: ["*.pynb"]
+
+# Plug-in
+plugins:
+  - jekyll-gist
