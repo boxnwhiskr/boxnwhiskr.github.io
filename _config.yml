@@ -1,4 +1,5 @@
 # Site settings
+highlighter: rouge
 title: "-[|]- Box and Whisker"
 email: whisker@boxnwhis.kr
 description: > # this means to ignore newlines until "baseurl:"
@@ -24,3 +25,7 @@ navigation:
   text: Contact
 
 exclude: ["*.pynb"]
+
+# Plug-in
+plugins:
+  - jekyll-gist
