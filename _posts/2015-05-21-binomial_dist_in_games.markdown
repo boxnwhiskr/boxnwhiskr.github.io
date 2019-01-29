@@ -17,9 +17,8 @@ date: 2015-05-21
 **불확실한 결과**가 발생하는 모든 과정에 확률은 존재한다.
 
 ![diablo3_damage](/img/posts/2015-05-21-binomial_dist_in_games/diablo3_damage.jpg)
-_<데미지 숫자 하나도 결국 확률에 의해서 결정된 사건 중 하나다.
-출처: [http://i.imgur.com/YjI1H.jpg](http://i.imgur.com/YjI1H.jpg) 
-linked in [us.battle.net](http://us.battle.net/d3/en/forum/topic/7199913320)>_
+
+_<데미지 숫자 하나도 결국 확률에 의해서 결정된 사건 중 하나다. 출처: [http://i.imgur.com/YjI1H.jpg](http://i.imgur.com/YjI1H.jpg) linked in [us.battle.net](http://us.battle.net/d3/en/forum/topic/7199913320)>_
 
 게임에서 일어나는 대부분의 사건은 그 결과가 불확실하다.
 즉, 게임 속의 거의 모든 사건에는 확률이 관여하고 있다.
