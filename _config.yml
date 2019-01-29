@@ -26,6 +26,3 @@ navigation:
 
 exclude: ["*.pynb"]
 
-# Plug-in
-plugins:
-  - jekyll-gist
