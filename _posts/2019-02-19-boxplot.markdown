@@ -70,27 +70,27 @@ date: 2019-02-19
 
 박스 플롯을 좁은 간격으로 나란히 그리면 여러 데이터 뭉치를 쉽게 비교할 수 있다.
 
-![박스 플롯 병치](/img/posts/2019-02-19-boxplot/variation-multiples.png)
+![박스 플롯 병치](/img/posts/2019-02-19-boxplot/boxplot-jitter0-opacity1.png)
 
 상황에 따라 세로로 그릴 수도 있다.
 
-![세로 박스 플롯](/img/posts/2019-02-19-boxplot/variation-vertical.png)
+![세로 박스 플롯](/img/posts/2019-02-19-boxplot/boxplot-jitter0-opacity1-vertical.png)
 
 데이터 뭉치 사이에 관련성이 있다면 같은 색상을 써서 시각적으로 짝지어주면 좋다.
 
-![색상 코딩](/img/posts/2019-02-19-boxplot/variation-color-coded.png)
+![색상 코딩](/img/posts/2019-02-19-boxplot/boxplot-color-jitter0-opacity1.png)
 
 박스 플롯 위에 스트립 플롯을 겹친 형태로 그려서 개별 데이터의 분포를 직접 드러낼 수도 있다.
 
-![데이터 포인트 함께 보여주기](/img/posts/2019-02-19-boxplot/variation-inner-points.png)
+![데이터 포인트 함께 보여주기](/img/posts/2019-02-19-boxplot/boxplot-color-jitter0-opacity1-showInnerDots.png)
 
-이 경우, 데이터가 지나치게 많거나 서로 겹쳐 있으면 어디에 데이터가 얼마나 몰려 있는지 시각적으로 알기가 어렵기 때문에 점의 위치를 아주 조금 흩뿌려주면 좋다. 이를 지터링(jiterring)이라고 한다.
+이 경우, 데이터가 지나치게 많거나 서로 겹쳐 있으면 어디에 데이터가 얼마나 몰려 있는지 시각적으로 알기가 어렵기 때문에 점의 위치를 아주 조금 흩뿌려주면 좋다. 이를 지터링(jiterring)이라고 한다. 상자와 점이 겹쳐 있어서 잘 보이지 않는다면 투명도를 약하게 적용해도 좋다.
 
-![지터링](/img/posts/2019-02-19-boxplot/variation-jittering.png)
+![지터링](/img/posts/2019-02-19-boxplot/boxplot-color-jitter0.2-opacity0.8-showInnerDots.png)
 
 에드워드 터프티가 제안한 최소주의 형태로 나타내도 데이터가 시각적으로 잘 드러난다면 이 형태를 쓰는 것도 좋다.
 
-![최소주의](/img/posts/2019-02-19-boxplot/variation-minimal.png)
+![최소주의](/img/posts/2019-02-19-boxplot/boxplot-color-jitter0-minimalStyle-opacity1.png)
 
 # 맺음말
 
