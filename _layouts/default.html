@@ -41,6 +41,13 @@ if(location.hostname !== 'boxnwhis.kr') {
 </script>
 <!-- End GA -->
 
+<!-- GB -->
+<script src="/js/gbsdk.umd.js"></script>
+<script>
+    let gb = new gbsdk.GreedyBandit('ArB1TrArYa1pHaNuMeRiC');
+    gb.postLog({});
+</script>
+<!-- End GB -->
 <nav>
     <ul>
         {% for item in site.navigation %}
