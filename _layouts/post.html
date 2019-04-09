@@ -219,6 +219,17 @@ document.addEventListener("DOMContentLoaded", function(e) {
     });
     </script>
 
+    <!-- GB -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        gb.getAssigns(function(assigns) {
+            if(assigns[0].values['v'] == 'A') {
+                document.querySelector('form.poll').setAttribute('style', 'display: none');
+            }
+        })
+    });
+    </script>
+
     <nav>
         <ol>
             {% if page.next.url %}
