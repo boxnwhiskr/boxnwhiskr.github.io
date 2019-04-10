@@ -222,8 +222,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
     <!-- GB -->
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        gb.getAssign('aatest', function(values) {
-            if(values['v'] === 'A') {
+        gb.getAssigns(function(assigns) {
+            if(assigns.value('aatest', 'v') === 'A') {
                 document.querySelector('form.poll').setAttribute('style', 'display: none');
             }
         })

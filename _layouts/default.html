@@ -42,9 +42,10 @@ if(location.hostname !== 'boxnwhis.kr') {
 <!-- End GA -->
 
 <!-- GB -->
-<script src="/js/gbsdk.umd.js"></script>
+
+<script src="//unpkg.com/gbsdk-js@^0"></script>
 <script>
-    let gb = new gbsdk.GreedyBandit('ArB1TrArYa1pHaNuMeRiC');
+    let gb = new gbsdk.GreedyBandit('ArB1TrArYa1pHaNuMeRiC', {});
     gb.postLog({});
 </script>
 <!-- End GB -->
