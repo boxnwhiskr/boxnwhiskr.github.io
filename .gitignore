@@ -10,3 +10,9 @@ _script/*/*.rproj
 
 # python
 .python-version
+
+# jekyll
+.jekyll-cache/
+
+# vim
+*.swp
