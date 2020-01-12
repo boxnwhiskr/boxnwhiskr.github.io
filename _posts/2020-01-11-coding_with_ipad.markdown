@@ -217,9 +217,9 @@ blink> mosh test-server
 - [A Quick and Easy Guide to tmux](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)
 - [Tactical tmux: The 10 Most Important Commands](https://danielmiessler.com/study/tmux/)
 
-[tmux](https://tmux.github.io)를 쓰면 같은 세션에 두 개 이상의 원격 터미널이 접속할 수 있다. 하나의 화면을 여러 명이 공유해서 볼 수 있어서 이를 통해 원격으로 짝 프로그래밍이 가능하다. 보통 짝 프로그래밍은 하나의 모니터와 하나의 키보드 앞에 두 명이 같이 앉아서 번갈아 가며 키보드를 사용한다. 물리적으로 떨어져 있으면 짝으로 작업하기 어렵다. 그런데 [tmux](https://tmux.github.io)로 물리적 한계를 극복할 수 있다. 두 사람이 원거리에서 같은 화면을 함께 보며 하나의 커서로 번걸아 코딩한다.
+[tmux](https://tmux.github.io)를 쓰면 같은 세션에 두 개 이상의 원격 터미널이 접속할 수 있다. 하나의 화면을 여러 명이 공유해서 볼 수 있어서 이를 통해 원격으로 [짝 프로그래밍](https://en.wikipedia.org/wiki/Pair_programming)이 가능하다. 보통 [짝 프로그래밍](https://en.wikipedia.org/wiki/Pair_programming)은 하나의 모니터와 하나의 키보드 앞에 두 명이 같이 앉아서 번갈아 가며 키보드를 사용한다. 물리적으로 떨어져 있으면 짝으로 작업하기 어렵다. 그런데 [tmux](https://tmux.github.io)로 물리적 한계를 극복할 수 있다. 두 사람이 원거리에서 같은 화면을 함께 보며 하나의 커서로 번걸아 코딩한다.
 
-함께 일하는 개발자([@alankang](https://twitter.com/alankang))와 원격으로 짝 프로그래밍을 할 때 이 방법을 사용한다. 같은 개발 서버에 붙어서 음성 통화로 이야기하며 작업하면 꽤 만족스럽다. 원격으로 짝 프로그래밍을 하기 위해서 여러가지 시도를 해왔는데, 지금은 [tmux](https://tmux.github.io) 사용으로 정착하고 있다.
+함께 일하는 동료([@alankang](https://twitter.com/alankang))와 원격으로 [짝 프로그래밍](https://en.wikipedia.org/wiki/Pair_programming)을 할 때 이 방법을 사용한다. 같은 개발 서버에 붙어서 음성 통화로 이야기하며 작업하면 꽤 만족스럽다. 원격으로 [짝 프로그래밍](https://en.wikipedia.org/wiki/Pair_programming)을 하기 위해서 여러가지 시도를 해왔는데, 지금은 [tmux](https://tmux.github.io) 사용으로 정착하고 있다.
 
 - [Remote Pair Programming Made Easy with SSH and tmux](https://www.hamvocke.com/blog/remote-pair-programming-with-tmux/)
 
@@ -239,7 +239,7 @@ blink> mosh test-server
 
 ## 아이패드
 
-우선 가볍다. 어디든 기기를 들고 다니면서 일을 하기 때문에, 전에는 무거운 가방을 당연하게 받아들였다. 오히려 더 좋은 가방을 사서 무거운 물건을 효율적으로 휴대하기 위해 노력했다. 아이패드로 코딩하면서 가방이 매우 가볍고 작아졌다. 같이 일하는 개발자([@alankang](https://twitter.com/alankang))는 아이패드 11인치를 쓰는데, 어느 날부터 시장 바구니 같은 걸 손에 들고 다닌다. 장보러 온 사람 같다. 정든 백팩과 이별하게 되었다.
+우선 가볍다. 어디든 기기를 들고 다니면서 일을 하기 때문에, 전에는 무거운 가방을 당연하게 받아들였다. 오히려 더 좋은 가방을 사서 무거운 물건을 효율적으로 휴대하기 위해 노력했다. 아이패드로 코딩하면서 가방이 매우 가볍고 작아졌다. 함께 일하는 동료([@alankang](https://twitter.com/alankang))는 아이패드 11인치를 쓰는데, 어느 날부터 시장 바구니 같은 걸 손에 들고 다닌다. 장보러 온 사람 같다. 정든 백팩과 이별하게 되었다.
 
 배터리 걱정에서 해방된다. 아직까지 일하면서 한 번도 아이패드가 방전된 경우가 없다. 카페에서 전원을 찾을 필요도 없고, 보조 배터리와 충전기를 들고 다니지 않아도 된다. 대부분의 연산이 개발 서버에서 이루어지기 때문에 다른 짓(?)을 하지 않는다면 아이패드의 전력 소모는 매우 적다. 배터리가 더 오래 가는 이유다.
 
@@ -255,7 +255,7 @@ blink> mosh test-server
 
 [Vim](https://www.vim.org)에 익숙해진다. [Vim](https://www.vim.org)은 처음에 배우기가 참 어렵지만, 일단 익숙해지면 매우 효율적으로 코딩할 수 있다. 그래도 일부러 공부하는 것이 참 괴로운데, 이것 말고 방법이 없게 되면 익힐 수 밖에 없다. 제약을 강화하면 다른 면에서 효율이 올라간다. [Practical Vim](https://pragprog.com/book/dnvim2/practical-vim-second-edition)을 읽고, 배운 것을 평소에 써먹으려고 노력하는 것이 중요하다. 외국어 습득 과정과 유사하게, 계속 머리 속에서 인출하는 연습이 필요하다. 기본 기능만 꾸준하게 사용하면 능률이 안 오르고, 항상 ‘[hjkl](https://catonmat.net/why-vim-uses-hjkl-as-arrow-keys)’만 누르게 된다. 감을 유지하기 위해서 가끔씩 [Vim golf](https://www.vimgolf.com)를 치는 것도 좋다. 효율적인 키 스트로크를 떠올리기 위해서 타이핑을 멈추고 잠시 생각하는 시간을 아까워하지 않아야 한다.
 
-원격 [짝 프로그래밍](https://en.wikipedia.org/wiki/Pair_programming)이 원활하다. 꼭 [CLI](https://en.m.wikipedia.org/wiki/Command-line_interface)에서 [tmux](https://tmux.github.io)를 쓰지 않아도 원격 짝 프로그램은 가능하다. 대안으로 [AWS Cloud9](https://aws.amazon.com/cloud9/)이나 [Visual Studio Code](https://code.visualstudio.com)가 있다. 다만 [tmux](https://tmux.github.io)를 쓰는 방법이 가장 쉽고 간편하다.
+원격 [짝 프로그래밍](https://en.wikipedia.org/wiki/Pair_programming)이 원활하다. 꼭 [CLI](https://en.m.wikipedia.org/wiki/Command-line_interface)에서 [tmux](https://tmux.github.io)를 쓰지 않아도 원격 [짝 프로그래밍](https://en.wikipedia.org/wiki/Pair_programming)은 가능하다. 대안으로 [AWS Cloud9](https://aws.amazon.com/cloud9/)이나 [Visual Studio Code](https://code.visualstudio.com)가 있다. 다만 [tmux](https://tmux.github.io)를 쓰는 방법이 가장 쉽고 간편하다.
 
 리눅스에 익숙해진다. 정확하게 말하면 리눅스의 [CLI](https://en.m.wikipedia.org/wiki/Command-line_interface)와 친해진다. 대안이 없다. 뭔가를 하려면 무조건 텍스트로 명령어를 치는 수 밖에 없으니 자주 쓰게 되고, 편해진다. 개발을 시작한 이래로 이 검은 화면이 편해지는 날은 오지 않을 거라고 생각했는데, 이제 무섭지는 않다. [The Linux Command Line](http://linuxcommand.org/tlcl.php)을 읽어보면 많은 도움이 된다. 역시나 배운 걸 실제로 써먹어 보려는 시도를 지속하는 것이 중요하다.
 
