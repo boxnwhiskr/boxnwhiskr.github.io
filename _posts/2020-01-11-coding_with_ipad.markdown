@@ -176,7 +176,7 @@ blink> ssh test-server
 > sudo reboot
 {% endhighlight %}
 
-접속이 바로 끊기고 [Blink Shell](https://www.blink.sh)로 돌아온다. 잠깐 기다렸다가 다시 [SSH](https://en.wikipedia.org/wiki/Secure_Shell)연결로 서버에 접속한다. 이제 [mosh](https://mosh.org)를 설치하자.
+접속이 바로 끊기고 [Blink Shell](https://www.blink.sh)로 돌아온다. 잠깐 기다렸다가 다시 [SSH](https://en.wikipedia.org/wiki/Secure_Shell) 연결로 서버에 접속한다. 이제 [mosh](https://mosh.org)를 설치하자.
 
 {% highlight console %}
 blink> ssh test-server
@@ -204,7 +204,7 @@ blink> mosh test-server
 
 ## Vim
 
-Vim은 사용할 수 있는 애드인이 매우 많다. 사실상 핵심적인 [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)의 기능은 애드인으로 Vim에서 사용할 수 있다. 처음에 [CLI](https://en.m.wikipedia.org/wiki/Command-line_interface) 환경에서 Vim으로 개발을 시작하면 그 빈약한 기능 때문에 다시 화려한 [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)로 돌아가고 싶다. 어떤 애드인으로 무슨 기능을 사용할 수 있는지 몰라서 이런 경우가 생기는데, 자신이 개발하는 언어를 기반으로 검색을 해보면 Vim에서 쓸 수 있는 다양한 애드인을 찾을 수 있다. 정말 안 되는 게 없다.
+[Vim](https://www.vim.org)은 사용할 수 있는 애드인이 매우 많다. 사실상 핵심적인 [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)의 기능은 애드인으로 [Vim](https://www.vim.org)에서 사용할 수 있다. 처음에 [CLI](https://en.m.wikipedia.org/wiki/Command-line_interface) 환경에서 [Vim](https://www.vim.org)으로 개발을 시작하면 그 빈약한 기능 때문에 다시 화려한 [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)로 돌아가고 싶다. 어떤 애드인으로 무슨 기능을 사용할 수 있는지 몰라서 이런 경우가 생기는데, 자신이 개발하는 언어를 기반으로 검색을 해보면 [Vim](https://www.vim.org)에서 쓸 수 있는 다양한 애드인을 찾을 수 있다. 정말 안 되는 게 없다.
 
 - [VIM and Python – A Match Made in Heaven](https://realpython.com/vim-and-python-a-match-made-in-heaven/)
 - [Vim](https://www.fullstackpython.com/vim.html)
@@ -225,13 +225,13 @@ Vim은 사용할 수 있는 애드인이 매우 많다. 사실상 핵심적인 [
 
 ## 테마 설정
 
-테마라 하면 터미널 스크린의 색깔과 글씨 크기, 폰트 등 거의 모든 시각적 설정을 말한다. 크게 네 가지 부분에서 설정할 수 있는데, [Blink Shell](https://www.blink.sh), Bash, Vim, [tmux](https://tmux.github.io)가 각각의 테마를 제공한다. 터미널에 연결해서 텍스트 기반 에디터를 켜면 처음에는 그 볼품 없는 모양 때문에 흥미가 떨어지는데, 상상하는 거의 모든 곳을 마음대로 고칠 수 있다. Bash 대신에 Z shell을 쓴다면 할 수 있는 건 더 많아진다. 개발하면서 테마가 무슨 소용이 있을까 생각할 수 있지만, 보기 싫은 작업 환경에서는 일하기도 싫어진다. 게다가 적절한 정보를 보기 쉽게 표시해주는 것만으로도 작업 효율이 올라간다.
+테마라 하면 터미널 스크린의 색깔과 글씨 크기, 폰트 등 거의 모든 시각적 설정을 말한다. 크게 네 가지 부분에서 설정할 수 있는데, [Blink Shell](https://www.blink.sh), [Bash](https://www.gnu.org/software/bash), [Vim](https://www.vim.org), [tmux](https://tmux.github.io)가 각각의 테마를 제공한다. 터미널에 연결해서 텍스트 기반 에디터를 켜면 처음에는 그 볼품 없는 모양 때문에 흥미가 떨어지는데, 상상하는 거의 모든 곳을 마음대로 고칠 수 있다. [Bash](https://www.gnu.org/software/bash) 대신에 [Z shell](https://www.zsh.org)을 쓴다면 할 수 있는 건 더 많아진다. 개발하면서 테마가 무슨 소용이 있을까 생각할 수 있지만, 보기 싫은 작업 환경에서는 일하기도 싫어진다. 게다가 적절한 정보를 보기 쉽게 표시해주는 것만으로도 작업 효율이 올라간다.
 
 - [What are the best VIM color-schemes?](https://www.slant.co/topics/480/~best-vim-color-schemes)
 
 ## 랩탑 환경과 비교
 
-가장 큰 차이는 마우스를 쓸 수 없다는 점이다. 텍스트 환경의 볼품없는 에디터는 테마로 얼마든지 멋지게 고칠 수 있다. [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)에서 요긴하게 써먹던 기능들도 Vim 애드인을 통해 거의 동일하게 사용할 수 있다. 극복할 수 없는 차이는 마우스로 화면 위에 커서를 움직일 수 없다는 점이다. 처음에 아이패드로 개발을 하면서 가장 답답한 점이 이 부분인데, Vim을 열심히 연습하면서 극복하는 방법 밖에는 없다. 그리고 익숙해지면, 절대로 그 이전 상태로 돌아갈 수 없다.
+가장 큰 차이는 마우스를 쓸 수 없다는 점이다. 텍스트 환경의 볼품없는 에디터는 테마로 얼마든지 멋지게 고칠 수 있다. [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)에서 요긴하게 써먹던 기능들도 [Vim](https://www.vim.org) 애드인을 통해 거의 동일하게 사용할 수 있다. 극복할 수 없는 차이는 마우스로 화면 위에 커서를 움직일 수 없다는 점이다. 처음에 아이패드로 개발을 하면서 가장 답답한 점이 이 부분인데, [Vim](https://www.vim.org)을 열심히 연습하면서 극복하는 방법 밖에는 없다. 그리고 익숙해지면, 절대로 그 이전 상태로 돌아갈 수 없다.
 
 # 좋은 점
 
