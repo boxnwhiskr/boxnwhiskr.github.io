@@ -217,7 +217,7 @@ blink> mosh test-server
 - [A Quick and Easy Guide to tmux](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)
 - [Tactical tmux: The 10 Most Important Commands](https://danielmiessler.com/study/tmux/)
 
-[tmux](https://tmux.github.io)를 쓰면 같은 세션에 두 개 이상의 원격 터미널이 접속할 수 있다. 하나의 화면을 여러 명이 공유해서 볼 수 있어서 이를 통해 원격으로 [짝 프로그래밍](https://en.wikipedia.org/wiki/Pair_programming)이 가능하다. 보통 [짝 프로그래밍](https://en.wikipedia.org/wiki/Pair_programming)은 하나의 모니터와 하나의 키보드 앞에 두 명이 같이 앉아서 번갈아 가며 키보드를 사용한다. 물리적으로 떨어져 있으면 짝으로 작업하기 어렵다. 그런데 [tmux](https://tmux.github.io)로 물리적 한계를 극복할 수 있다. 두 사람이 원거리에서 같은 화면을 함께 보며 하나의 커서로 번걸아 코딩한다.
+[tmux](https://tmux.github.io)를 쓰면 같은 세션에 두 개 이상의 원격 터미널이 접속할 수 있다. 하나의 화면을 여러 명이 공유해서 볼 수 있어서 이를 통해 원격으로 [짝 프로그래밍](https://en.wikipedia.org/wiki/Pair_programming)이 가능하다. 보통 [짝 프로그래밍](https://en.wikipedia.org/wiki/Pair_programming)은 하나의 모니터와 하나의 키보드 앞에 두 명이 같이 앉아서 번갈아 가며 키보드를 사용한다. 물리적으로 떨어져 있으면 짝으로 작업하기 어렵다. 그런데 [tmux](https://tmux.github.io)로 물리적 한계를 극복할 수 있다. 두 사람이 원거리에서 같은 화면을 함께 보며 하나의 커서로 번갈아 코딩한다.
 
 함께 일하는 동료([@alankang](https://twitter.com/alankang))와 원격으로 [짝 프로그래밍](https://en.wikipedia.org/wiki/Pair_programming)을 할 때 이 방법을 사용한다. 같은 개발 서버에 붙어서 음성 통화로 이야기하며 작업하면 꽤 만족스럽다. 원격으로 [짝 프로그래밍](https://en.wikipedia.org/wiki/Pair_programming)을 하기 위해서 여러가지 시도를 해왔는데, 지금은 [tmux](https://tmux.github.io) 사용으로 정착하고 있다.
 
