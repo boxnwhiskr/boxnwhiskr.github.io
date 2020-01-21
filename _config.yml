@@ -23,6 +23,3 @@ navigation:
   text: Company
 - url: /contact.html
   text: Contact
-
-exclude: ["*.pynb"]
-

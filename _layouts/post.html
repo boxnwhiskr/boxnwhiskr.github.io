@@ -46,7 +46,7 @@ try {
             if(accumScrollTime > 30 * 1000 && scrollTop / document.body.scrollHeight > 0.8) {
                 var pixelPerSec = Math.floor(accumScrollMove / accumScrollTime * 1000);
                 var label = pixelPerSec > 100 ? 'skimmer' : 'reader';
-                ga('send', 'event', 'read', 'pps', label, pixelPerSec);
+                gtag('event', 'read', {'event_category': 'pps', 'event_label': label, 'value': pixelPerSec});
             } else {
                 window.setTimeout(checkScroll, 500);
             }
@@ -55,24 +55,6 @@ try {
         checkScroll();
     });
 } catch(e) {}
-</script>
-
-<!-- IPython Notebook -->
-<script>
-document.addEventListener("DOMContentLoaded", function(e) {
-    var cells = document.querySelectorAll('article .cell');
-    for(var i = 0; i < cells.length; i++) {
-        var cell = cells[i];
-        cell.addEventListener('click', function() {
-            var curClasses = this.getAttribute('class');
-            if(curClasses.indexOf(' expanded') !== -1) {
-                this.setAttribute('class', curClasses.substring(0, curClasses.length - 9));
-            } else {
-                this.setAttribute('class', curClasses + ' expanded');
-            }
-        });
-    }
-});
 </script>
 
 <!-- Align image to center -->
@@ -212,21 +194,10 @@ document.addEventListener("DOMContentLoaded", function(e) {
             submitButton.value = '감사합니다';
             submitButton.setAttribute('class', 'closed');
 
-            ga('send', 'event', 'poll', 'difficulty', difficulty, difficultyValue);
-            ga('send', 'event', 'poll', 'helpful', helpful, helpfulValue);
+            gtag('event', 'poll', {'event_category': 'difficulty', 'event_label': difficulty, 'event_value': difficultyValue});
+            gtag('event', 'poll', {'event_category': 'helpful', 'event_label': helpful, 'event_value': helpfulValue});
             return false;
         });
-    });
-    </script>
-
-    <!-- GB -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        gb.getAssigns(function(assigns) {
-            if(assigns.value('aatest', 'v') === 'A') {
-                document.querySelector('form.poll').setAttribute('style', 'display: none');
-            }
-        })
     });
     </script>
 
