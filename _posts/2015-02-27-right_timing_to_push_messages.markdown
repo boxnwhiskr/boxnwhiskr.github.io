@@ -214,7 +214,6 @@ Google Analytics는 기본적으로 30분 동안 유저의 활동이 기록되�
 
 *   [A/B 테스팅이란](/2015/01/29/a_b_testing.html)
 *   [온라인 게임에서의 A/B 테스팅](/2015/01/29/a_b_testing_online_games.html)
-*   [A-B Testing의 단점과 개선안](http://www.ecogwiki.com/A-B_Testing%EC%9D%98_%EB%8B%A8%EC%A0%90%EA%B3%BC_%EA%B0%9C%EC%84%A0%EC%95%88)
 
 ## 타임 윈도우 확장
 위에서는 온라인 서비스를 가정하여 고객의 접속 시간을 매우 짧은 시간대로 표현하였다.
