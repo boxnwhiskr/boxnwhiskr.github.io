@@ -4,6 +4,7 @@ title: A/B 테스트와 최적화를 동시에 - 그리디밴딧(Greedy Bandit)
 author: 박장시
 brief: 박스앤위스커가 만든 A/B 테스트 엔진, 그리디밴딧을 소개합니다.
 date: 2016-04-06
+published: false
 ---
 
 박스앤위스커가 만든 A/B 테스트 서비스 [그리디밴딧(Greedy Bandit)](https://greedybandit.com/)을 소개한다.
