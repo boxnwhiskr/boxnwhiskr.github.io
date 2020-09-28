@@ -49,7 +49,7 @@ python.org 내의 문서만 검색하려면 "site:python.org"이라고 입력합
 
 * `Cmd+Tab`, `Cmd+L` (편집기에서 브라우저로 전환하고 주소창으로 포커스 옮기기)
 * 검색어 입력 후 `Enter`
-* J/K로 네비게이션하다가 적절한 문서가 있으면 `Cmd+Enter` (새 탭으로 열기)
+* `J`, `K`로 내비게이션하다가 적절한 문서가 있으면 `Cmd+Enter` (새 탭으로 열기)
 * `Ctrl+Tab`, `Shift+Ctrl+Tab` 으로 브라우저 탭 전환
 * `Space`, `Shift-Space`로 페이징하며 읽기
 * 불필요한 탭은 `Cmd+W`로 닫기
