@@ -114,7 +114,6 @@ $$P(X=k) = \frac{n!}{k!(n-k)!}p^{k}(1-p)^{n-k}$$
 플레이어의 경험을 고려한다면 후자의 설명이 더 와닿는다.
 
 확률 값은 [R](http://www.r-project.org/)에서 아래와 같이 간단하게 계산한다.
-구체적은 코드는 [여기](https://github.com/Jangsea/binom_item/blob/master/examples_binom.R)에서 볼 수 있다. 
 성공 확률(prob)이 0.1인 경우, 10번(size) 시도했을 때, 0번부터 10번 성공(x)할 확률 11개 값을 계산한 값이다.
 총합 1인 확률을 각 사건에 나눠주었기 때문에 11개 확률 값의 합계는 당연히 1이 된다.
 
